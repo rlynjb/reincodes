@@ -96,19 +96,33 @@ export function App() {
         <h5 className="text-yellow">and some projects I've worked on..</h5>
         <div className="mt-6 grid grid-cols-3 gap-6">
           <div>
-            <img src="../assets/ui_system_design.png" />
-            <h6 className="text-slate my-2">UI Design System</h6>
-            <p className="text-xs">System Design, DSA, Vue3, TailwindCSS, DaisyUI, Github Pages, Vue Styleguidist</p>
+            <img className="max-h-64" src="../assets/portfolio.png" />
+            <h6 className="text-slate my-2">Portfolio Microfrontend</h6>
+            <p className="text-xs">Microfrontend architecture, NX, React, TailwindCSS, Netlify</p>
             <a
-              href="https://rlynjb.github.io/uids/"
+              href="https://reincodes.netlify.app/"
               target="_blank"
               className="text-yellow"
             >
               Visit
             </a>
           </div>
+
           <div>
-            <img src="../assets/spacex.png" />
+            <img className="max-h-64" src="../assets/ui_system_design.png" />
+            <h6 className="text-slate my-2">UI Design System</h6>
+            <p className="text-xs">Vue3, TailwindCSS, DaisyUI, Github Pages</p>
+            <a
+              href="https://rlynjb.github.io/uidesign/"
+              target="_blank"
+              className="text-yellow"
+            >
+              Visit
+            </a>
+          </div>
+
+          <div>
+            <img className="max-h-64" src="../assets/spacex.png" />
             <h6 className="text-slate my-2">SpaceX Seat Reservation</h6>
             <p className="text-xs">React, Apollo GraphQL, Netlify Functions, MongoDB</p>
             <a
@@ -119,8 +133,9 @@ export function App() {
               Visit
             </a>
           </div>
+
           <div>
-            <img src="../assets/persopo.png" />
+            <img className="max-h-64" src="../assets/persopo.png" />
             <h6 className="text-slate mb-2">Persopo - Public Record Search</h6>
             <p className="text-xs">Ember.js, Golang</p>
             <a
