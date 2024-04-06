@@ -1,7 +1,7 @@
 {
-  "name": "intro",
+  "name": "uids",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/intro/src",
+  "sourceRoot": "apps/uids/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,17 +10,16 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/intro",
-        "index": "apps/intro/src/index.html",
+        "outputPath": "dist/apps/uids",
+        "index": "apps/uids/src/index.html",
         "baseHref": "/",
-        "main": "apps/intro/src/main.tsx",
-        "polyfills": "apps/intro/src/polyfills.ts",
-        "tsConfig": "apps/intro/tsconfig.app.json",
-        "assets": ["apps/intro/src/favicon.ico", "apps/intro/src/assets"],
-        "styles": ["apps/intro/src/styles.css"],
+        "main": "apps/uids/src/main.tsx",
+        "polyfills": "apps/uids/src/polyfills.ts",
+        "tsConfig": "apps/uids/tsconfig.app.json",
+        "assets": ["apps/uids/src/favicon.ico", "apps/uids/src/assets"],
+        "styles": ["apps/uids/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack",
-        "postcssConfig": "apps/intro/postcss.config.js"
+        "webpackConfig": "@nrwl/react/plugins/webpack"
       },
       "configurations": {
         "development": {
@@ -32,8 +31,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/intro/src/environments/environment.ts",
-              "with": "apps/intro/src/environments/environment.prod.ts"
+              "replace": "apps/uids/src/environments/environment.ts",
+              "with": "apps/uids/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -49,16 +48,16 @@
       "executor": "@nrwl/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "intro:build",
+        "buildTarget": "uids:build",
         "hmr": true,
-        "port": 4200
+        "port": 4201
       },
       "configurations": {
         "development": {
-          "buildTarget": "intro:build:development"
+          "buildTarget": "uids:build:development"
         },
         "production": {
-          "buildTarget": "intro:build:production",
+          "buildTarget": "uids:build:production",
           "hmr": false
         }
       }
@@ -67,14 +66,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/intro/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/uids/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/intro"],
+      "outputs": ["coverage/apps/uids"],
       "options": {
-        "jestConfig": "apps/intro/jest.config.ts",
+        "jestConfig": "apps/uids/jest.config.ts",
         "passWithNoTests": true
       }
     }
