@@ -69,25 +69,67 @@ export function App() {
       </div>
 
       <div className="resume container mx-auto p-8 bg-tertiary">
-        <p>and for complete history, here's my Resume ✓</p>
+        <p>
+          and for complete history, here's my
+          <a
+            className="text-yellow ml-1"
+            target="_blank"
+            href="https://docs.google.com/document/d/1LOO_sdXimhxD43TeWSkoZbqASsT3B68l9YAdkyxmwNU/edit?usp=share_link"
+          >
+            Resume ✓
+          </a>
+        </p>
         <p>I’m currently looking for new opportunities, preferably remote and looking forward to accepting projects.</p>
-        <p>If you have a question or just want to say hi, feel free to contact me via LinkedIn ✓</p>
+        <p>
+          If you have a question or just want to say hi, feel free to contact me via
+          <a
+            className="text-yellow ml-1"
+            target="_blank"
+            href="https://www.linkedin.com/in/rlynpro/"
+          >
+            LinkedIn ✓
+          </a>
+        </p>
       </div>
 
       <div className="projects container mx-auto py-8">
         <h5 className="text-yellow">and some projects I've worked on..</h5>
         <div className="mt-6 grid grid-cols-3 gap-6">
           <div>
-            <h6 className="text-slate mb-2">UI Design System</h6>
+            <img src="../assets/ui_system_design.png" />
+            <h6 className="text-slate my-2">UI Design System</h6>
             <p className="text-xs">System Design, DSA, Vue3, TailwindCSS, DaisyUI, Github Pages, Vue Styleguidist</p>
+            <a
+              href="https://rlynjb.github.io/uids/"
+              target="_blank"
+              className="text-yellow"
+            >
+              Visit
+            </a>
           </div>
           <div>
-            <h6 className="text-slate mb-2">SpaceX Seat Reservation</h6>
+            <img src="../assets/spacex.png" />
+            <h6 className="text-slate my-2">SpaceX Seat Reservation</h6>
             <p className="text-xs">React, Apollo GraphQL, Netlify Functions, MongoDB</p>
+            <a
+              href="https://spacex-reserve-seat.netlify.app/"
+              target="_blank"
+              className="text-yellow"
+            >
+              Visit
+            </a>
           </div>
           <div>
+            <img src="../assets/persopo.png" />
             <h6 className="text-slate mb-2">Persopo - Public Record Search</h6>
             <p className="text-xs">Ember.js, Golang</p>
+            <a
+              href="https://persopo.com/"
+              target="_blank"
+              className="text-yellow"
+            >
+              Visit
+            </a>
           </div>
         </div>
       </div>
