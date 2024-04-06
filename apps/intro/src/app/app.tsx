@@ -10,8 +10,8 @@ export function App() {
           <p className='inline-block'>my portfolio and codebook</p>
         </div>
         <div className='text-right'>
-          <a className="inline-block py-2 px-4">Intro</a>
-          <a className="inline-block py-2 px-4">UIDS</a>
+          <a className="inline-block py-2 px-4" href="/">Intro</a>
+          <a className="inline-block py-2 px-4" href="/uids/">UIDS</a>
         </div>
       </header>
 

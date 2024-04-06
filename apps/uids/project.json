@@ -50,7 +50,8 @@
       "options": {
         "buildTarget": "uids:build",
         "hmr": true,
-        "port": 4201
+        "port": 4201,
+        "baseHref": "/uids/"
       },
       "configurations": {
         "development": {

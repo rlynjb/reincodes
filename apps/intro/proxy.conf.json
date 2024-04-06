@@ -1,0 +1,8 @@
+{
+  "/intro": {
+    "target": "http://localhost:4200/"
+  },
+  "/uids": {
+    "target": "http://localhost:4201/"
+  }
+}

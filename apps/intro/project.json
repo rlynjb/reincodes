@@ -51,7 +51,8 @@
       "options": {
         "buildTarget": "intro:build",
         "hmr": true,
-        "port": 4200
+        "port": 4200,
+        "proxyConfig": "apps/intro/proxy.conf.json"
       },
       "configurations": {
         "development": {
