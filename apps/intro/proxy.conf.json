@@ -3,6 +3,6 @@
     "target": "http://localhost:4200/"
   },
   "/uids": {
-    "target": "http://localhost:4201/"
+    "target": "https://uids.netlify.app/"
   }
 }
