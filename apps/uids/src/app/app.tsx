@@ -1,13 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
 import { Header } from '@reincodes/ui'
 
 export function App() {
   return (
-    <>
+    <div className="bg-primary text-secondary h-fit pb-20">
       <Header />
-    </>
+      contents etc
+    </div>
   );
 }
 
