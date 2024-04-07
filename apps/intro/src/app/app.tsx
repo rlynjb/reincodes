@@ -1,19 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
+import { Header } from '@reincodes/ui'
 
 export function App() {
   return (
     <div className="bg-primary text-secondary h-fit pb-20">
-      <header className="container mx-auto py-2 bg-primary text-secondary grid grid-cols-2 items-center">
-        <div>
-          <b className='mr-6 text-yellow'>reincodes</b>
-          <p className='inline-block'>my portfolio and codebook</p>
-        </div>
-        <div className='text-right'>
-          <a className="inline-block py-2 px-4" href="/">Intro</a>
-          <a className="inline-block py-2 px-4" href="/uids/">UIDS</a>
-        </div>
-      </header>
+      <Header />
 
       <div className="intro container mx-auto py-8">
         <h1 className="text-yellow">hello, i'm rein.</h1>
