@@ -4,9 +4,12 @@ import { Header } from '@reincodes/ui'
 
 export function App() {
   return (
-    <div className="bg-primary text-secondary h-fit pb-20">
+    <div className="bg-primary text-secondary h-screen pb-20">
       <Header />
-      contents etc
+
+      <div className="container mx-auto text-center py-6">
+        <h3>Coming soon...</h3>
+      </div>
     </div>
   );
 }
