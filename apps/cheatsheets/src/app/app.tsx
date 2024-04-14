@@ -13,19 +13,30 @@ import {
 } from 'react';
 import { ViewCode } from './features';
 
+/*
+  TODO:
+  - implement TS
+  - create Table UI component
+  - create sidebar navigation UI component
+*/
+
 
 export function App() {
   const initialSelected = C3_CLEANING_CODE
   const [selected, setSelected] = useState(initialSelected)
 
-  const chapters = {
-    c3: C3_CLEANING_CODE,
-    c4: C4_POPULAR_COMPOSITION
-  } as any
-
-  const handleNav = (chapter: string) => {
-    setSelected(chapters[chapter])
-  }
+  const chaptersNav = [
+    {
+      id: 'c3',
+      title: 'Cleaning up code',
+      data: C3_CLEANING_CODE
+    },
+    {
+      id: 'c4',
+      title: 'Popular Composition Patterns',
+      data: C4_POPULAR_COMPOSITION
+    }
+  ]
 
   return (
     <Layout>
@@ -34,12 +45,11 @@ export function App() {
       <div className="container mx-auto mt-6 grid grid-cols-6">
         <div className="col-span-1">
           <ul>
-            <li>
-              <a onClick={() => handleNav('c3')}>Cleaning up code</a>
-            </li>
-            <li>
-              <a onClick={() => handleNav('c4')}>Popular Composition Patterns</a>
-            </li>
+            {chaptersNav.map((item) =>
+              <li key={item.id}>
+                <a onClick={() => setSelected(item.data)}>{item.title}</a>
+              </li>
+            )}
           </ul>
         </div>
 
