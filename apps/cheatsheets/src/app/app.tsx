@@ -5,25 +5,43 @@ import {
   Layout
 } from '@reincodes/ui';
 import {
-  C3_CLEANING_CODE
+  C3_CLEANING_CODE,
+  C4_POPULAR_COMPOSITION
 } from '../constants';
+import {
+  useState
+} from 'react';
+import { ViewCode } from './features';
+
 
 export function App() {
-  const cleaningUpCode = C3_CLEANING_CODE
+  const initialSelected = C3_CLEANING_CODE
+  const [selected, setSelected] = useState(initialSelected)
+
+  const chapters = {
+    c3: C3_CLEANING_CODE,
+    c4: C4_POPULAR_COMPOSITION
+  } as any
+
+  const handleNav = (chapter: string) => {
+    setSelected(chapters[chapter])
+  }
 
   return (
     <Layout>
       <Header />
 
       <div className="container mx-auto mt-6 grid grid-cols-6">
-        <ul className="col-span-1">
-          <li>
-            <a href="">Cleaning up code</a>
-          </li>
-          <li>
-            <a href="">Patterns</a>
-          </li>
-        </ul>
+        <div className="col-span-1">
+          <ul>
+            <li>
+              <a onClick={() => handleNav('c3')}>Cleaning up code</a>
+            </li>
+            <li>
+              <a onClick={() => handleNav('c4')}>Popular Composition Patterns</a>
+            </li>
+          </ul>
+        </div>
 
         <div className="col-span-5">
           <div className="overflow-x-auto">
@@ -35,20 +53,13 @@ export function App() {
                 </tr>
               </thead>
               <tbody>
-                {cleaningUpCode.map((item, index) =>
+                {selected.map((item, index) =>
                   <tr key={index}>
                     <td className="align-text-top">
-                      <div className="collapse bg-base-200 rounded-none">
-                        <input type="checkbox" className="min-h-fit"/>
-                        <div className="collapse-title text-sm p-2 min-h-fit">
-                          {item.title}
-                        </div>
-                        <div className="collapse-content">
-                          <pre className="text-xs">
-                              {item.sample}
-                          </pre>
-                        </div>
-                      </div>
+                      <ViewCode
+                        title={item.title}
+                        sample={item.sample}
+                      />
                     </td>
                     <td className="align-text-top">
                       {item.desc}
