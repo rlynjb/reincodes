@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/*"
+  to = "https://reincodes.netlify.app/"
+  status = 200
+
+[[redirects]]
+  from = "/uids/*"
+  to = "https://uids.netlify.app/"
+  status = 200
