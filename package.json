@@ -37,6 +37,7 @@
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "28.1.1",
     "cypress": "^10.7.0",
+    "daisyui": "^4.10.1",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",

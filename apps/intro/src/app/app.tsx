@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
-import { Header } from '@reincodes/ui'
+import { Header, Layout } from '@reincodes/ui'
 
 export function App() {
   const expriences = [
@@ -60,7 +60,7 @@ export function App() {
   ]
 
   return (
-    <div className="bg-primary text-secondary h-screen h-full pb-20">
+    <Layout>
       <Header />
 
       <div className="intro container mx-auto py-8">
@@ -143,7 +143,7 @@ export function App() {
           )) }
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 

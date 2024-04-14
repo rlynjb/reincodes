@@ -2,6 +2,9 @@
   "/intro": {
     "target": "http://localhost:4200/"
   },
+  "/cheatsheets": {
+    "target": "http://localhost:4202/"
+  },
   "/uids": {
     "target": "http://localhost:4201/"
   }

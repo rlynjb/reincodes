@@ -1,0 +1,87 @@
+{
+  "name": "cheatsheets",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cheatsheets/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/cheatsheets",
+        "index": "apps/cheatsheets/src/index.html",
+        "baseHref": "/",
+        "main": "apps/cheatsheets/src/main.tsx",
+        "polyfills": "apps/cheatsheets/src/polyfills.ts",
+        "tsConfig": "apps/cheatsheets/tsconfig.app.json",
+        "assets": [
+          "apps/cheatsheets/src/favicon.ico",
+          "apps/cheatsheets/src/assets"
+        ],
+        "styles": ["apps/cheatsheets/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack",
+        "postcssConfig": "apps/cheatsheets/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/cheatsheets/src/environments/environment.ts",
+              "with": "apps/cheatsheets/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "cheatsheets:build",
+        "hmr": true,
+        "port": 4202,
+        "baseHref": "/cheatsheets/"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "cheatsheets:build:development"
+        },
+        "production": {
+          "buildTarget": "cheatsheets:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cheatsheets/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/cheatsheets"],
+      "options": {
+        "jestConfig": "apps/cheatsheets/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
