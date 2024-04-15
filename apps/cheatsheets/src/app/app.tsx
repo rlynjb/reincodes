@@ -6,7 +6,10 @@ import {
 } from '@reincodes/ui';
 import {
   C3_CLEANING_CODE,
-  C4_POPULAR_COMPOSITION
+  C4_POPULAR_COMPOSITION,
+  C5_WRITING_CODE_FOR_THE_BROWSER,
+  C7_ANTIPATTERNS_TO_BE_AVOIDED,
+  C8_REACT_HOOKS,
 } from '../constants';
 import {
   useState
@@ -18,6 +21,7 @@ import { ViewCode } from './features';
   - implement TS
   - create Table UI component
   - create sidebar navigation UI component
+  - change columns to Problem - Solution
 */
 
 
@@ -33,8 +37,23 @@ export function App() {
     },
     {
       id: 'c4',
-      title: 'Popular Composition Patterns',
+      title: 'Exploring Popular Composition Patterns',
       data: C4_POPULAR_COMPOSITION
+    },
+    {
+      id: 'c5',
+      title: 'Writing Code for the Browser',
+      data: C5_WRITING_CODE_FOR_THE_BROWSER
+    },
+    {
+      id: 'c7',
+      title: 'Anti-Patterns to be Avoided',
+      data: C7_ANTIPATTERNS_TO_BE_AVOIDED
+    },
+    {
+      id: 'c8',
+      title: 'React Hooks',
+      data: C8_REACT_HOOKS
     }
   ]
 
@@ -46,7 +65,10 @@ export function App() {
         <div className="col-span-1">
           <ul>
             {chaptersNav.map((item) =>
-              <li key={item.id}>
+              <li
+                key={item.id}
+                className="mb-4"
+              >
                 <a onClick={() => setSelected(item.data)}>{item.title}</a>
               </li>
             )}
