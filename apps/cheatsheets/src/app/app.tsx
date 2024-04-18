@@ -23,8 +23,7 @@ import {
 
 /*
   TODO:
-  - implement TS
-  - create Table UI component
+  - review code and implement TS
   - create sidebar navigation UI component
 */
 
@@ -73,7 +72,7 @@ export function App() {
             columns={columns}
             rows={selected}
           >
-            {(rows: any) => rows.map((item: any, index: number) =>
+            {(customRows: any) => customRows.map((item: any, index: number) =>
               <tr key={index}>
                 <td className="align-text-top w-96">
                   {item.problem ? item.problem : ''}
