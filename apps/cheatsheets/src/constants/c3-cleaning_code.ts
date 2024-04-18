@@ -1,5 +1,6 @@
 export const C3_CLEANING_CODE = [
   {
+    problem: "default root wrapper for elements",
     title: 'React.Fragment',
     desc: 'New feature that works as a special wrapper for elements. It can be specified as React.Fragment or as an empty tag(<></>).',
     sample: `
@@ -12,6 +13,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how to define spaces in JSX",
     title: 'Spaces',
     desc: 'JSX handles the spaces between text and elements differently from HTML.',
     sample: `
@@ -24,11 +26,13 @@ export const C3_CLEANING_CODE = [
     </div>`
   },
   {
+    problem: "how JSX handles boolean attributes",
     title: 'Boolean attributes',
     desc: 'If you set an attribute without a value, JSX assumes that its value is true, ff. the same behavior as the HTML diabled attribute.',
     sample: ``
   },
   {
+    problem: "what is good practice to pass down attributes to children",
     title: 'Spread attributes',
     desc: 'A common practice that leads to fewer bugs is not to pass entire JS objects down to children by reference, but to use primitive values, which can be easily validated, making components more robust and error-proof.',
     sample: `
@@ -38,6 +42,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "what is good practice for clean JSX code",
     title: 'Multiline',
     desc: 'whenever we have nested elements, we should always go multiline.',
     sample: `
@@ -50,6 +55,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "what is good practice for clean component attributes definition",
     title: 'Multi-properties',
     desc: 'A common solution is to write each attribute on a new line, with one level of indentation, and then align the closing bracket with the opening tag.',
     sample: `
@@ -61,6 +67,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how to do basic if else in JSX",
     title: 'Conditionals #1 - Classic if...else statement',
     desc: 'Classic if...else statement',
     sample: `
@@ -76,6 +83,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how to do a inline if condition in JSX",
     title: 'Conditionals #2 - Inline condition',
     desc: 'Inline condition',
     sample: `
@@ -85,6 +93,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how to do a inline if else condition in JSX",
     title: 'Conditionals #3 - Ternary condition',
     desc: 'It is used in popular repositories, such as Redux real-world examples where ternary is used to show a Loading label if the component is fetching the data or Load More inside a button depending on the value of the isFetching variable.',
     sample: `
@@ -94,6 +103,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "what is a good practice to keep complicated conditions clean in JSX",
     title: 'Conditionals #4 - Helper function',
     desc: 'We can create a helper function inside our component and use it in JSX to verify the condition. This is a good practice to keep the JSX clean and easy to read.',
     sample: `
@@ -117,6 +127,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how to keep computed properties clean in JSX",
     title: 'Conditionals #5 - Helper Function for computed properties',
     desc: 'This is better because it is isolated and can be tested independently.',
     sample: `
@@ -130,6 +141,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how can we make conditionals reusable",
     title: 'Conditionals #6 - RenderIf component',
     desc: 'We can create a custom component and call it RenderIf to render our compoenents conditionally.',
     sample: `
@@ -177,6 +189,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "how can we make our component small, clean, and easy to read",
     title: 'Sub-rendering (Sub-render method)',
     desc: 'We always want to keep our components very small and our render methods very clean and simple. One solution is to split it into smaller functions in a way that lets up keep all the logic in the same component. In Redix real-world exampls, a sub-render method is used to render the load more button.',
     sample: `
@@ -198,6 +211,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "what is the core founcation of React",
     title: 'Functional Programming',
     desc: 'Besides following best practices and using linter to catch errors and enforce consistency, another way to clean up our code is to adopt an FP style. We can write more declarative and less imperative code, maing our components easier to read and reason about.',
     sample: `
@@ -224,6 +238,7 @@ export const C3_CLEANING_CODE = [
     `
   },
   {
+    problem: "We can use this to wrap 3rd party components for presentation logic only.",
     title: 'Purity',
     desc: 'A function is pure when there are no side effects, which means that the function does not change anything that is not local to the function itself. Meanwhile, A function that changes the state of an application/modifies variables defined in the upperscope, or a function that touches external entities (DOM) is considered impure. Impure functions are harder to debug, and mose of the time it is not possible to apply them multiple times and expect to get the same result.',
     sample: `

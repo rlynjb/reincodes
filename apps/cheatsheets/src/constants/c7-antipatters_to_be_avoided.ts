@@ -1,5 +1,6 @@
 export const C7_ANTIPATTERNS_TO_BE_AVOIDED = [
   {
+    problem: "how do we avoid duplicate props pass down to child and state",
     title: "Initializing the state using properties",
     desc: "It's best pracitce to make it explicit and give the property a name that makes you intentions clear, such as initialCount.",
     sample: `

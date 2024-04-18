@@ -1,8 +1,9 @@
 {
   "recommendations": [
-    "nrwl.angular-console",
+    "nrwl.angular-console", // Nx Console
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "GitHub.copilot" // Github Copilot
   ]
 }

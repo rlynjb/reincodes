@@ -42,11 +42,37 @@ export const C5_WRITING_CODE_FOR_THE_BROWSER = [
     `
   },
   {
+    problem: "how to define events in JSX and how to pass down events to child components",
     title: "Handling events",
     desc: "",
     sample: `
     return (
+      // to define event
       <button onClick={handleClick}>Click me</button>
+
+      // to pass down event to child
+      <ChildComponent onClick={handleClick} />
+
+      // ChildComponent.tsx
+      import { ReactNode, FC } from "react";
+
+      interface Props {
+        children?: ReactNode,
+        onClick?: () => void,
+      }
+
+      export const Button: FC<Props> = ({children, onClick}) => {
+        return (
+          <button
+            className="btn rounded-none w-full"
+            onClick={onClick}
+          >
+            {children}
+          </button>
+        )
+      }
+
+      export default Button;
     )
     `
   },
@@ -77,6 +103,7 @@ export const C5_WRITING_CODE_FOR_THE_BROWSER = [
     `
   },
   {
+    problem: "how do we access a child component's DOM element (ref) from the parent component",
     title: "Understanding forwardRef",
     desc: "react.forwardRef is a HOC that allows you to pass a ref down to a child component. This is useful when you need to access the child component's DOM elements of instance from the parent component.",
     sample: `
@@ -138,6 +165,7 @@ export const C5_WRITING_CODE_FOR_THE_BROWSER = [
     `
   },
   {
+    problem: "what is the proper way to create icon components",
     title: "Exploring SVG",
     desc: "A common way to create SVG in a web app with React is to wrap our vectors into a React component and use that props to define their dynamic values.",
     sample: `

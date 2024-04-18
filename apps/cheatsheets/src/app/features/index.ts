@@ -1,1 +1,1 @@
-export * from './ViewCode';
+export * from './ViewNote';

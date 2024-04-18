@@ -1,4 +1,4 @@
-export function ViewCode({title, sample}: {title: string, sample: string}) {
+export function ViewNote({title, sample, desc}: {title: string, sample: string, desc: string}) {
   return (
     <div className="collapse bg-base-200 rounded-none">
       <input type="checkbox" className="min-h-fit"/>
@@ -6,6 +6,9 @@ export function ViewCode({title, sample}: {title: string, sample: string}) {
         {title}
       </div>
       <div className="collapse-content">
+        <p className="text-xs">
+          {desc}
+        </p>
         <pre className="text-xs">
           {sample}
         </pre>
@@ -14,4 +17,4 @@ export function ViewCode({title, sample}: {title: string, sample: string}) {
   )
 }
 
-export default ViewCode;
+export default ViewNote;
