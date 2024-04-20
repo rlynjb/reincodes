@@ -11,6 +11,8 @@ import {
   C7_ANTIPATTERNS_TO_BE_AVOIDED,
   C8_REACT_HOOKS,
   C9_REACT_ROUTER,
+  C10_REACT_18_NEW_FEATURES,
+  C11_MANAGING_DATA,
 } from '../constants';
 import {
   useState
@@ -20,6 +22,9 @@ import {
   Button,
   Table,
 } from "./ui"
+import {
+  LanguageSelector
+} from "./utils"
 
 /*
   TODO:
@@ -27,6 +32,12 @@ import {
   - create sidebar navigation UI component
 */
 
+interface Note {
+  problem: string
+  title: string
+  desc?: string
+  sample?: string
+}
 
 export function App() {
   const initialSelected = C3_CLEANING_CODE
@@ -43,13 +54,19 @@ export function App() {
     { id: 'c7', title: 'Anti-Patterns to be Avoided', data: C7_ANTIPATTERNS_TO_BE_AVOIDED },
     { id: 'c8', title: 'React Hooks', data: C8_REACT_HOOKS },
     { id: 'c9', title: 'React Router', data: C9_REACT_ROUTER },
+    { id: 'c10', title: 'React 18 New Features', data: C10_REACT_18_NEW_FEATURES},
+    { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA}
   ]
 
   return (
     <Layout>
       <Header />
 
-      <div className="container mx-auto mt-6 grid grid-cols-6 gap-4">
+      <div className="container mx-auto mt-12 grid grid-cols-6 gap-4">
+        <div className="col-span-6">
+          <LanguageSelector />
+        </div>
+
         <div className="col-span-1 pt-14">
           <ul>
             {chaptersNav.map((item) =>
