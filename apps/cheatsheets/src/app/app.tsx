@@ -25,7 +25,7 @@ import {
 import {
   I18nLangSelect,
   useI18nTranslate,
-} from "./utils"
+} from "./utils/i18n"
 
 /*
   TODO:
@@ -59,7 +59,7 @@ export function App() {
     { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA}
   ]
 
-  const translate = useI18nTranslate() as any
+  const translate = useI18nTranslate()
 
   return (
     <Layout>

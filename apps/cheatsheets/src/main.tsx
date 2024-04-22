@@ -5,7 +5,7 @@ import App from './app/app';
 
 import {
   I18nProvider
-} from './app/utils';
+} from './app/utils/i18n';
 
 const i18nInit = {
   en: {

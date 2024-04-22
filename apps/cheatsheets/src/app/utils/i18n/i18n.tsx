@@ -1,6 +1,8 @@
 import {
-  FC, createContext, useState,
-  useEffect, ReactElement, useCallback,
+  FC,
+  createContext,
+  useState,
+  useCallback,
   useContext
 } from "react";
 
@@ -61,7 +63,7 @@ export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, resour
 // CREATE custom component to allow user to interact with context
 export const I18nLangSelect = () => {
   // get context we'll need
-  const { resources, initialLocale, locale, setLocale } = useContext(I18nContext);
+  const { resources, locale, setLocale } = useContext(I18nContext);
 
   // wrapping event with useCallback to memoize function.
   // this is for performance optimization
