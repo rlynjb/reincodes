@@ -3,11 +3,33 @@ import * as ReactDOM from 'react-dom/client';
 
 import App from './app/app';
 
+import {
+  I18nProvider
+} from './app/utils';
+
+const i18nInit = {
+  en: {
+    "langSelectLabel": "English",
+    "greeting": "Hello, world!",
+    "changeLanguage": "Change language"
+  },
+  es: {
+    "langSelectLabel": "Spanish",
+    "greeting": "¡Hola, mundo!",
+    "changeLanguage": "Cambiar idioma"
+  }
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <StrictMode>
-    <App />
+    <I18nProvider
+      initialLocale="en"
+      resources={i18nInit}
+    >
+      <App />
+    </I18nProvider>
   </StrictMode>
 );

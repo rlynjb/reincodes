@@ -23,7 +23,8 @@ import {
   Table,
 } from "./ui"
 import {
-  LanguageSelector
+  I18nLangSelect,
+  useI18nTranslate,
 } from "./utils"
 
 /*
@@ -58,13 +59,16 @@ export function App() {
     { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA}
   ]
 
+  const translate = useI18nTranslate() as any
+
   return (
     <Layout>
       <Header />
 
       <div className="container mx-auto mt-12 grid grid-cols-6 gap-4">
         <div className="col-span-6">
-          <LanguageSelector />
+          <I18nLangSelect />
+          {translate('greeting')}
         </div>
 
         <div className="col-span-1 pt-14">
