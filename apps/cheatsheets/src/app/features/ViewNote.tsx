@@ -1,6 +1,13 @@
 import parse from 'html-react-parser';
+import { FC } from 'react';
 
-export function ViewNote({title, sample = ``, desc = ''}: {title: string, sample?: string, desc?: string}) {
+interface Props {
+  title: string
+  sample?: string
+  desc?: string
+}
+
+export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}) => {
   return (
     <div className="collapse bg-base-200 rounded-none">
       <input type="checkbox" className="min-h-fit"/>
