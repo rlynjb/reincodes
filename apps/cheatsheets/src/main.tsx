@@ -27,7 +27,7 @@ root.render(
   <StrictMode>
     <I18nProvider
       initialLocale="en"
-      resources={i18nInit}
+      translations={i18nInit}
     >
       <App />
     </I18nProvider>

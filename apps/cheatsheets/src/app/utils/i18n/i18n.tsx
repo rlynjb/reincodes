@@ -1,3 +1,53 @@
+/**
+ * USAGE:
+ * Wrap the root component with I18nProvider and pass in the initialLocale and translations.
+ *
+ * import { I18nProvider } from './app/utils/i18n';
+ *
+ * const i18nInit = {
+ *  en: {
+ *    "langSelectLabel": "English",
+ *    "greeting": "Hello, world!",
+ *    "changeLanguage": "Change language"
+ *  },
+ *  es: {
+ *    "langSelectLabel": "Spanish",
+ *    "greeting": "¡Hola, mundo!",
+ *    "changeLanguage": "Cambiar idioma"
+ *  }
+ * }
+ *
+ * <I18nProvider
+ *  initialLocale="en"
+ *  translations={i18nInit}
+ * >
+ *  <App />
+ * </I18nProvider>
+ *
+ * ------
+ *
+ * Use I18nLangSelect component to provide a dropdown to change language.
+ *
+ * import { I18nLangSelect } from "./utils/i18n"
+ *
+ * <I18nLangSelect />
+ *
+ * ------
+ *
+ * Use useI18nTranslate hook to translate text.
+ * Pass in key define in the translations object.
+ *
+ * {translate('greeting')}
+ *
+ * ------
+ *
+ * NOTE:
+ * Create plugin in React
+ * ref: https://stackoverflow.com/questions/72562934/creating-plugins-in-react
+ * How to handle multiple Context
+ * ref: https://stackoverflow.com/questions/53346462/react-multiple-contexts
+ */
+
 import {
   FC,
   createContext,
@@ -6,41 +56,32 @@ import {
   useContext
 } from "react";
 
-/*
-  NOTE:
-  - Create plugin in React
-  ref: https://stackoverflow.com/questions/72562934/creating-plugins-in-react
-  - How to handle multiple Context
-  ref: https://stackoverflow.com/questions/53346462/react-multiple-contexts
-*/
-
-// within our team, what are our do's and don'ts when building plugins
 
 interface i18nProvider {
   children?: any
   initialLocale: string
-  resources: object
+  translations: object
 }
 
 interface i18nContext {
   locale: string
   setLocale: any
   initialLocale: string
-  resources: object
+  translations: object
 }
 
 
-// CREATE context
+// Define Context
 export const I18nContext = createContext<i18nContext>({
   locale: '',
   setLocale: null,
   initialLocale: '',
-  resources: {},
+  translations: {},
 });
 
 
-// CREATE provider
-export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, resources }) => {
+// Create Provider to wrap around the root component
+export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, translations }) => {
   // state
   const [locale, setLocale] = useState(initialLocale);
 
@@ -49,7 +90,7 @@ export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, resour
     locale,
     setLocale,
     initialLocale,
-    resources,
+    translations,
   }
 
   return (
@@ -60,10 +101,10 @@ export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, resour
 }
 
 
-// CREATE custom component to allow user to interact with context
+// Provide Custom Component to allow user to interact with context
 export const I18nLangSelect = () => {
   // get context we'll need
-  const { resources, locale, setLocale } = useContext(I18nContext);
+  const { translations, locale, setLocale } = useContext(I18nContext);
 
   // wrapping event with useCallback to memoize function.
   // this is for performance optimization
@@ -78,7 +119,7 @@ export const I18nLangSelect = () => {
         value={locale}
         onChange={changeLanguage}
       >
-        {Object.entries(resources).map(([key, dict]) => (
+        {Object.entries(translations).map(([key, dict]) => (
           <option key={key} value={key}>
             {dict.langSelectLabel}
           </option>
@@ -89,11 +130,11 @@ export const I18nLangSelect = () => {
 }
 
 
-// CREATE custom hook to simplify working with data
+// Provide Custom Hook to simplify working with data
 export const useI18nTranslate = () => {
-  const { resources, locale } = useContext(I18nContext)
+  const { translations, locale } = useContext(I18nContext)
 
   return (key: any) => {
-    return resources[locale as keyof typeof resources][key]
+    return translations[locale as keyof typeof translations][key]
   }
 }
