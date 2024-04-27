@@ -1,5 +1,4 @@
 [build]
-  base = "/"
   package = "apps/intro"
   publish = "dist/apps/intro"
   command = "npm run build:all"
@@ -8,16 +7,13 @@
   from = "/*"
   to = "https://reincodes.netlify.app/"
   status = 200
-  force = false
 
 [[redirects]]
   from = "/uids/*"
   to = "https://uids.netlify.app/"
   status = 200
-  force = false
 
 [[redirects]]
   from = "/cheatsheets/*"
   to = "https://reinotes.netlify.app/"
   status = 200
-  force = false
