@@ -1,7 +1,7 @@
 [build]
   base = "/"
-  package = "apps/uids"
-  publish = "dist/apps/uids"
+  package = "apps/cheatsheets"
+  publish = "dist/apps/cheatsheets"
   command = "npm run build:all"
 
 [[redirects]]
