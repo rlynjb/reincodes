@@ -12,7 +12,7 @@ export function App() {
       <Header />
 
       <div className="intro container mx-auto py-8">
-        <h1 className="text-yellow">hello, i'm rein.</h1>
+        <h1 className="text-yellow text-5xl">hello, i'm rein.</h1>
 
         <p className="my-6">
           I’m a software engineer specializing in front-end with an objective of lead. I have about 6+ years professional experience with common front-end technologies such as: JavaScript/ES6, HTML/CSS, Vue, Node. And have worked within a software development team, using JIRA, daily stand ups, and weekly meetings.
