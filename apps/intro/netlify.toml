@@ -4,6 +4,6 @@
   status = 200
 
 [[redirects]]
-  from = "/uids/*"
+  from = "/uids"
   to = "https://uids.netlify.app/:splat"
   status = 200
