@@ -46,19 +46,24 @@
  * ref: https://stackoverflow.com/questions/72562934/creating-plugins-in-react
  * How to handle multiple Context
  * ref: https://stackoverflow.com/questions/53346462/react-multiple-contexts
+ * Using React Context in Nextjs Server Side Rendering
+ * ref: https://dev.to/codingbrowny/using-context-providers-in-nextjs-server-components-2gk4
  */
+
+"use client";
 
 import {
   FC,
   createContext,
   useState,
   useCallback,
-  useContext
+  useContext,
+  ReactNode
 } from "react";
 
 
 interface i18nProvider {
-  children?: any
+  children?: ReactNode
   initialLocale: string
   translations: object
 }
@@ -71,7 +76,9 @@ interface i18nContext {
 }
 
 
-// Define Context
+/**
+ * Define Context
+ */
 export const I18nContext = createContext<i18nContext>({
   locale: '',
   setLocale: null,
@@ -80,7 +87,9 @@ export const I18nContext = createContext<i18nContext>({
 });
 
 
-// Create Provider to wrap around the root component
+/**
+ * Create Provider to wrap around the root component
+ */
 export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, translations }) => {
   // state
   const [locale, setLocale] = useState(initialLocale);
@@ -101,7 +110,9 @@ export const I18nProvider: FC<i18nProvider> = ({ children, initialLocale, transl
 }
 
 
-// Provide Custom Component to allow user to interact with context
+/**
+ * Provide Custom Component to allow user to interact with context
+ */
 export const I18nLangSelect = () => {
   // get context we'll need
   const { translations, locale, setLocale } = useContext(I18nContext);
@@ -130,7 +141,12 @@ export const I18nLangSelect = () => {
 }
 
 
-// Provide Custom Hook to simplify working with data
+/**
+ * Provide Custom Hook to simplify working with data
+ *
+ * TODO:
+ * Transfer this to it a .ts file
+ */
 export const useI18nTranslate = () => {
   const { translations, locale } = useContext(I18nContext)
 
