@@ -13,9 +13,9 @@ export function Header(props: HeaderProps) {
           <p className='inline-block'>my portfolio and codebook</p>
         </div>
         <div className='text-right'>
-          <a className="inline-block py-2 px-4" href="/">Intro</a>
-          <a className="inline-block py-2 px-4" href="/cheatsheets/">Cheatsheets</a>
-          <a className="inline-block py-2 px-4" href="/uids/">UIDS</a>
+          <a className="inline-block py-2 px-4" href="https://reincodes.netlify.app/">Intro</a>
+          <a className="inline-block py-2 px-4" href="https://reinotes.netlify.app/">Cheatsheets</a>
+          <a className="inline-block py-2 px-4" href="https://uids.netlify.app/">UIDS</a>
         </div>
       </header>
     </div>
