@@ -1,64 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 import { Header, Layout } from '@reincodes/ui'
+import {
+  experiences,
+  projects,
+} from '../constants';
 
 export function App() {
-  const expriences = [
-    {
-      company: 'Switch',
-      date: 'August 2017 - Present // Las Vegas, NV',
-      desc: [
-        'Knowledge of development and deployment pipeline.',
-        'Knowledge of development history of existing applications.',
-        'Collaborate with back-end developers.',
-        'Implement back-end APIs in front-end apps.',
-        'Communicate with managers for project requirements.',
-        'Trained new hires',
-        'Reversed engineer and documented existing applications using knowledge of UML System Design.',
-        'Projects I took ownership (See resume for full description..)'
-      ]
-    },
-    {
-      company: 'JS Products',
-      date: 'June 2016 - August 2017 // Las Vegas, NV',
-      desc: [
-        'Developed impressive public facing websites using Grav, Laravel, Zurb Foundation.',
-        'Collaborated with stakeholders for updates and changes of their websites.',
-        'Collaborated with UI/UX Designers using InVision.',
-        'Helped the company keep up to date with current web technology.',
-        'Developed a theme starter kit that is customed to company’s design guideline.',
-        'Developed a “Personlized your Ratchet Set” web app for Kobalttools.com using JavaScript.'
-      ]
-    }
-  ]
-
-  const projects = [
-    {
-      title: 'Portfolio Microfrontend',
-      desc: 'Microfrontend architecture, NX, React, TailwindCSS, Netlify',
-      link: 'https://reincodes.netlify.app/',
-      thumb: '../assets/portfolio.png'
-    },
-    {
-      title: 'UI Design System',
-      desc: 'Vue3, TailwindCSS, DaisyUI, Github Pages',
-      link: 'https://rlynjb.github.io/uidesign/',
-      thumb: '../assets/ui_system_design.png'
-    },
-    {
-      title: 'SpaceX Seat Reservation',
-      desc: 'React, Apollo GraphQL, Netlify Functions, MongoDB',
-      link: 'https://spacex-reserve-seat.netlify.app/',
-      thumb: '../assets/spacex.png'
-    },
-    {
-      title: 'Persopo - Public Record Search',
-      desc: 'Ember.js, Golang',
-      link: 'https://persopo.com/',
-      thumb: '../assets/persopo.png'
-    }
-  ]
-
   return (
     <Layout>
       <Header />
@@ -87,7 +35,7 @@ export function App() {
       <div className='experiences container mx-auto py-8'>
         <h5 className="text-yellow">Here's some of my exprience..</h5>
 
-        { expriences.map((exp, index) => (
+        { experiences.map((exp, index) => (
           <div key={index} className='my-6'>
             <h6 className="text-slate">{exp.company}</h6>
             <b>{exp.date}</b>
