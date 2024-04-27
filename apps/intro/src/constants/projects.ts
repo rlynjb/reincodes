@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Cheatsheets',
     desc: 'Note taking app built with React, TailwindCSS, and DaisyUI deployed on Netlify under Monorepo architecture',
-    link: 'https://cheatsheets.netlify.app/',
+    link: 'https://reinotes.netlify.app/',
     thumb: '../assets/portfolio.png'
   },
   {
