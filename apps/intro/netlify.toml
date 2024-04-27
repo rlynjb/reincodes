@@ -1,9 +1,9 @@
 [[redirects]]
   from = "/*"
-  to = "https://reincodes.netlify.app/"
+  to = "https://reincodes.netlify.app/:splat"
   status = 200
 
 [[redirects]]
   from = "/uids/*"
-  to = "https://uids.netlify.app/"
+  to = "https://uids.netlify.app/:splat"
   status = 200
