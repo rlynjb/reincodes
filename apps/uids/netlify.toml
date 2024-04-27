@@ -1,5 +1,4 @@
 [build]
-  base = "apps/uids"
   package = "apps/uids"
   publish = "dist/apps/uids"
   command = "npm run build:all"

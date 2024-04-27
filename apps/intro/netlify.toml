@@ -1,5 +1,4 @@
 [build]
-  base = "apps/intro"
   package = "apps/intro"
   publish = "dist/apps/intro"
   command = "npm run build:all"

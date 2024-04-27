@@ -1,5 +1,4 @@
 [build]
-  base = "apps/cheatsheets"
   package = "apps/cheatsheets"
   publish = "dist/apps/cheatsheets"
   command = "npm run build:all"
