@@ -13,6 +13,7 @@ import {
   C9_REACT_ROUTER,
   C10_REACT_18_NEW_FEATURES,
   C11_MANAGING_DATA,
+  C12_SERVER_SIDE_RENDERING,
 } from '../constants';
 import {
   useState
@@ -56,7 +57,8 @@ export function App() {
     { id: 'c8', title: 'React Hooks', data: C8_REACT_HOOKS },
     { id: 'c9', title: 'React Router', data: C9_REACT_ROUTER },
     { id: 'c10', title: 'React 18 New Features', data: C10_REACT_18_NEW_FEATURES},
-    { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA}
+    { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA},
+    { id: 'c12', title: 'Server-side Rendering', data: C12_SERVER_SIDE_RENDERING }
   ]
 
   const translate = useI18nTranslate()
