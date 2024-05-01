@@ -11,12 +11,16 @@ const i18nInit = {
   en: {
     "langSelectLabel": "English",
     "greeting": "Hello, world!",
-    "changeLanguage": "Change language"
+    "changeLanguage": "Change language",
+    "howtoField": "How To",
+    "solutionLabel": "Solution"
   },
   es: {
     "langSelectLabel": "Spanish",
     "greeting": "¡Hola, mundo!",
-    "changeLanguage": "Cambiar idioma"
+    "changeLanguage": "Cambiar idioma",
+    "howtoField": "Cómo",
+    "solutionLabel": "Solución"
   }
 }
 

@@ -42,62 +42,70 @@ interface Note {
 }
 
 export function App() {
+  const translate = useI18nTranslate()
   const initialSelected = C3_CLEANING_CODE
   const [selected, setSelected] = useState(initialSelected)
+
   const columns = [
-    { name: "How to", field: "problem" },
-    { name: "Solution", field: "title" }
+    { name: `${translate('howtoField')}`, field: "problem" },
+    { name: `${translate('solutionLabel')}`, field: "title" }
   ]
 
-  const chaptersNav = [
-    { id: 'c3', title: 'Cleaning up code', data: C3_CLEANING_CODE },
-    { id: 'c4', title: 'Exploring Popular Composition Patterns', data: C4_POPULAR_COMPOSITION },
-    { id: 'c5', title: 'Writing Code for the Browser', data: C5_WRITING_CODE_FOR_THE_BROWSER },
-    { id: 'c7', title: 'Anti-Patterns to be Avoided', data: C7_ANTIPATTERNS_TO_BE_AVOIDED },
-    { id: 'c8', title: 'React Hooks', data: C8_REACT_HOOKS },
-    { id: 'c9', title: 'React Router', data: C9_REACT_ROUTER },
-    { id: 'c10', title: 'React 18 New Features', data: C10_REACT_18_NEW_FEATURES},
-    { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA},
-    { id: 'c12', title: 'Server-side Rendering', data: C12_SERVER_SIDE_RENDERING }
-  ]
-
-  const translate = useI18nTranslate()
+  const notesNav = {
+    "React.js": [
+      { id: 'c3', title: 'Cleaning up code', data: C3_CLEANING_CODE },
+      { id: 'c4', title: 'Exploring Popular Composition Patterns', data: C4_POPULAR_COMPOSITION },
+      { id: 'c5', title: 'Writing Code for the Browser', data: C5_WRITING_CODE_FOR_THE_BROWSER },
+      { id: 'c7', title: 'Anti-Patterns to be Avoided', data: C7_ANTIPATTERNS_TO_BE_AVOIDED },
+      { id: 'c8', title: 'React Hooks', data: C8_REACT_HOOKS },
+      { id: 'c9', title: 'React Router', data: C9_REACT_ROUTER },
+      { id: 'c10', title: 'React 18 New Features', data: C10_REACT_18_NEW_FEATURES},
+      { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA},
+      { id: 'c12', title: 'Server-side Rendering', data: C12_SERVER_SIDE_RENDERING }
+    ],
+    "DSA": []
+  }
 
   return (
     <Layout>
       <Header />
 
-      <div className="container mx-auto mt-12 grid grid-cols-6 gap-4">
-        <div className="col-span-6">
+      <div className="container mx-auto mt-12 grid grid-cols-12 gap-4">
+        <div className="col-span-12 text-right">
           <I18nLangSelect />
-          {translate('greeting')}
         </div>
 
-        <div className="col-span-1 pt-14">
-          <ul>
-            {chaptersNav.map((item) =>
-              <li
-                key={item.id}
-                className="mb-4"
-              >
-                <Button
-                  onClick={() => setSelected(item.data)}
-                >
-                  {item.title}
-                </Button>
+        <div className="col-span-3">
+          {/** TODO: convert to Menu component */}
+          <ul className="menu menu-sm bg-base-200">
+            { Object.keys(notesNav).map((key: string) =>
+              <li key={key}>
+                <h2 className="menu-title">{key}</h2>
+                <ul className="menu menu-sm bg-base-200">
+                  {notesNav[key as keyof typeof notesNav].map((chapter: any) =>
+                    <li key={chapter.id}>
+                      <a
+                        className="rounded-none"
+                        onClick={() => setSelected(chapter.data)}
+                      >
+                        {chapter.title}
+                      </a>
+                    </li>
+                  )}
+                </ul>
               </li>
             )}
           </ul>
         </div>
 
-        <div className="col-span-5">
+        <div className="col-span-9">
           <Table
             columns={columns}
             rows={selected}
           >
             {(customRows: any) => customRows.map((item: any, index: number) =>
               <tr key={index}>
-                <td className="align-text-top w-96">
+                <td className="align-text-top min-w-96">
                   {item.problem ? item.problem : ''}
                 </td>
                 <td className="align-text-top">

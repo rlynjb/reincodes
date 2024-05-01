@@ -126,7 +126,7 @@ export const I18nLangSelect = () => {
   return (
     <>
       <select
-        className="select w-full max-w-xs mr-6 rounded-none"
+        className="select max-w-xs rounded-none"
         value={locale}
         onChange={changeLanguage}
       >
