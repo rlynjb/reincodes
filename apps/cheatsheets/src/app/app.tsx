@@ -52,7 +52,7 @@ export function App() {
   ]
 
   const notesNav = {
-    "React.js": [
+    "React 18 Design Patterns and Best Practices": [
       { id: 'c3', title: 'Cleaning up code', data: C3_CLEANING_CODE },
       { id: 'c4', title: 'Exploring Popular Composition Patterns', data: C4_POPULAR_COMPOSITION },
       { id: 'c5', title: 'Writing Code for the Browser', data: C5_WRITING_CODE_FOR_THE_BROWSER },
@@ -63,7 +63,7 @@ export function App() {
       { id: 'c11', title: 'Managing Data', data: C11_MANAGING_DATA},
       { id: 'c12', title: 'Server-side Rendering', data: C12_SERVER_SIDE_RENDERING }
     ],
-    "DSA": []
+    "A Common-Sense Guide to Data Structures and Algorithms": []
   }
 
   return (

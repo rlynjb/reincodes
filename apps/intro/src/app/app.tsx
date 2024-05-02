@@ -77,8 +77,8 @@ export function App() {
         <div className="mt-6 grid grid-cols-3 gap-6">
           { projects.map((project, index) => (
             <div key={index}>
-              <img className="max-h-64" src={project.thumb} />
-              <h6 className="text-slate mb-2">{project.title}</h6>
+              <img className="h-64" src={project.thumb} />
+              <h6 className="text-slate my-2">{project.title}</h6>
               <p className="text-xs">{project.desc}</p>
               <a
                 href={project.link}
