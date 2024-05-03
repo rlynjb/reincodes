@@ -27,6 +27,9 @@ import {
  *
  * backlog:
  * - add ability to bookmark a note or just a important reminder feature
+ * - add theme switcher with option of light and dark mode
+ * - ex. https://cheatsheets.netlify.app/sheet/react/
+ * - add ability to sort nav items by book or chapter
  */
 
 
@@ -54,6 +57,7 @@ export function App() {
         <div className="col-span-3">
           <MenuWithTitle
             navItems={notesNav}
+            initialItem={initialSelected}
             selectedItem={(item: any) => setSelected(item)}
           />
         </div>

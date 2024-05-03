@@ -1,5 +1,6 @@
 import {
   FC,
+  useState,
 } from "react";
 
 
@@ -21,10 +22,12 @@ export interface INavItemsValue {
 
 export const MenuWithTitle: FC<Props> = ({navItems, initialItem, selectedItem}) => {
   const initialSelected = initialItem
+  const [private_selected, set_private_selected] = useState(initialSelected) as any
 
   const subMenu = (navItems: any, key: string) => {
     const handleClick = (item: any) => {
       selectedItem(item)
+      set_private_selected(item)
     }
 
     return (
@@ -32,8 +35,9 @@ export const MenuWithTitle: FC<Props> = ({navItems, initialItem, selectedItem}) 
         <ul className="menu menu-sm bg-base-200">
           {navItems[key as keyof typeof navItems].map((navItem: any) =>
             <li key={navItem.id}>
+              {/* TODO: check if we can make this condition cleaner. check previous notes */}
               <a
-                className="rounded-none"
+                className={'rounded-none ' + (private_selected && private_selected.id === navItem.id && 'active')}
                 onClick={() => handleClick(navItem)}
               >
                 {navItem.title}
