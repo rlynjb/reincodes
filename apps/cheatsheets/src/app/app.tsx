@@ -23,7 +23,8 @@ import {
 /**
  * TODO:
  * - implement router or ability to remember which item was selected for certain time period
- * - implement breadcrumb or highlight selected item or add simple title at the top
+ * -- so when browser is refreshed, it will remember the selected item
+ * - add simple note/desc to the top of page
  *
  * backlog:
  * - add ability to bookmark a note or just a important reminder feature
