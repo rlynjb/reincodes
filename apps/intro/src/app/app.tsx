@@ -5,6 +5,7 @@ import {
   experiences,
   projects,
 } from '../constants';
+import parse from 'html-react-parser';
 
 export function App() {
   return (
@@ -79,11 +80,13 @@ export function App() {
             <div key={index}>
               <img className="h-64" src={project.thumb} />
               <h6 className="text-slate my-2">{project.title}</h6>
-              <p className="text-xs">{project.desc}</p>
+              <p className="text-xs">
+                {parse(project.desc)}
+              </p>
               <a
                 href={project.link}
                 target="_blank"
-                className="text-yellow"
+                className="text-yellow mt-4"
               >
                 Visit
               </a>
