@@ -25,12 +25,19 @@ import {
  * - implement router or ability to remember which item was selected for certain time period
  * -- so when browser is refreshed, it will remember the selected item
  * - add simple note/desc to the top of page
+ * - add ability to search notes
+ * - add ability to filter notes by book or chapter
+ * - add ability to add new notes
+ * - add ability to edit notes
+ * - add ability to delete notes
+ * - add ability to share notes
  *
  * backlog:
  * - add ability to bookmark a note or just a important reminder feature
  * - add theme switcher with option of light and dark mode
  * - ex. https://cheatsheets.netlify.app/sheet/react/
  * - add ability to sort nav items by book or chapter
+ * - improve UI table note section
  */
 
 

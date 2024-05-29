@@ -45,6 +45,16 @@ export const C12_SERVER_SIDE_RENDERING = [
     - https://www.reddit.com/r/nextjs/comments/18frfs7/how_do_you_manage_dependency_injection_in_nextjs/
     `,
     sample: ``
+  },
+  {
+    problem: "How do we render Client Conponents on full page load including interactivity not just HTML UI",
+    title: "new React 18 feature called hydrateRoot",
+    desc: `
+    see: https://nextjs.org/docs/app/building-your-application/rendering/client-components#full-page-load
+    <br>
+    for explanation
+    `,
+    sample: ``
   }
 ];
 

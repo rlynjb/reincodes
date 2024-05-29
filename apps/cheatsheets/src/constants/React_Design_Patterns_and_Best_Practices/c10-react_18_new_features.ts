@@ -98,9 +98,13 @@ export const C10_REACT_18_NEW_FEATURES = [
     sample: ``
   },
   {
-    problem: "",
+    problem: "How do we render a fully functional Client Conponents on initial page load in SSR?",
     title: "hydrateRoot",
-    desc: ``,
+    desc: `
+    a new feature that works in conjunction with createRoot. <br>
+    in SSR, react can render the initial HTML on the server and send it to the client, which can then "hydrate" <br>
+    the HTML into a fully functional React app.
+    `,
     sample: ``
   },
   {

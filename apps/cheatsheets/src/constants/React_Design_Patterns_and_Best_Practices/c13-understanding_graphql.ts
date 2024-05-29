@@ -1,0 +1,3 @@
+export const C13_UNDERSTANDING_GRAPHQL = []
+
+export default C13_UNDERSTANDING_GRAPHQL
