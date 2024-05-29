@@ -150,7 +150,7 @@ export const I18nLangSelect = () => {
 export const useI18nTranslate = () => {
   const { translations, locale } = useContext(I18nContext)
 
-  return (key: any) => {
+  return (key: string) => {
     return translations[locale as keyof typeof translations][key]
   }
 }
