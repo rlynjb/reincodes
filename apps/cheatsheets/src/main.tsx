@@ -9,6 +9,7 @@ import {
 
 import App from './app/app';
 import ErrorPage from './app/pages/error-page';
+import AboutPage from './app/pages/about-page';
 
 import {
   I18nProvider
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/cheatsheets",
     element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/cheatsheets/about",
+    element: <AboutPage />,
     errorElement: <ErrorPage />,
   },
 ]);
