@@ -1,28 +1,29 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 import App from './app/app';
+import ErrorPage from './app/pages/error-page';
 
 import {
   I18nProvider
 } from './app/utils/i18n';
+import { translations } from './constants/translations';
 
-const i18nInit = {
-  en: {
-    "langSelectLabel": "English",
-    "greeting": "Hello, world!",
-    "changeLanguage": "Change language",
-    "howtoField": "How To",
-    "solutionLabel": "Solution"
+
+const router = createBrowserRouter([
+  {
+    path: "/cheatsheets",
+    element: <App />,
+    errorElement: <ErrorPage />,
   },
-  es: {
-    "langSelectLabel": "Spanish",
-    "greeting": "¡Hola, mundo!",
-    "changeLanguage": "Cambiar idioma",
-    "howtoField": "Cómo",
-    "solutionLabel": "Solución"
-  }
-}
+]);
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -31,9 +32,9 @@ root.render(
   <StrictMode>
     <I18nProvider
       initialLocale="en"
-      translations={i18nInit}
+      translations={translations}
     >
-      <App />
+      <RouterProvider router={router} />
     </I18nProvider>
   </StrictMode>
 );
