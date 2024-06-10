@@ -1,3 +1,7 @@
+import {
+  Link,
+} from "react-router-dom";
+
 export default function AboutPage() {
   return (
     <div id="about-page"
@@ -9,6 +13,9 @@ export default function AboutPage() {
         <p>
           <i>Version 1.0.0</i>
         </p>
+        <Link to="/cheatsheets" className="text-white underline">
+          Home
+        </Link>
       </div>
     </div>
   )

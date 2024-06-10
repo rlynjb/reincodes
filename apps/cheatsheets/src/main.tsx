@@ -3,8 +3,6 @@ import * as ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 
 import App from './app/app';
@@ -15,6 +13,10 @@ import {
   I18nProvider
 } from './app/utils/i18n';
 import { translations } from './constants/translations';
+
+import {
+  BreadcrumbProvider
+} from './app/utils/breadcrumb';
 
 
 const router = createBrowserRouter([
@@ -36,11 +38,15 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <I18nProvider
-      initialLocale="en"
-      translations={translations}
+    <BreadcrumbProvider
+      items={[ { label: 'hello' } ]}
     >
-      <RouterProvider router={router} />
-    </I18nProvider>
+      <I18nProvider
+        initialLocale="en"
+        translations={translations}
+      >
+        <RouterProvider router={router} />
+      </I18nProvider>
+    </BreadcrumbProvider>
   </StrictMode>
 );
