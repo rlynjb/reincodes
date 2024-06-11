@@ -17,6 +17,7 @@ import { ViewNote } from './features';
 import {
   MenuWithTitle,
   Table,
+  Breadcrumbs,
 } from "./ui"
 import {
   I18nLangSelect,
@@ -61,6 +62,9 @@ export function App() {
       <Header />
 
       <div className="container mx-auto mt-12 grid grid-cols-12 gap-4">
+        <div className="col-span-12">
+          <Breadcrumbs />
+        </div>
         <div className="col-span-1">
           <Link to="/cheatsheets/about" className="text-white underline">
             About
