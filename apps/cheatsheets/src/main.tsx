@@ -14,10 +14,6 @@ import {
 } from './app/utils/i18n';
 import { translations } from './constants/translations';
 
-import {
-  BreadcrumbProvider
-} from './app/utils/breadcrumb';
-
 
 const router = createBrowserRouter([
   {
@@ -38,15 +34,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <BreadcrumbProvider
-      items={[ { label: 'hello' } ]}
+    <I18nProvider
+      initialLocale="en"
+      translations={translations}
     >
-      <I18nProvider
-        initialLocale="en"
-        translations={translations}
-      >
-        <RouterProvider router={router} />
-      </I18nProvider>
-    </BreadcrumbProvider>
+      <RouterProvider router={router} />
+    </I18nProvider>
   </StrictMode>
 );
