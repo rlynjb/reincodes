@@ -1,11 +1,13 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { BreadcrumbsContext } from './Breadcrumbs';
 
 export const useBreadcrumbs = (pathItems?: any[]) => {
   const context = useContext(BreadcrumbsContext);
+  const { current: myArray } = useRef(pathItems);
 
   useEffect(() => {
-    context.setPathItems(pathItems || [])
+    context.setPathItems(myArray || [])
+
     return () => context.setPathItems([]);
-  }, [pathItems, context]);
+  }, [myArray, context]);
 }

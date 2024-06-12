@@ -18,6 +18,7 @@ import {
   MenuWithTitle,
   Table,
   Breadcrumbs,
+  useBreadcrumbs,
 } from "./ui"
 import {
   I18nLangSelect,
@@ -56,15 +57,22 @@ export function App() {
   const initialSelected = Object.values(notesNav)[0][0] // get first item in an object
   const [selected, setSelected] = useState(initialSelected)
 
+  useBreadcrumbs([
+    {
+      label: 'Home',
+      link: '/'
+    },
+    {
+      label: 'Notes',
+      link: '/cheatsheets'
+    }
+  ])
 
   return (
     <Layout>
       <Header />
 
       <div className="container mx-auto mt-12 grid grid-cols-12 gap-4">
-        <div className="col-span-12">
-          <Breadcrumbs />
-        </div>
         <div className="col-span-1">
           <Link to="/cheatsheets/about" className="text-white underline">
             About

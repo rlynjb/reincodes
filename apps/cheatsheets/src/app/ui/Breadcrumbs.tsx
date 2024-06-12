@@ -1,3 +1,4 @@
+import path from "path";
 import {
   FC,
   createContext,
@@ -5,7 +6,7 @@ import {
   useState,
   ReactNode
 } from "react";
-import { useLocation } from "react-router-dom";
+//import { useLocation } from "react-router-dom";
 
 interface itemsProps {
   label: string
@@ -39,7 +40,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({children, items, setPathFromR
     { label: 'Add Document', link: '/documents/add' }
   ]
   // if setPathFromRouter is true, automatically get path in router
-  const location = useLocation()
+  //const location = useLocation()
   //if useBreadcrumb is used, use context
   const [pathItems, setPathItems] = useState(initialItems)
   const context = useMemo(() => {
@@ -56,6 +57,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({children, items, setPathFromR
   const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
 
 
+  /*
   if (setPathFromRouter) {
     initialItems = location.pathname.split('/').map((pathItem, pathIndex) => {
       return {
@@ -68,9 +70,11 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({children, items, setPathFromR
       }
     })
   }
+  */
+
 
   if (pathItems.length) {
-    items = pathItems
+    initialItems = pathItems
   }
 
 
