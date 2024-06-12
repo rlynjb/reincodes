@@ -71,7 +71,7 @@ export function App() {
   return (
     <Layout>
       <Header />
-
+      <Breadcrumbs />
       <div className="container mx-auto mt-12 grid grid-cols-12 gap-4">
         <div className="col-span-1">
           <Link to="/cheatsheets/about" className="text-white underline">

@@ -1,9 +1,11 @@
+import path from "path";
 import {
   FC,
   createContext,
   useMemo,
   useState,
-  ReactNode
+  ReactNode,
+  useContext,
 } from "react";
 
 
@@ -13,14 +15,16 @@ interface itemsProps {
 }
 
 interface BreadcrumbsProps {
-  children?: ReactNode
   items?: itemsProps[]
-  setPathFromRouter?: boolean
 }
 
 interface BreadcrumbsContextProps {
   pathItems: itemsProps[]
   setPathItems: (items: itemsProps[]) => void
+}
+
+interface BreadcrumbsProviderProps {
+  children?: ReactNode
 }
 
 
@@ -29,24 +33,32 @@ export const BreadcrumbsContext = createContext<BreadcrumbsContextProps>({
   setPathItems: (items: itemsProps[]) => {}
 })
 
-export const Breadcrumbs: FC<BreadcrumbsProps> = ({children, items, setPathFromRouter = false}) => {
+export const BreadcrumbsProvider: FC<BreadcrumbsProviderProps> = ({ children }) => {
+  const [ pathItems, setPathItems] = useState<any[]>([])
+
+  const context = {
+    pathItems,
+    setPathItems,
+  }
+
+  return (
+    <BreadcrumbsContext.Provider value={context}>
+      {children}
+    </BreadcrumbsContext.Provider>
+  )
+}
+
+export const Breadcrumbs: FC<BreadcrumbsProps> = ({items}) => {
   let initialItems = items || [
     { label: 'Home', link: '/' },
     { label: 'Documents', link: '/documents' },
     { label: 'Add Document', link: '/documents/add' }
   ]
   //if useBreadcrumb is used, use context
-  const [pathItems, setPathItems] = useState(initialItems)
-  const context = useMemo(() => {
-    return {
-      pathItems,
-      setPathItems
-    }
-  }, [pathItems])
+  const context = useContext(BreadcrumbsContext)
 
-
-  if (pathItems.length) {
-    initialItems = pathItems
+  if (context.pathItems.length) {
+    initialItems = context.pathItems
   }
 
   return (
@@ -62,9 +74,6 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({children, items, setPathFromR
           ))}
         </ul>
       </div>
-      <BreadcrumbsContext.Provider value={context}>
-        {children}
-      </BreadcrumbsContext.Provider>
     </>
   )
 }

@@ -14,7 +14,7 @@ import {
 } from './app/utils/i18n';
 import { translations } from './constants/translations';
 
-import { Breadcrumbs } from './app/ui';
+import { BreadcrumbsProvider, Breadcrumbs } from './app/ui';
 
 
 const router = createBrowserRouter([
@@ -40,9 +40,9 @@ root.render(
       initialLocale="en"
       translations={translations}
     >
-      <Breadcrumbs>
+      <BreadcrumbsProvider>
         <RouterProvider router={router} />
-      </Breadcrumbs>
+      </BreadcrumbsProvider>
     </I18nProvider>
   </StrictMode>
 );
