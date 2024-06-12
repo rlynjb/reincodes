@@ -1,4 +1,8 @@
-import path from "path";
+/**
+ * Context API implement of BreadCrumbs
+ * https://www.gcasc.io/blog/next-dynamic-breadcrumbs
+ */
+
 import {
   FC,
   createContext,
