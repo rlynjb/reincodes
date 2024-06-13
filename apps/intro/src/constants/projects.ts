@@ -2,10 +2,10 @@ export const projects = [
   {
     title: 'reinotes - Note Taking App',
     desc: `
-    Note taking app built with React, TailwindCSS, and DaisyUI deployed on Netlify under Monorepo architecture. <br>
+    Note taking app built with React, TailwindCSS, and DaisyUI deployed on Netlify under Monorepo architecture.<br>
     - Implemented knowledge in basic Functional Programming (React's core foundation). <br>
     - Built a simple i18n plugin using Context API and custom hooks. <br>
-    - Built a simple Menu UI component, separating business logic from UI and emitting data from child to parent components.
+    - Built a simple Menu UI component, separating business logic from UI and emitting data from child to parent components.<br>
     - Built a Breadcrumb UI component using Context API, custom hooks/components.
     `,
     link: 'https://reinotes.netlify.app/',
