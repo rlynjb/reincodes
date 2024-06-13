@@ -6,7 +6,8 @@ export const projects = [
     - Implemented knowledge in basic Functional Programming (React's core foundation). <br>
     - Built a simple i18n plugin using Context API and custom hooks. <br>
     - Built a simple Menu UI component, separating business logic from UI and emitting data from child to parent components.<br>
-    - Built a Breadcrumb UI component using Context API, custom hooks/components.
+    - Built a Breadcrumb UI component using Context API, custom hooks/components. <br>
+    - Implemented a simple test using Jest to check of page loads. <br>
     `,
     link: 'https://reinotes.netlify.app/',
     thumb: '../assets/reinotes.png'

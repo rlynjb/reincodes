@@ -13,27 +13,28 @@ import {
 import {
   Link,
 } from "react-router-dom";
-import { ViewNote } from './features';
+import {
+  ViewChapterNotes
+} from './features';
 import {
   MenuWithTitle,
-  Table,
   Breadcrumbs,
   useBreadcrumbs,
 } from "./ui"
 import {
   I18nLangSelect,
-  useI18nTranslate,
 } from "./utils/i18n"
 
 /**
  * TODO:
  * - implement router or ability to remember which item was selected for certain time period
  * -- so when browser is refreshed, it will remember the selected item
+ * - add ability to edit notes
+ *
  * - add simple note/desc to the top of page
  * - add ability to search notes
  * - add ability to filter notes by book or chapter
  * - add ability to add new notes
- * - add ability to edit notes
  * - add ability to delete notes
  * - add ability to share notes
  *
@@ -47,13 +48,6 @@ import {
 
 
 export function App() {
-  const translate = useI18nTranslate()
-
-  const columns = [
-    { name: `${translate('howtoField')}`, field: "problem" },
-    { name: `${translate('solutionLabel')}`, field: "title" }
-  ]
-
   const initialSelected = Object.values(notesNav)[0][0] // get first item in an object
   const [selected, setSelected] = useState(initialSelected)
 
@@ -71,8 +65,11 @@ export function App() {
   return (
     <Layout>
       <Header />
-      <Breadcrumbs />
+
       <div className="container mx-auto mt-12 grid grid-cols-12 gap-4">
+        <div className="col-span-12">
+          <Breadcrumbs />
+        </div>
         <div className="col-span-1">
           <Link to="/cheatsheets/about" className="text-white underline">
             About
@@ -91,25 +88,7 @@ export function App() {
         </div>
 
         <div className="col-span-9">
-          <Table
-            columns={columns}
-            rows={selected.data}
-          >
-            {(customRows: any) => customRows.map((item: any, index: number) =>
-              <tr key={index}>
-                <td className="align-text-top min-w-96">
-                  {item.problem ? item.problem : ''}
-                </td>
-                <td className="align-text-top">
-                  <ViewNote
-                    title={item.title}
-                    desc={item.desc}
-                    sample={item.sample}
-                  />
-                </td>
-              </tr>
-            )}
-          </Table>
+          <ViewChapterNotes selected={selected.data} />
         </div>
       </div>
     </Layout>
