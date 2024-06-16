@@ -5,25 +5,16 @@ import {
   Layout
 } from '@reincodes/ui';
 import {
-  notesNav
-} from '../constants';
-import {
-  useState
-} from 'react';
-import {
-  Link,
-} from "react-router-dom";
-import {
-  ViewChapterNotes
-} from './features';
-import {
   MenuWithTitle,
   Breadcrumbs,
   useBreadcrumbs,
 } from "./ui"
-import {
-  I18nLangSelect,
-} from "./utils/i18n"
+import { notesNav } from '../constants';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { ViewChapterNotes } from './features';
+import { I18nLangSelect } from "./utils/i18n"
+
 
 /**
  * TODO:

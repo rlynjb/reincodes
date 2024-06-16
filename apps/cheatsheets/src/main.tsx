@@ -9,12 +9,10 @@ import App from './app/app';
 import ErrorPage from './app/pages/error-page';
 import AboutPage from './app/pages/about-page';
 
-import {
-  I18nProvider
-} from './app/utils/i18n';
+import { I18nProvider } from './app/utils/i18n';
 import { translations } from './constants/translations';
 
-import { BreadcrumbsProvider, Breadcrumbs } from './app/ui';
+import { BreadcrumbsProvider } from './app/ui';
 
 
 const router = createBrowserRouter([
