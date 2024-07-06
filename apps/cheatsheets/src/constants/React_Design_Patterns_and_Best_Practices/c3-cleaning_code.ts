@@ -2,7 +2,20 @@ export const C3_CLEANING_CODE = [
   {
     problem: "default root wrapper for elements",
     title: 'React.Fragment',
-    desc: 'New feature that works as a special wrapper for elements. It can be specified as React.Fragment or as an empty tag(<></>).',
+    desc: `
+      <p>
+        New feature that works as a special wrapper for elements. It can be specified as React.Fragment or as an empty tag(<></>).
+      </p>
+
+      <pre>
+      return (
+        <>
+          <ChildA />
+          <ChildB />
+        </>
+      )
+      </pre>
+    `,
     sample: `
       return (
         <>
