@@ -1,7 +1,5 @@
-import parse from 'html-react-parser';
-import { FC, useEffect } from 'react';
-import { useQuill } from 'react-quilljs';
-import 'quill/dist/quill.snow.css';
+import { FC, useState, useEffect } from 'react';
+import { Editor } from '../ui/Editor';
 
 
 interface Props {
@@ -13,6 +11,7 @@ interface Props {
 /**
  * TODO:
  * 1. setup QuillJS and render desc values << WIP
+ *    Create a React wrapper for Quilljs << DONE
  * 2. move sample values to desc property
  * 3. convert Note Title to input field
  * 4. convert How To column values to input field
@@ -23,36 +22,16 @@ interface Props {
  * 9. Setup store and implement https://knexjs.org/
 */
 
-export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}) => {
-  const toolbarOptions = [
-    ['bold', 'italic', 'underline', 'strike'],
-    ['blockquote', 'code-block'],
-    [{ 'header': 1 }, { 'header': 2 }, { 'header': 3 }, { 'header': 4 }, { 'header': 5 }, { 'header': 6 }],
-    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-  ]
+export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}: Props) => {
+  const [range, setRange] = useState();
+  const [lastChange, setLastChange] = useState();
+  const [readOnly, setReadOnly] = useState(false);
 
-  const formats = [
-    'bold', 'italic', 'underline', 'strike',
-    'align', 'list', 'indent',
-    'size', 'header',
-    'link', 'image', 'video',
-    'color', 'background',
-    'clean',
-  ]
-
-
-  const { quill, quillRef } = useQuill({
-    modules: {
-      toolbar: toolbarOptions
-    },
-    formats
-  });
-
+/*
   useEffect(() => {
-    if (quill) {
-      quill.clipboard.dangerouslyPasteHTML(desc);
-    }
-  }, [quill]);
+    console.log(desc)
+  }, [desc]);
+*/
 
   return (
     <div className="collapse bg-base-200 rounded-none">
@@ -61,21 +40,10 @@ export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}) => {
         {title}
       </div>
       <div className="collapse-content">
-
-        <div>
-          <div ref={quillRef} />
-        </div>
-
-        {/**
-        <div
-          className="text-xs"
-        >
-          {parse(desc)}
-        </div>
-        <pre className="text-xs">
-          {sample}
-        </pre>
-         */}
+        {desc}
+        <Editor
+          defaultValue={desc}
+        />
       </div>
     </div>
   )
