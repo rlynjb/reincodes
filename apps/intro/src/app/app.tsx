@@ -16,21 +16,16 @@ export function App() {
         <h1 className="text-yellow text-5xl">hello, i'm rein.</h1>
 
         <p className="my-6">
-          I’m a software engineer specializing in front-end with an objective of lead. I have about 6+ years professional experience with common front-end technologies such as: JavaScript/ES6, HTML/CSS, Vue, Node. And have worked within a software development team, using JIRA, daily stand ups, and weekly meetings.
+          With over 6 years of hands-on experience in building complex web-based user interfaces using JavaScript, CSS, and HTML, I have extensive experience with: Vue.js, React.js, Next.js, Nuxt.js, Typescript, Primereact, Tailwind CSS, Daisy UI, and REST APIs.
         </p>
 
         <p className="my-6">
-          I've also gained experience of development and deployment pipeline usings tools such as: Git, Vim/Bash, Gitlab for code management and reviews. Rancher/Nerdctrl or Docker CLI, Jenkins to push code/features to dev and production.
+          I possess a deep understanding of front-end architecture and build processes, including npm, yarn, webpack, and Monorepo setups with Micro-Frontend Architecture, NX, and Turborepo.
         </p>
 
         <p className="my-6">
-          My goal is to be really good in System Design and Data Structure and Algorithms. Also, below are additional languages, frameworks, tools I've touched over the years..
+          I am also familiar with Unit Testing, Ember.js, Laravel, Rancher, Jenkins, Bash, Vim, Git, Microservices, Containers, WordPress, and Grav (Static Site Generators), and have experimented with GraphQL and Apollo Client/Server.
         </p>
-
-        <div className="skills">
-          <span>Typescript</span>,
-          <span>Vue3</span>, Tailwind/Daisy UI, Nuxt3, Next.js, React, Quasar Framework, Laravel, Netlify, Monorepo architecture, NX
-        </div>
       </div>
 
       <div className='experiences container mx-auto py-8'>
