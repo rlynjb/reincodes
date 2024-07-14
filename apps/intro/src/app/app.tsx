@@ -72,20 +72,33 @@ export function App() {
         <h5 className="text-yellow">and some projects I've worked on..</h5>
         <div className="mt-6 grid grid-cols-3 gap-6">
           { projects.map((project, index) => (
-            <div key={index}>
-              <img className="h-64" src={project.thumb} />
-              <h6 className="text-slate my-2">{project.title}</h6>
-              <p className="text-xs">
-                {parse(project.desc)}
-              </p>
-              <a
-                href={project.link}
-                target="_blank"
-                className="text-yellow mt-4"
-              >
-                Visit
-              </a>
-            </div>
+            <a
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="col-span-3 grid grid-cols-3 gap-6 mb-6 block hover:opacity-70"
+            >
+              <div className="col-span-1 justify-self-end">
+                <img className="h-48" src={project.thumb} />
+              </div>
+
+              <div className="col-span-2">
+                <h6 className="text-slate my-2 text-2xl">
+                  <span className="inline-block">
+                    {project.title}
+                  </span>
+
+                  <span className="inline-block align-middle ml-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </span>
+                </h6>
+                <p className="text-xs">
+                  {parse(project.desc)}
+                </p>
+              </div>
+            </a>
           )) }
         </div>
       </div>
