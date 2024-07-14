@@ -16,7 +16,7 @@ export function App() {
         <h1 className="text-yellow text-5xl">hello, i'm rein.</h1>
 
         <p className="my-6">
-          With over 6 years of hands-on experience in building complex web-based user interfaces using JavaScript, CSS, and HTML, I have extensive experience with: Vue.js, React.js, Next.js, Nuxt.js, Typescript, Primereact, Tailwind CSS, Daisy UI, and REST APIs.
+          With over 6 years of hands-on experience in building complex web-based user interfaces using JavaScript, CSS, and HTML, I have extensive experience with: <b>Vue.js, React.js, Next.js, Nuxt.js, Typescript, Primereact, Tailwind CSS, Daisy UI, and REST APIs.</b>
         </p>
 
         <p className="my-6">
