@@ -23,7 +23,7 @@ export function App() {
           I possess a deep understanding of front-end architecture and build processes, including npm, yarn, webpack, and Monorepo setups with Micro-Frontend Architecture, NX, and Turborepo.
         </p>
 
-        <p className="my-6">
+        <p>
           I am also familiar with Unit Testing, Ember.js, Laravel, Rancher, Jenkins, Bash, Vim, Git, Microservices, Containers, WordPress, and Grav (Static Site Generators), and have experimented with GraphQL and Apollo Client/Server.
         </p>
       </div>
