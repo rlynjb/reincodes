@@ -12,6 +12,7 @@ interface Props {
  * TODO:
  * 1. setup QuillJS and render desc values << WIP
  *    Create a React wrapper for Quilljs << DONE
+ *    BUG: QuillJS is not changing values when user selects a different chapter
  * 2. move sample values to desc property
  * 3. convert Note Title to input field
  * 4. convert How To column values to input field
@@ -23,10 +24,6 @@ interface Props {
 */
 
 export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}: Props) => {
-  const [range, setRange] = useState();
-  const [lastChange, setLastChange] = useState();
-  const [readOnly, setReadOnly] = useState(false);
-
   return (
     <div className="collapse bg-base-200 rounded-none">
       <input type="checkbox" className="min-h-fit"/>
@@ -34,8 +31,12 @@ export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}: Props) => {
         {title}
       </div>
       <div className="collapse-content">
+      {desc}
+      <pre>
+        {sample}
+      </pre>
         <Editor
-          value={desc}
+          defaultValue={desc}
         />
       </div>
     </div>

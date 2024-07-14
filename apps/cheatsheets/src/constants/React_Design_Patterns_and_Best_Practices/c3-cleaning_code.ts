@@ -23,7 +23,9 @@ export const C3_CLEANING_CODE = [
   {
     problem: "how to define spaces in JSX",
     title: 'Spaces',
-    desc: 'JSX handles the spaces between text and elements differently from HTML.',
+    desc: `
+      JSX handles the spaces between text and elements differently from HTML.
+    `,
     sample: `
     <div>
       <span>My</span>
