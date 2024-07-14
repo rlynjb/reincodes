@@ -14,7 +14,7 @@ export function Header(props: HeaderProps) {
               reincodes
             </b>
           </a>
-          <p className='inline-block text-slate'>Welcome to my portfolio and playground :D</p>
+          <p className='inline-block text-slate'>Welcome to my portfolio :D</p>
         </div>
       </header>
     </div>
