@@ -46,7 +46,7 @@ export function App() {
 
       <div className="resume container mx-auto p-8 bg-tertiary">
         <p>
-          and for complete history, here's my
+          and for complete history and projects, here's my
           <a
             className="text-yellow ml-1"
             target="_blank"
@@ -69,7 +69,7 @@ export function App() {
       </div>
 
       <div className="projects container mx-auto py-8">
-        <h5 className="text-yellow">and some projects I've worked on..</h5>
+        <h5 className="text-yellow">and some personal projects I've demonstrated skills on..</h5>
         <div className="mt-6 grid grid-cols-3 gap-6">
           { projects.map((project, index) => (
             <a

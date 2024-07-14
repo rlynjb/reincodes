@@ -34,6 +34,7 @@
     "@nrwl/react": "14.8.9",
     "@nrwl/web": "14.8.9",
     "@nrwl/workspace": "14.8.9",
+    "@nx/next": "^19.4.3",
     "@testing-library/react": "13.4.0",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.7",
