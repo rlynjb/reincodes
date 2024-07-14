@@ -10,18 +10,10 @@ import styles from "./styles.module.css";
 
 
 interface EditorProps {
-  defaultValue?: string;
+  value?: string;
 }
 
-export const Editor = ({ defaultValue }: EditorProps) => {
-  // Editor state
-  const [value, setValue] = useState(defaultValue);
-
-  useEffect(() => {
-    console.log('note--- ')
-    console.log(value)
-  }, [defaultValue])
-
+export const Editor = ({ value }: EditorProps) => {
   // Editor ref
   const quill = useRef() as any;
 
@@ -63,7 +55,6 @@ export const Editor = ({ defaultValue }: EditorProps) => {
       formats={formats}
       modules={modules}
       placeholder={"What did you grasp from it?"}
-      onChange={(value) => setValue(value)}
     />
   );
 };

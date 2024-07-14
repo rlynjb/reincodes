@@ -27,12 +27,6 @@ export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}: Props) => {
   const [lastChange, setLastChange] = useState();
   const [readOnly, setReadOnly] = useState(false);
 
-/*
-  useEffect(() => {
-    console.log(desc)
-  }, [desc]);
-*/
-
   return (
     <div className="collapse bg-base-200 rounded-none">
       <input type="checkbox" className="min-h-fit"/>
@@ -40,9 +34,8 @@ export const ViewNote: FC<Props> = ({title, sample = ``, desc = ''}: Props) => {
         {title}
       </div>
       <div className="collapse-content">
-        {desc}
         <Editor
-          defaultValue={desc}
+          value={desc}
         />
       </div>
     </div>
