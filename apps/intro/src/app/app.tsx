@@ -69,7 +69,7 @@ export function App() {
       </div>
 
       <div className="projects container mx-auto py-8">
-        <h5 className="text-yellow">and some personal projects I've demonstrated skills on..</h5>
+        <h5 className="text-yellow">Here are experiment projects I've demonstrated skills and use knowledge in Real-world projects...</h5>
         <div className="mt-6 grid grid-cols-3 gap-6">
           { projects.map((project, index) => (
             <a
