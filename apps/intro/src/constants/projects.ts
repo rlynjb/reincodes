@@ -2,7 +2,8 @@ export const projects = [
   {
     title: 'reinotes - Note Taking App',
     desc: `
-    Note taking app built with React, TailwindCSS, and DaisyUI deployed on Netlify under Monorepo architecture.<br>
+    Note taking app I built and use to jot down notes/highlights when reading books about tech.<br>
+    Build with React, TailwindCSS, and DaisyUI deployed on Netlify under Monorepo architecture.<br>
     <br>
     - Implemented knowledge in basic Functional Programming (React's core foundation). <br>
     - Built a simple i18n plugin using Context API and custom hooks. <br>
@@ -16,7 +17,8 @@ export const projects = [
   },
   {
     title: 'Portfolio Microfrontend',
-    desc: `Microfrontend architecture, NX, React, TailwindCSS, Netlify. <br>
+    desc: `
+    My portfolio site built with: Microfrontend architecture, NX, React, TailwindCSS, Netlify. <br>
     <br>
     - Implemented knowledge in Microfrontend Architecture, NX, React, and deploying Monorepo in Netlify.
     `,
@@ -25,7 +27,9 @@ export const projects = [
   },
   {
     title: 'UI Design System',
-    desc: `Vue3, TailwindCSS, DaisyUI, Github Pages. <br>
+    desc: `
+    A simple UI Design System I experimented with and used gained knowledge in real-world projects. <br>
+    Built with: Vue3, TailwindCSS, DaisyUI. <br>
     <br>
     - Implemented knowledge in Vue3 using Composition API <br>
     - Implemented knowledge in DSA separating UI logic from Business logic.
@@ -35,13 +39,16 @@ export const projects = [
   },
   {
     title: 'SpaceX Seat Reservation',
-    desc: 'React, Apollo GraphQL, Netlify Functions, MongoDB',
+    desc: `
+    An experimental project to learn concepts of GraphQL. <br>
+    React, Apollo GraphQL, Netlify Functions, MongoDB`,
     link: 'https://spacex-reserve-seat.netlify.app/',
     thumb: '../assets/spacex.png'
   },
   {
     title: 'Persopo - Public Record Search',
-    desc: 'Ember.js, Golang',
+    desc: `
+    A legacy project I worked on with a small team of developers using Ember.js, Golang`,
     link: 'https://persopo.com/',
     thumb: '../assets/persopo.png'
   }

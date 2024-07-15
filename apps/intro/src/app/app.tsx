@@ -40,21 +40,21 @@ export function App() {
                 <li key={index}>{desc}</li>
               )) }
             </ul>
+            <div>
+              For more details, here's my
+              <a
+                className="text-yellow ml-1"
+                target="_blank"
+                href="https://docs.google.com/document/d/1LOO_sdXimhxD43TeWSkoZbqASsT3B68l9YAdkyxmwNU/edit?usp=share_link"
+              >
+                Resume ✓
+              </a>
+            </div>
           </div>
         ))}
       </div>
 
       <div className="resume container mx-auto p-8 bg-tertiary">
-        <p>
-          and for complete history and projects, here's my
-          <a
-            className="text-yellow ml-1"
-            target="_blank"
-            href="https://docs.google.com/document/d/1LOO_sdXimhxD43TeWSkoZbqASsT3B68l9YAdkyxmwNU/edit?usp=share_link"
-          >
-            Resume ✓
-          </a>
-        </p>
         <p>I’m currently looking for new opportunities, preferably remote and looking forward to accepting projects.</p>
         <p>
           If you have a question or just want to say hi, feel free to contact me via
