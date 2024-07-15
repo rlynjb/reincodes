@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: 'reinotes - Note Taking App',
+    title: 'Reinotes',
     desc: `
     Note taking app I built and use to jot down notes/highlights when reading books about tech.<br>
-    Build with React, TailwindCSS, and DaisyUI deployed on Netlify under Monorepo architecture.<br>
+    Built with React, TailwindCSS, and DaisyUI deployed on Netlify.<br>
     <br>
     - Implemented knowledge in basic Functional Programming (React's core foundation). <br>
     - Built a simple i18n plugin using Context API and custom hooks. <br>
@@ -18,9 +18,8 @@ export const projects = [
   {
     title: 'Portfolio Microfrontend',
     desc: `
-    My portfolio site built with: Microfrontend architecture, NX, React, TailwindCSS, Netlify. <br>
-    <br>
-    - Implemented knowledge in Microfrontend Architecture, NX, React, and deploying Monorepo in Netlify.
+    An expriemental project and my portfolio site built with: Microfrontend architecture, NX, React, TailwindCSS and use knowledge in real-world projects. <br>
+    Deplyed on Netlify under NX config. <br>
     `,
     link: 'https://reincodes.netlify.app/',
     thumb: '../assets/portfolio.png'
@@ -28,8 +27,8 @@ export const projects = [
   {
     title: 'UI Design System',
     desc: `
-    A simple UI Design System I experimented with and used gained knowledge in real-world projects. <br>
-    Built with: Vue3, TailwindCSS, DaisyUI. <br>
+    A simple UI Design System I experimented with and used knowledge in real-world projects. <br>
+    Built with: Vue3, TailwindCSS, DaisyUI, Styleguidist. <br>
     <br>
     - Implemented knowledge in Vue3 using Composition API <br>
     - Implemented knowledge in DSA separating UI logic from Business logic.
