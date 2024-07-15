@@ -29,11 +29,12 @@ export const projects = [
     desc: `
     A simple UI Design System I experimented with and used knowledge in real-world projects. <br>
     Built with: Vue3, TailwindCSS, DaisyUI, Styleguidist. <br>
+    Deployed in Github Pages. <br>
     <br>
     - Implemented knowledge in Vue3 using Composition API <br>
     - Implemented knowledge in DSA separating UI logic from Business logic.
     `,
-    link: 'https://rlynjb.github.io/uidesign/',
+    link: 'https://rlynjb.github.io/uids/',
     thumb: '../assets/ui_system_design.png'
   },
   {
