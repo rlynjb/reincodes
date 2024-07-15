@@ -48,7 +48,7 @@ export const projects = [
   {
     title: 'Persopo - Public Record Search',
     desc: `
-    A legacy project I worked on with a small team of developers using Ember.js, Golang`,
+    My first JavaScript project I worked on with a small team of developers using Ember.js, Golang`,
     link: 'https://persopo.com/',
     thumb: '../assets/persopo.png'
   }
