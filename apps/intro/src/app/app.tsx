@@ -29,7 +29,7 @@ export function App() {
       </div>
 
       <div className='experiences container mx-auto py-8'>
-        <h5 className="text-yellow">Here's some of my latest exprience..</h5>
+        <h5 className="text-yellow">Here are some of my recent experience..</h5>
 
         { experiences.map((exp, index) => (
           <div key={index} className='my-6'>
@@ -41,7 +41,7 @@ export function App() {
               )) }
             </ul>
             <div>
-              For more details, here's my
+              For more details:
               <a
                 className="text-yellow ml-1"
                 target="_blank"
