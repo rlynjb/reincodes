@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Reinotes',
+    title: 'Note taking / Study Aid app (Reinotes)',
     desc: `
     Note taking app I built and use to jot down notes/highlights when reading books about tech.<br>
     Built with React, TailwindCSS, and DaisyUI deployed on Netlify.<br>
@@ -16,7 +16,7 @@ export const projects = [
     thumb: '../assets/reinotes.png'
   },
   {
-    title: 'Portfolio Microfrontend',
+    title: 'Portfolio built in Microfrontend (Reincodes)',
     desc: `
     An expriemental project and my portfolio site built with: Microfrontend architecture, NX, React, TailwindCSS and use knowledge in real-world projects. <br>
     Deplyed on Netlify under NX config. <br>
