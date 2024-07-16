@@ -31,8 +31,9 @@ export const projects = [
     Built with: Vue3, TailwindCSS, DaisyUI, Styleguidist. <br>
     Deployed in Github Pages. <br>
     <br>
-    - Implemented knowledge in Vue3 using Composition API <br>
-    - Implemented knowledge in DSA separating UI logic from Business logic.
+    - Built with Vue3 using Composition API <br>
+    - Separating UI logic from Business logic. <br>
+    - Built Table component using 2D array matrix data structure. <br>
     `,
     link: 'https://rlynjb.github.io/uids/',
     thumb: '../assets/ui_system_design.png'
