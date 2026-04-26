@@ -16,7 +16,7 @@ type Project = {
 const projects: Project[] = [
   {
     name: "loopd",
-    subtitle: "productivity pwa",
+    subtitle: "daily journal and vlog",
     description:
       "Native Android journaling + vlogging app, solo-built in React Native + Expo. Combines an AI-assisted on-device editor (FFmpeg + Skia) with \"drops\" — inline prose markers that scan into typed SQLite tables with optional Notion sync. The thesis: capture is filing — one marked line, one structured record.",
     tech: ["react native", "expo", "typescript", "sqlite", "ffmpeg", "notion api", "claude api"],
@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     name: "contrl",
-    subtitle: "calisthenics pwa",
+    subtitle: "skilltree calisthenics workout",
     description:
       "webcam-based rep counting and form scoring with on-device pose estimation. form is the gate to the next level.",
     tech: ["next.js", "mediapipe", "on-device ml"],
@@ -40,7 +40,7 @@ const projects: Project[] = [
   },
   {
     name: "AdvntrCue",
-    subtitle: "rag · sf guide",
+    subtitle: "rag travel guide",
     description:
       "end-to-end rag pipeline over neon postgres with pgvector. embed query → vector search → gpt answer.",
     tech: ["pgvector", "drizzle", "openai"],
@@ -52,7 +52,7 @@ const projects: Project[] = [
   },
   {
     name: "buffr",
-    subtitle: "TODO subtitle",
+    subtitle: "devtool",
     description:
       "a single-user developer continuity tool that tracks coding sessions across multiple side projects, auto-summarizing work from GitHub commits and completed tasks via a swappable LLM layer.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Neon", "Drizzle", "LangChain", "Claude"],
