@@ -18,8 +18,8 @@ const projects: Project[] = [
     name: "loopd",
     subtitle: "productivity pwa",
     description:
-      "plan → live → reflect → improve. unified journal + habit system, plus a vlog editor for short-form video.",
-    tech: ["next.js", "notion api", "ffmpeg"],
+      "Native Android journaling + vlogging app, solo-built in React Native + Expo. Combines an AI-assisted on-device editor (FFmpeg + Skia) with \"drops\" — inline prose markers that scan into typed SQLite tables with optional Notion sync. The thesis: capture is filing — one marked line, one structured record.",
+    tech: ["react native", "expo", "typescript", "sqlite", "ffmpeg", "notion api", "claude api"],
     href: "https://loopd.app",
     external: true,
     iconBg: "bg-[#E1F5EE]",
@@ -39,16 +39,28 @@ const projects: Project[] = [
     initials: "ct",
   },
   {
-    name: "travel buddy",
+    name: "AdvntrCue",
     subtitle: "rag · sf guide",
     description:
       "end-to-end rag pipeline over neon postgres with pgvector. embed query → vector search → gpt answer.",
     tech: ["pgvector", "drizzle", "openai"],
-    href: "/ai/helloai",
-    external: false,
+    href: "https://adventurecue.netlify.app/",
+    external: true,
     iconBg: "bg-[#EEEDFE]",
     iconText: "text-[#3C3489]",
-    initials: "tb",
+    initials: "ac",
+  },
+  {
+    name: "buffr",
+    subtitle: "TODO subtitle",
+    description:
+      "a single-user developer continuity tool that tracks coding sessions across multiple side projects, auto-summarizing work from GitHub commits and completed tasks via a swappable LLM layer.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "Neon", "Drizzle", "LangChain", "Claude"],
+    href: "https://buffrdev.netlify.app/",
+    external: true,
+    iconBg: "bg-[#FBEAF0]",
+    iconText: "text-[#72243E]",
+    initials: "bf",
   },
 ];
 
@@ -110,7 +122,7 @@ export default function FeaturedProjects() {
       <div className="text-[11px] font-medium text-neutral-500 uppercase tracking-wider mb-6">
         featured projects
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {projects.map((p) => (
           <ProjectCard key={p.name} project={p} />
         ))}
