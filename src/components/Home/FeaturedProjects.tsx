@@ -6,8 +6,8 @@ type Project = {
   subtitle: string;
   description: string;
   tech: string[];
-  href: string;
-  external: boolean;
+  href?: string;
+  external?: boolean;
   iconBg: string;
   iconText: string;
   initials: string;
@@ -20,8 +20,6 @@ const projects: Project[] = [
     description:
       "Native Android journaling + vlogging app, solo-built in React Native + Expo. Combines an AI-assisted on-device editor (FFmpeg + Skia) with \"drops\" — inline prose markers that scan into typed SQLite tables with optional Notion sync. The thesis: capture is filing — one marked line, one structured record.",
     tech: ["react native", "expo", "typescript", "sqlite", "ffmpeg", "notion api", "claude api"],
-    href: "https://loopd.app",
-    external: true,
     iconBg: "bg-[#E1F5EE]",
     iconText: "text-[#085041]",
     initials: "lp",
@@ -32,8 +30,6 @@ const projects: Project[] = [
     description:
       "webcam-based rep counting and form scoring with on-device pose estimation. form is the gate to the next level.",
     tech: ["next.js", "mediapipe", "on-device ml"],
-    href: "https://contrl.app",
-    external: true,
     iconBg: "bg-[#FAECE7]",
     iconText: "text-[#712B13]",
     initials: "ct",
@@ -64,8 +60,9 @@ const projects: Project[] = [
   },
 ];
 
-const cardClass =
-  "bg-black border border-neutral-800 hover:border-neutral-700 rounded-xl p-4 transition-colors h-full flex flex-col gap-2 cursor-pointer";
+const baseCardClass =
+  "bg-black border border-neutral-800 rounded-xl p-4 transition-colors h-full flex flex-col gap-2";
+const linkCardClass = `${baseCardClass} hover:border-neutral-700 cursor-pointer`;
 
 function CardBody({ project }: { project: Project }) {
   return (
@@ -97,20 +94,27 @@ function CardBody({ project }: { project: Project }) {
 }
 
 function ProjectCard({ project }: { project: Project }): ReactNode {
+  if (!project.href) {
+    return (
+      <div className={baseCardClass}>
+        <CardBody project={project} />
+      </div>
+    );
+  }
   if (project.external) {
     return (
       <a
         href={project.href}
         target="_blank"
         rel="noopener noreferrer"
-        className={cardClass}
+        className={linkCardClass}
       >
         <CardBody project={project} />
       </a>
     );
   }
   return (
-    <Link href={project.href} className={cardClass}>
+    <Link href={project.href} className={linkCardClass}>
       <CardBody project={project} />
     </Link>
   );
