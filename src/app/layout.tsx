@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link';
-import Menu from "@/components/Menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,23 +29,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-mono)]`}
       >
-        <header className="sticky top-0 p-4 z-10 bg-black flex justify-between">
-          <Link  
-            className="block"
-            href={"/"}
-          >
-            <h1 className="text-xl leading-none">
-              Reincodes<br/>
-              <span className="text-xs text-gray-400">Portfolio & DSA Visualizer</span>
-            </h1>
-          </Link>
+        <header className="sticky top-0 z-10 bg-black">
+          <div className="max-w-[720px] mx-auto px-4 sm:px-6 py-4 flex justify-between items-baseline">
+            <Link
+              className="block"
+              href={"/"}
+            >
+              <h1 className="text-xl leading-none">
+                Reincodes<br/>
+                <span className="text-xs text-gray-400">Portfolio & DSA Visualizer</span>
+              </h1>
+            </Link>
+
+            <nav className="flex gap-3.5 text-xs">
+              <a href="https://github.com/rlynjb" target="_blank" rel="noopener noreferrer"
+                 className="text-gray-400 hover:text-white">github</a>
+              <a href="https://www.linkedin.com/in/rlynpro" target="_blank" rel="noopener noreferrer"
+                 className="text-gray-400 hover:text-white">linkedin</a>
+              <a href="mailto:rlynjb@gmail.com"
+                 className="text-gray-400 hover:text-white">email</a>
+            </nav>
+          </div>
         </header>
 
         <main className="mx-4 relative grid grid-cols-12"
           style={{ height: "85vh" }}
         >
-          <Menu />
-
           <div className="b-container col-span-12">
             {children}
           </div>

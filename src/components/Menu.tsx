@@ -4,6 +4,7 @@ import "./styles.css";
 import { useState } from "react";
 import { sidebarNav } from "@/const/sidebarNav";
 import Link from 'next/link';
+import { usePathname } from "next/navigation";
 
 interface TopicProps {
   topic_title: string;
@@ -16,6 +17,7 @@ interface SubtopicProps {
 }
 
 export default function Menu () {
+  const pathname = usePathname();
   const topics: TopicProps[] = sidebarNav;
 
   const open = 'menu--open';
@@ -32,6 +34,8 @@ export default function Menu () {
   }
 
   const menuButtonText = (isMenu === close || isMenu === '') ? 'projects' : 'close'
+
+  if (pathname === '/') return null;
 
   return (
     <div className={`menu w-64 ${isMenu}`}>

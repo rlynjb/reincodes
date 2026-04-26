@@ -1,0 +1,120 @@
+import Link from "next/link";
+import type { ReactNode } from "react";
+
+type Project = {
+  name: string;
+  subtitle: string;
+  description: string;
+  tech: string[];
+  href: string;
+  external: boolean;
+  iconBg: string;
+  iconText: string;
+  initials: string;
+};
+
+const projects: Project[] = [
+  {
+    name: "loopd",
+    subtitle: "productivity pwa",
+    description:
+      "plan → live → reflect → improve. unified journal + habit system, plus a vlog editor for short-form video.",
+    tech: ["next.js", "notion api", "ffmpeg"],
+    href: "https://loopd.app",
+    external: true,
+    iconBg: "bg-[#E1F5EE]",
+    iconText: "text-[#085041]",
+    initials: "lp",
+  },
+  {
+    name: "contrl",
+    subtitle: "calisthenics pwa",
+    description:
+      "webcam-based rep counting and form scoring with on-device pose estimation. form is the gate to the next level.",
+    tech: ["next.js", "mediapipe", "on-device ml"],
+    href: "https://contrl.app",
+    external: true,
+    iconBg: "bg-[#FAECE7]",
+    iconText: "text-[#712B13]",
+    initials: "ct",
+  },
+  {
+    name: "travel buddy",
+    subtitle: "rag · sf guide",
+    description:
+      "end-to-end rag pipeline over neon postgres with pgvector. embed query → vector search → gpt answer.",
+    tech: ["pgvector", "drizzle", "openai"],
+    href: "/ai/helloai",
+    external: false,
+    iconBg: "bg-[#EEEDFE]",
+    iconText: "text-[#3C3489]",
+    initials: "tb",
+  },
+];
+
+const cardClass =
+  "bg-black border border-neutral-800 hover:border-neutral-700 rounded-xl p-4 transition-colors h-full flex flex-col gap-2 cursor-pointer";
+
+function CardBody({ project }: { project: Project }) {
+  return (
+    <>
+      <div className="flex gap-2.5 items-center">
+        <div
+          className={`w-[34px] h-[34px] rounded-md flex items-center justify-center text-[13px] font-medium ${project.iconBg} ${project.iconText}`}
+        >
+          {project.initials}
+        </div>
+        <div className="flex flex-col">
+          <span className="font-medium text-sm">{project.name}</span>
+          <span className="text-[11px] text-neutral-500">{project.subtitle}</span>
+        </div>
+      </div>
+      <p className="text-xs text-neutral-300 leading-snug">{project.description}</p>
+      <div className="flex flex-wrap gap-1 mt-auto pt-1">
+        {project.tech.map((t) => (
+          <span
+            key={t}
+            className="font-mono text-[11px] px-1.5 py-0.5 rounded-md bg-neutral-900 text-neutral-400"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function ProjectCard({ project }: { project: Project }): ReactNode {
+  if (project.external) {
+    return (
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cardClass}
+      >
+        <CardBody project={project} />
+      </a>
+    );
+  }
+  return (
+    <Link href={project.href} className={cardClass}>
+      <CardBody project={project} />
+    </Link>
+  );
+}
+
+export default function FeaturedProjects() {
+  return (
+    <section className="mb-14">
+      <div className="text-[11px] font-medium text-neutral-500 uppercase tracking-wider mb-6">
+        featured projects
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+        {projects.map((p) => (
+          <ProjectCard key={p.name} project={p} />
+        ))}
+      </div>
+    </section>
+  );
+}
