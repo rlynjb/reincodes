@@ -18,7 +18,7 @@ const projects: Project[] = [
     name: "loopd",
     subtitle: "daily journal and vlog",
     description:
-      "Native Android journaling + vlogging app, solo-built in React Native + Expo. Combines an AI-assisted on-device editor (FFmpeg + Skia) with \"drops\" — inline prose markers that scan into typed SQLite tables with optional Notion sync. The thesis: capture is filing — one marked line, one structured record.",
+      "Built a native Android app to capture my day in one journal — prose, todos, habits, nutrition, project tags, video clips — and render a vlog from the clips at the end of it. Local-first, AI-assisted compose.",
     tech: ["react native", "expo", "typescript", "sqlite", "ffmpeg", "notion api", "claude api"],
     iconBg: "bg-[#E1F5EE]",
     iconText: "text-[#085041]",
@@ -28,7 +28,7 @@ const projects: Project[] = [
     name: "contrl",
     subtitle: "skilltree calisthenics workout",
     description:
-      "webcam-based rep counting and form scoring with on-device pose estimation. form is the gate to the next level.",
+      "Built contrl to track bodyweight progression without spreadsheets or account walls. A 5-level skill tree across push / pull / squat with an auto rep counter — MediaPipe pose landmarking running on-device through React Native Worklets.",
     tech: ["next.js", "mediapipe", "on-device ml"],
     iconBg: "bg-[#FAECE7]",
     iconText: "text-[#712B13]",
@@ -47,16 +47,16 @@ const projects: Project[] = [
     initials: "ac",
   },
   {
-    name: "buffr",
-    subtitle: "devtool",
+    name: "aipe",
+    subtitle: "ai spec templates",
     description:
-      "a single-user developer continuity tool that tracks coding sessions across multiple side projects, auto-summarizing work from GitHub commits and completed tasks via a swappable LLM layer.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Neon", "Drizzle", "LangChain", "Claude"],
-    href: "https://buffrdev.netlify.app/",
+      "Built to avoid re-explaining my codebase to AI agents. 14 spec templates packaged as slash commands for Claude Code and Codex — I feed in my project context once and get filled specs every session.",
+    tech: ["claude code", "codex", "slash commands"],
+    href: "https://github.com/rlynjb/aipe",
     external: true,
     iconBg: "bg-[#FBEAF0]",
     iconText: "text-[#72243E]",
-    initials: "bf",
+    initials: "ai",
   },
 ];
 
