@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/reincodes" : "";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  images: { unoptimized: true },
+  basePath,
+  assetPrefix: basePath || undefined,
+  trailingSlash: true,
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
 };
