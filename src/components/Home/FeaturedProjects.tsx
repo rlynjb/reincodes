@@ -19,7 +19,7 @@ const projects: Project[] = [
     subtitle: "daily journal and vlog",
     description:
       "Built a native Android app to capture my day in one journal — prose, todos, habits, nutrition, project tags, video clips — and render a vlog from the clips at the end of it. Local-first, AI-assisted compose.",
-    tech: ["react native", "expo", "typescript", "sqlite", "ffmpeg", "notion api", "claude api"],
+    tech: ["react-native", "expo", "typescript", "android", "sqlite", "supabase", "anthropic", "ffmpeg", "local-first"],
     iconBg: "bg-[#E1F5EE]",
     iconText: "text-[#085041]",
     initials: "lp",
@@ -29,7 +29,7 @@ const projects: Project[] = [
     subtitle: "skilltree calisthenics workout",
     description:
       "Built contrl to track bodyweight progression without spreadsheets or account walls. A 5-level skill tree across push / pull / squat with an auto rep counter — MediaPipe pose landmarking running on-device through React Native Worklets.",
-    tech: ["next.js", "mediapipe", "on-device ml"],
+    tech: ["react-native", "expo", "typescript", "expo-sqlite", "mediapipe", "react-native-vision-camera", "react-native-worklets-core", "pose-detection"],
     iconBg: "bg-[#FAECE7]",
     iconText: "text-[#712B13]",
     initials: "ct",
@@ -38,8 +38,8 @@ const projects: Project[] = [
     name: "AdvntrCue",
     subtitle: "rag travel guide",
     description:
-      "end-to-end rag pipeline over neon postgres with pgvector. embed query → vector search → gpt answer.",
-    tech: ["pgvector", "drizzle", "openai"],
+      "Built a Next.js RAG app with pgvector, GPT-4 streaming, tool-calling, and session memory (MemoRAG) — a learning project for modern AI engineering.",
+    tech: ["Next.js", "TypeScript", "RAG", "pgvector", "OpenAI", "Vercel AI SDK", "Drizzle ORM", "Netlify Functions"],
     href: "https://adventurecue.netlify.app/",
     external: true,
     iconBg: "bg-[#EEEDFE]",
@@ -51,7 +51,7 @@ const projects: Project[] = [
     subtitle: "ai spec templates",
     description:
       "Built to avoid re-explaining my codebase to AI agents. 14 spec templates packaged as slash commands for Claude Code and Codex — I feed in my project context once and get filled specs every session.",
-    tech: ["claude code", "codex", "slash commands"],
+    tech: ["llm", "generative-ai", "ai-writing-assistant", "prompt-engineering", "multimodal-ai", "speech-to-text", "text-summarization", "rag"],
     href: "https://github.com/rlynjb/aipe",
     external: true,
     iconBg: "bg-[#FBEAF0]",
