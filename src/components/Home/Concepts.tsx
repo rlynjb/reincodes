@@ -1,42 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
-import { CONCEPT_CATEGORIES, type Concept } from "./conceptsData";
-
-const rowClass =
-  "flex items-center gap-3 p-2 rounded-md hover:bg-neutral-900 transition-colors";
-
-function ConceptRow({ concept }: { concept: Concept }): ReactNode {
-  const body = (
-    <>
-      <div className="w-10 h-10 shrink-0 bg-neutral-900 rounded-md border border-neutral-800 flex items-center justify-center overflow-hidden">
-        {concept.thumb}
-      </div>
-      <div className="flex-1 flex items-center justify-between">
-        <span className="text-sm font-medium">{concept.title}</span>
-        {concept.wip ? (
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-950 text-amber-400 font-medium">
-            wip
-          </span>
-        ) : (
-          <span className="text-[11px] text-neutral-500 font-mono">{concept.meta}</span>
-        )}
-      </div>
-    </>
-  );
-
-  if (concept.external) {
-    return (
-      <a href={concept.href} target="_blank" rel="noopener noreferrer" className={rowClass}>
-        {body}
-      </a>
-    );
-  }
-  return (
-    <Link href={concept.href} className={rowClass}>
-      {body}
-    </Link>
-  );
-}
+import { CONCEPT_CATEGORIES } from "./conceptsData";
 
 export default function Concepts() {
   return (
@@ -53,7 +16,25 @@ export default function Concepts() {
             </div>
             <div className="flex flex-col">
               {category.concepts.map((c) => (
-                <ConceptRow key={c.href + c.title} concept={c} />
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="flex items-center gap-3 p-2 rounded-md hover:bg-neutral-900 transition-colors"
+                >
+                  <div className="w-10 h-10 shrink-0 bg-neutral-900 rounded-md border border-neutral-800 flex items-center justify-center overflow-hidden">
+                    {c.thumb}
+                  </div>
+                  <div className="flex-1 flex items-center justify-between">
+                    <span className="text-sm font-medium">{c.title}</span>
+                    {c.wip ? (
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-950 text-amber-400 font-medium">
+                        wip
+                      </span>
+                    ) : (
+                      <span className="text-[11px] text-neutral-500 font-mono">{c.meta}</span>
+                    )}
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

@@ -5,7 +5,6 @@ export interface Concept {
   href: string;
   meta?: string;
   wip?: boolean;
-  external?: boolean;
   thumb: ReactNode;
 }
 
@@ -222,33 +221,6 @@ const FibonacciThumb = () =>
     </>
   );
 
-const RelationalThumb = () =>
-  svgWrap(
-    <>
-      <rect x="10" y="15" width="22" height="28" rx="2" fill="#3B82F6" fillOpacity="0.15" stroke="#3B82F6" strokeWidth="1" />
-      <line x1="10" y1="22" x2="32" y2="22" stroke="#3B82F6" strokeWidth="0.6" />
-      <circle cx="14" cy="29" r="1" fill="#3B82F6" />
-      <circle cx="14" cy="34" r="1" fill="#3B82F6" />
-      <circle cx="14" cy="39" r="1" fill="#3B82F6" />
-
-      <rect x="68" y="15" width="22" height="28" rx="2" fill="#3B82F6" fillOpacity="0.15" stroke="#3B82F6" strokeWidth="1" />
-      <line x1="68" y1="22" x2="90" y2="22" stroke="#3B82F6" strokeWidth="0.6" />
-      <circle cx="72" cy="29" r="1" fill="#3B82F6" />
-      <circle cx="72" cy="34" r="1" fill="#3B82F6" />
-      <circle cx="72" cy="39" r="1" fill="#3B82F6" />
-
-      <rect x="39" y="57" width="22" height="28" rx="2" fill="#3B82F6" fillOpacity="0.15" stroke="#3B82F6" strokeWidth="1" />
-      <line x1="39" y1="64" x2="61" y2="64" stroke="#3B82F6" strokeWidth="0.6" />
-      <circle cx="43" cy="71" r="1" fill="#3B82F6" />
-      <circle cx="43" cy="76" r="1" fill="#3B82F6" />
-      <circle cx="43" cy="81" r="1" fill="#3B82F6" />
-
-      <line x1="32" y1="29" x2="68" y2="29" stroke="#3B82F6" strokeWidth="0.6" strokeDasharray="2 2" />
-      <line x1="21" y1="43" x2="39" y2="64" stroke="#3B82F6" strokeWidth="0.6" strokeDasharray="2 2" />
-      <line x1="79" y1="43" x2="61" y2="64" stroke="#3B82F6" strokeWidth="0.6" strokeDasharray="2 2" />
-    </>
-  );
-
 const gridPatternBfs: GridCell[] = [
   "e", "e", "g", "e", "e",
   "h", "o", "h", "e", "e",
@@ -370,44 +342,39 @@ export const CONCEPT_CATEGORIES: ConceptCategory[] = [
       },
     ],
   },
+];
+
+export interface Implementation {
+  title: string;
+  href: string;
+  meta?: string;
+  wip?: boolean;
+}
+
+export const IMPLEMENTATIONS: Implementation[] = [
   {
-    name: "implementations",
-    concepts: [
-      {
-        title: "graph",
-        href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/Graph.ts",
-        meta: "adj-list · bfs · dfs",
-        external: true,
-        thumb: <NetworkThumb />,
-      },
-      {
-        title: "binary search tree",
-        href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/BinarySearchTree.ts",
-        meta: "crud · 3 traversals",
-        external: true,
-        thumb: <TreeThumb leftLeaves={2} />,
-      },
-      {
-        title: "binary heap",
-        href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/BinaryHeap.ts",
-        meta: "min · max · heapify",
-        external: true,
-        thumb: <HeapThumb />,
-      },
-      {
-        title: "priority queue",
-        href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/PriorityQueue.ts",
-        meta: "heap-backed",
-        external: true,
-        thumb: <HeapThumb />,
-      },
-      {
-        title: "relational store",
-        href: "https://github.com/rlynjb/reincodes",
-        wip: true,
-        external: true,
-        thumb: <RelationalThumb />,
-      },
-    ],
+    title: "graph",
+    href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/Graph.ts",
+    meta: "adj-list · bfs · dfs",
+  },
+  {
+    title: "binary search tree",
+    href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/BinarySearchTree.ts",
+    meta: "crud · 3 traversals",
+  },
+  {
+    title: "binary heap",
+    href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/BinaryHeap.ts",
+    meta: "min · max · heapify",
+  },
+  {
+    title: "priority queue",
+    href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/PriorityQueue.ts",
+    meta: "heap-backed",
+  },
+  {
+    title: "relational store",
+    href: "https://github.com/rlynjb/reincodes",
+    wip: true,
   },
 ];

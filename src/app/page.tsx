@@ -1,6 +1,7 @@
 import Hero from "@/components/Home/Hero";
 import FeaturedProjects from "@/components/Home/FeaturedProjects";
 import Concepts from "@/components/Home/Concepts";
+import Implementations from "@/components/Home/Implementations";
 import Footer from "@/components/Home/Footer";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <FeaturedProjects />
       <Concepts />
+      <Implementations />
       <Footer />
     </div>
   );
