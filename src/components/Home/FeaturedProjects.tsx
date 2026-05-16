@@ -64,7 +64,7 @@ const projects: Project[] = [
     description:
       "Built to avoid re-explaining my codebase to AI agents. 14 spec templates packaged as slash commands for Claude Code and Codex — I feed in my project context once and get filled specs every session.",
     tech: ["llm", "generative-ai", "ai-writing-assistant", "prompt-engineering", "multimodal-ai", "speech-to-text", "text-summarization", "rag"],
-    href: "https://github.com/rlynjb/aipe",
+    href: "https://rlynjb.github.io/aipe/",
     external: true,
     iconBg: "bg-[#FBEAF0]",
     iconText: "text-[#72243E]",
