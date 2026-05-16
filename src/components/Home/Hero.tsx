@@ -5,14 +5,18 @@ interface SkillChip {
 }
 
 const skills: SkillChip[] = [
-  { label: "vue · nuxt · quasar", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "react · next.js", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "javascript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
   { label: "typescript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "turborepo · monorepo", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "rag · pgvector", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "openai · langchain", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "mediapipe · pwa", bg: "bg-[#712B13]", text: "text-[#FAECE7]" },
-  { label: "dsa · system design", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "html", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "css", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "python", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "vue.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "nuxt.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "react.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "next.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "data structures & algorithms", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "system design", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "applied agentic ai", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
 ];
 
 export default function Hero() {
