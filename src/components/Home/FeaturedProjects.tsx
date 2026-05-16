@@ -47,6 +47,18 @@ const projects: Project[] = [
     initials: "ac",
   },
   {
+    name: "unshippd",
+    subtitle: "mock backend for unshipped APIs",
+    description:
+      "Built a TypeScript/Hono in-memory mock backend that stands in for unshipped API endpoints, with a relational data model and transparent fallback to the real backend for unmatched routes.",
+    tech: ["typescript", "hono", "mock-api", "in-memory", "relational-model", "fallback-proxy"],
+    href: "https://rlynjb.github.io/unshippd/",
+    external: true,
+    iconBg: "bg-[#E6F0FB]",
+    iconText: "text-[#173B6C]",
+    initials: "un",
+  },
+  {
     name: "aipe",
     subtitle: "ai spec templates",
     description:
