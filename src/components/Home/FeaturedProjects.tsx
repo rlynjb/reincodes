@@ -145,7 +145,7 @@ function ProjectCard({ project }: { project: Project }): ReactNode {
 export default function FeaturedProjects() {
   return (
     <section className="mb-14">
-      <div className="text-[11px] font-medium text-neutral-500 uppercase tracking-wider mb-6">
+      <div className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pb-2 border-b border-neutral-800">
         featured projects
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
