@@ -20,7 +20,7 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px]">
-        software engineer III at Switch · 7+ yrs in vue and react · building ai-powered tools on the side and deepening into product engineering.
+        front-end engineer, 7+ years in vue and react, shipping interactive web apps on small teams and big ones. spending my off-hours going deep on the fundamentals — dsa, system design, core cs — and lining it all up to work on ai-powered products next.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
         seattle, wa · open to frontend / ai engineering roles
