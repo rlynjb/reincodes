@@ -16,7 +16,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: "loopd",
+    name: "buffr",
     subtitle: "daily journal and vlog",
     description:
       "Built a native Android app to capture my day in one journal — prose, todos, habits, nutrition, project tags, video clips — and render a vlog from the clips at the end of it. Local-first, AI-assisted compose.",
