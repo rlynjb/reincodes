@@ -16,6 +16,18 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: "dryrun",
+    subtitle: "codebase-native study app",
+    description:
+      "Built an Android app that turns aipe-generated study guides into a four-level validation flow — reconstruct, explain, apply, defend — graded on-device by Gemini Nano with API fallback. Local-first, GitHub-synced, spaced-repetition driven.",
+    tech: ["android", "kotlin", "gemini-nano", "local-first", "spaced-repetition", "on-device-ai", "github-sync"],
+    href: "https://github.com/rlynjb/dryrun",
+    external: true,
+    iconBg: "bg-[#FBF1D6]",
+    iconText: "text-[#5A4308]",
+    initials: "dr",
+  },
+  {
     name: "buffr",
     subtitle: "daily journal and vlog",
     description:
@@ -40,40 +52,28 @@ const projects: Project[] = [
     initials: "ct",
   },
   {
-    name: "AdvntrCue",
-    subtitle: "rag travel guide",
-    description:
-      "Built a Next.js RAG app with pgvector, GPT-4 streaming, tool-calling, and session memory (MemoRAG) — a learning project for modern AI engineering.",
-    tech: ["Next.js", "TypeScript", "RAG", "pgvector", "OpenAI", "Vercel AI SDK", "Drizzle ORM", "Netlify Functions"],
-    href: "https://adventurecue.netlify.app/",
-    external: true,
-    iconBg: "bg-[#EEEDFE]",
-    iconText: "text-[#3C3489]",
-    initials: "ac",
-  },
-  {
-    name: "dryrun",
-    subtitle: "codebase-native study app",
-    description:
-      "Built an Android app that turns aipe-generated study guides into a four-level validation flow — reconstruct, explain, apply, defend — graded on-device by Gemini Nano with API fallback. Local-first, GitHub-synced, spaced-repetition driven.",
-    tech: ["android", "kotlin", "gemini-nano", "local-first", "spaced-repetition", "on-device-ai", "github-sync"],
-    href: "https://github.com/rlynjb/dryrun",
-    external: true,
-    iconBg: "bg-[#FBF1D6]",
-    iconText: "text-[#5A4308]",
-    initials: "dr",
-  },
-  {
     name: "aipe",
     subtitle: "spec workflow plugin",
     description:
-      "Built a spec workflow for AI-assisted development — 11 prompt templates packaged as slash commands for Claude Code and Codex CLI. A one-line intent plus my project context turns into a filled, structured spec the coding agent can implement from.",
+      "Spec workflow plugin for Claude Code + Codex. 7 disciplined templates across Describe → Diagnose → Act layers — plus a visual codebase study guide.",
     tech: ["claude-code", "codex-cli", "slash-commands", "prompt-engineering", "context-engineering", "markdown-templates", "agent-spec", "ai-workflow"],
     href: "https://rlynjb.github.io/aipe/",
     external: true,
     iconBg: "bg-[#FBEAF0]",
     iconText: "text-[#72243E]",
     initials: "ai",
+  },
+  {
+    name: "AdvntrCue",
+    subtitle: "rag travel guide",
+    description:
+      "Built a Next.js RAG app with pgvector, GPT-4 streaming, tool-calling, and session memory (MemoRAG) — a learning project for modern AI engineering.",
+    tech: ["Next.js", "TypeScript", "RAG", "pgvector", "OpenAI", "Vercel AI SDK", "Drizzle ORM", "Netlify Functions"],
+    href: "https://github.com/rlynjb/advntrCue",
+    external: true,
+    iconBg: "bg-[#EEEDFE]",
+    iconText: "text-[#3C3489]",
+    initials: "ac",
   },
 ];
 
