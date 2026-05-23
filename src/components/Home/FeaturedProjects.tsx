@@ -65,10 +65,10 @@ const projects: Project[] = [
   },
   {
     name: "aipe",
-    subtitle: "ai spec templates",
+    subtitle: "spec workflow plugin",
     description:
-      "Built to avoid re-explaining my codebase to AI agents. 14 spec templates packaged as slash commands for Claude Code and Codex — I feed in my project context once and get filled specs every session.",
-    tech: ["llm", "generative-ai", "ai-writing-assistant", "prompt-engineering", "multimodal-ai", "speech-to-text", "text-summarization", "rag"],
+      "Built a spec workflow for AI-assisted development — 11 prompt templates packaged as slash commands for Claude Code and Codex CLI. A one-line intent plus my project context turns into a filled, structured spec the coding agent can implement from.",
+    tech: ["claude-code", "codex-cli", "slash-commands", "prompt-engineering", "context-engineering", "markdown-templates", "agent-spec", "ai-workflow"],
     href: "https://rlynjb.github.io/aipe/",
     external: true,
     iconBg: "bg-[#FBEAF0]",
