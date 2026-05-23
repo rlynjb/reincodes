@@ -372,9 +372,4 @@ export const IMPLEMENTATIONS: Implementation[] = [
     href: "https://github.com/rlynjb/reincodes/blob/main/src/utils/data_structures/PriorityQueue.ts",
     meta: "heap-backed",
   },
-  {
-    title: "relational store",
-    href: "https://github.com/rlynjb/reincodes",
-    wip: true,
-  },
 ];
