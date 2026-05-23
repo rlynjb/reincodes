@@ -21,7 +21,8 @@ const projects: Project[] = [
     description:
       "Built a native Android app to capture my day in one journal — prose, todos, habits, nutrition, project tags, video clips — and render a vlog from the clips at the end of it. Local-first, AI-assisted compose.",
     tech: ["react-native", "expo", "typescript", "android", "sqlite", "supabase", "anthropic", "ffmpeg", "local-first"],
-    privateRepo: true,
+    href: "https://github.com/rlynjb/buffr",
+    external: true,
     iconBg: "bg-[#E1F5EE]",
     iconText: "text-[#085041]",
     initials: "lp",
@@ -32,7 +33,8 @@ const projects: Project[] = [
     description:
       "Built contrl to track bodyweight progression without spreadsheets or account walls. A 5-level skill tree across push / pull / squat with an auto rep counter — MediaPipe pose landmarking running on-device through React Native Worklets.",
     tech: ["react-native", "expo", "typescript", "expo-sqlite", "mediapipe", "react-native-vision-camera", "react-native-worklets-core", "pose-detection"],
-    privateRepo: true,
+    href: "https://github.com/rlynjb/contrl",
+    external: true,
     iconBg: "bg-[#FAECE7]",
     iconText: "text-[#712B13]",
     initials: "ct",
