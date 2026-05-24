@@ -224,7 +224,7 @@ The practical consequence: a redesign of the card — say, "show the time comple
 
 **The same pattern repeats in `FeaturedProjects.tsx` and `Implementations`**
 
-The codebase uses the same shape for the featured projects (`src/components/Home/FeaturedProjects.tsx` — `projects: Project[]` at L17 followed by a `.map()` in the component) and the implementations list (`conceptsData.tsx` L347–L381 — `IMPLEMENTATIONS: Implementation[]` consumed by `Implementations.tsx`).
+The codebase uses the same shape for the featured projects (`src/components/Home/FeaturedProjects.tsx` — `projects: Project[]` at L17 followed by a `.map()` in the component) and the implementations list (`conceptsData.tsx` L354–L375 — `IMPLEMENTATIONS: Implementation[]` consumed by `Implementations.tsx`).
 
 ```
 data exports                              renderer
@@ -360,7 +360,7 @@ export default function Concepts() {
 **Same pattern again**
 **File:** `src/components/Home/conceptsData.tsx`
 **Function / class:** `IMPLEMENTATIONS` (exported const), types `Implementation` (L347–L352)
-**Line range:** L354–L381
+**Line range:** L354–L375
 
 Consumed by `src/components/Home/Implementations.tsx` with the same shape — import the array, map over it, render link cards.
 
@@ -581,7 +581,7 @@ What scales, what breaks
 
 Q: The `FeaturedProjects.tsx` file keeps its data array *inside* the same file as the renderer. Why is that inconsistent with the concepts pattern?
 
-A: It is inconsistent and the answer is honest: the projects array is only consumed by one renderer and isn't worth a second file. The concepts catalog is split because the data and renderer have meaningfully different reasons to change — new visualizers land every few weeks, layout changes rarely — and because both renderers (the grid on home, and maybe a future sitemap) might consume it. Projects don't have that pressure: four entries, one consumer, and the entries change at the same cadence as the renderer (a new project means new copy, which often means a new card layout anyway). The split-vs-no-split decision is per-array, not codebase-wide, and "do I expect this to be consumed by two renderers?" is the test. For concepts: yes; for projects: no.
+A: It is inconsistent and the answer is honest: the projects array is only consumed by one renderer and isn't worth a second file. The concepts catalog is split because the data and renderer have meaningfully different reasons to change — new visualizers land every few weeks, layout changes rarely — and because both renderers (the grid on home, and maybe a future sitemap) might consume it. Projects don't have that pressure: five entries, one consumer, and the entries change at the same cadence as the renderer (a new project means new copy, which often means a new card layout anyway). The split-vs-no-split decision is per-array, not codebase-wide, and "do I expect this to be consumed by two renderers?" is the test. For concepts: yes; for projects: no.
 
 Diagram:
 ```
@@ -593,9 +593,9 @@ When to split, when to inline
 │ CONCEPT_CATEGORIES       │ yes                      │ many entries,   │
 │   (17 entries, grows)    │                          │ may be reused   │
 │ IMPLEMENTATIONS          │ yes (same file as        │ shares thumb-   │
-│   (5 entries)            │ concepts)                │ nail context    │
-│ projects                 │ no — inline in           │ 4 entries, one  │
-│   (4 entries, stable)    │ FeaturedProjects.tsx     │ consumer only   │
+│   (4 entries)            │ concepts)                │ nail context    │
+│ projects                 │ no — inline in           │ 5 entries, one  │
+│   (5 entries, stable)    │ FeaturedProjects.tsx     │ consumer only   │
 └──────────────────────────┴──────────────────────────┴─────────────────┘
 ```
 
@@ -651,3 +651,6 @@ Without opening any files, answer:
 - About how many lines is `Concepts.tsx`?
 
 Then open the files and verify.
+
+---
+Updated: 2026-05-24 — IMPLEMENTATIONS shrank from 5 to 4 entries (relational-store wip dropped); FeaturedProjects grew from 4 to 5 entries (dryrun added, loopd → buffr renamed); line range refreshed.
