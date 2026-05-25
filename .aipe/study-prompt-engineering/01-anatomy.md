@@ -191,7 +191,7 @@ The boundary between the upper band (constant per chain) and the lower band (per
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero prompts to anatomise. The existing study guide (`.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/`) positions reincodes as the *interview-prep visualizer host* per the curriculum: a place to *teach* AI concepts through visualizers, not a place where AI runs for users. The buildable target for this concept is below in Project exercises — a `/ai/prompt-anatomy` page that lets the reader load a real prompt, render its four sections as colored bands, toggle sections on/off, and see how the output changes.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero prompts to anatomise. The existing study guide (`.aipe/study-ai-engineering/`) positions reincodes as the *interview-prep visualizer host* per the curriculum: a place to *teach* AI concepts through visualizers, not a place where AI runs for users. The buildable target for this concept is below in Project exercises — a `/ai/prompt-anatomy` page that lets the reader load a real prompt, render its four sections as colored bands, toggle sections on/off, and see how the output changes.
 
 **Expected file paths** (when built):
 - `src/app/ai/prompt-anatomy/page.tsx` — the visualizer page
@@ -446,7 +446,7 @@ If you skipped any: you described the structure, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "summarize this DSA visualization" chain that takes the algorithm name, a description of the current step, and the algorithm's pseudocode, and returns a one-paragraph natural-language explanation. Lay out the four-section anatomy for this chain. What goes in system? Context? Few-shot? User?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed anatomy matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed anatomy matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -467,5 +467,5 @@ Without opening any files, answer:
 
 Then open the files and verify.
 
-✓ Pass: `next.config.ts`, `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/`, `CONCEPT_CATEGORIES`
+✓ Pass: `next.config.ts`, `.aipe/study-ai-engineering/`, `CONCEPT_CATEGORIES`
 ✗ Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.

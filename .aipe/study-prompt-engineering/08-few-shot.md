@@ -540,7 +540,7 @@ If you skipped any: you described the pattern, you didn't argue for the pivot.
 
 A new chain lands in the planned reincodes AI surface: a "categorize this DSA algorithm" chain that takes the algorithm name + a short description and returns one of `sorting`, `searching`, `graph-traversal`, `tree-operation`, `recursion`. The chain currently runs with instructions only and is 88% accurate, with the main failures being algorithms that span two categories (e.g., DFS — both `graph-traversal` and `recursion`). Apply the few-shot decision tree. Would you add few-shot? If yes, what's your initial 3-example set?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` and check whether your example-set design respects the static-export contract (the precompute step adds the examples to a chain that runs at build time, not user-request time).
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your example-set design respects the static-export contract (the precompute step adds the examples to a chain that runs at build time, not user-request time).
 
 ### Level 4 — Defend the decision you'd change
 

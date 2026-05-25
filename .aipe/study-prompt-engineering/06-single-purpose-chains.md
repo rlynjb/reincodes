@@ -486,7 +486,7 @@ If you skipped any: you described the structure, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "narrate this DSA step" feature that takes the algorithm name, the current step index, the array state, and the recently-completed comparison, and returns three things: a one-sentence natural-language narration, a list of "key observations" (2-3 bullet points), and a "next step prediction" (what the algorithm will do next). Apply the carve test. How many chains? Which models? What's the composition layer?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed pipeline respects the static-export contract (no live LLM at request time) — i.e., whether the precomputed-corpus pattern from that file's tradeoff analysis applies to your design.
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed pipeline respects the static-export contract (no live LLM at request time) — i.e., whether the precomputed-corpus pattern from that file's tradeoff analysis applies to your design.
 
 ### Level 4 — Defend the decision you'd change
 

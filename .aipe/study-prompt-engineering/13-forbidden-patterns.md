@@ -498,7 +498,7 @@ If you skipped any: you described it, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "weekly DSA challenge of the day" chain that generates a one-sentence description of an algorithm challenge for the user, run once daily. The user will see seven challenge descriptions per week. Design the anti-repetition machinery: what gets stored, what gets fed back into the prompt, what rotation shapes would you define?
 
-Write your answer (3-5 sentences minimum). Then check whether the design is compatible with reincodes' static-export contract (look at `/Users/rein/Public/reincodes/.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` for the constraint).
+Write your answer (3-5 sentences minimum). Then check whether the design is compatible with reincodes' static-export contract (look at `/Users/rein/Public/reincodes/.aipe/study-ai-engineering/05-ai-features-in-this-app.md` for the constraint).
 
 ### Level 4 — Defend the decision you'd change
 

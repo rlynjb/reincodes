@@ -63,9 +63,9 @@ The production failure mode each concept addresses:
                           feature as broken.
 ```
 
-## How this guide differs from `.aipe/study-prep-fundamentals-for-ai/`
+## How this guide differs from `.aipe/study-system-design-dsa/`
 
-This guide is **topic-focused, portfolio-wide-by-spec** (then redirected to reincodes-only per user instruction). The companion guide `.aipe/study-prep-fundamentals-for-ai/` is **codebase-focused** on reincodes — its `03-ai-engineering/` section already has Case B files for tokenization, embeddings, RAG, agents, and a meta "ai-features-in-this-app" file that frames reincodes as the *visualizer host* for AI concepts. This prompt-engineering guide complements that one by going deeper on the 13 prompt-engineering-specific concepts, each anchored to a planned `/ai/*` visualizer that would exercise the concept in reincodes' static-export contract.
+This guide is **topic-focused, portfolio-wide-by-spec** (then redirected to reincodes-only per user instruction). The companion guide `.aipe/study-system-design-dsa/` is **codebase-focused** on reincodes — its `03-ai-engineering/` section already has Case B files for tokenization, embeddings, RAG, agents, and a meta "ai-features-in-this-app" file that frames reincodes as the *visualizer host* for AI concepts. This prompt-engineering guide complements that one by going deeper on the 13 prompt-engineering-specific concepts, each anchored to a planned `/ai/*` visualizer that would exercise the concept in reincodes' static-export contract.
 
 Every file in this guide is Case B (concept not implemented in reincodes' production code) because reincodes has no AI surface — it's a Next.js static-export DSA visualizer + portfolio site. The `## Project exercises` blocks are the load-bearing content: each one names the planned visualizer that would demonstrate the concept in the browser, with file paths, scope, and effort estimates. The visualizers slot under `/ai/{concept}` and follow the static-export-friendly pattern (precompute model outputs at build time, ship as JSON, animate in the browser).
 

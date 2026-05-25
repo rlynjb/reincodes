@@ -485,7 +485,7 @@ If you skipped any: you described the bug, you didn't argue for the fix.
 
 A new chain lands in the planned reincodes AI surface: a "suggest the next algorithm to study" chain that takes the user's recently-viewed algorithms and returns a recommended next one with a short reason. The chain's declared output mode is `{algorithm: string, reason: string}`. The consumer renders the algorithm as a clickable card with the reason as hover text. Three weeks after shipping, the prompt is edited to "include a difficulty rating to help the user calibrate" — the schema is not updated. What happens in each of these implementations? (a) producer-side validator + hard error, (b) producer-side validator + retry, (c) silent-fallback try/catch.
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed handling respects the static-export contract (the chain runs at precompute time, not at user-request time) — i.e., whether the failure mode would surface at *build time* in CI rather than in production.
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed handling respects the static-export contract (the chain runs at precompute time, not at user-request time) — i.e., whether the failure mode would surface at *build time* in CI rather than in production.
 
 ### Level 4 — Defend the decision you'd change
 

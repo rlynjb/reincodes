@@ -470,7 +470,7 @@ If you skipped any: you described it, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "decide which algorithm to recommend for this user's data shape" chain that takes a description of the input (size, ordering, distribution, mutation pattern) and returns one of: `bubble | insertion | selection | merge | quick | heap`. Multi-signal classification — exactly the kind of problem CoT helps. Design the output schema with the structured-CoT pattern. Which field comes first? What's its type? What model tier would you target?
 
-Write your answer (3-5 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/02-dsa/README.md` to ground your "which signals matter for sorting choice" reasoning against the actual complexity-cheat-sheet table.
+Write your answer (3-5 sentences minimum). Then open `.aipe/study-system-design-dsa/02-dsa/README.md` to ground your "which signals matter for sorting choice" reasoning against the actual complexity-cheat-sheet table.
 
 ### Level 4 — Defend the decision you'd change
 

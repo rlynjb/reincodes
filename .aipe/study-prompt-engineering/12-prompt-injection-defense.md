@@ -287,7 +287,7 @@ The full picture is below.
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero chains exposed to user input, zero injection attempts to defend against. The existing study guide (`.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md`) positions reincodes as the *interview-prep visualizer host*: a place where AI concepts get visualized for teaching, not a place where AI runs for users. The buildable target for this concept is a `/ai/prompt-injection` page that renders a chat-like interface where the reader types a user message that attempts injection, and the visualizer runs the message through three precomputed defense layers side by side — no defense, instruction hierarchy + delimiters, structured-output-as-defense — showing what each layer's output is for the attempted attack.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero chains exposed to user input, zero injection attempts to defend against. The existing study guide (`.aipe/study-ai-engineering/05-ai-features-in-this-app.md`) positions reincodes as the *interview-prep visualizer host*: a place where AI concepts get visualized for teaching, not a place where AI runs for users. The buildable target for this concept is a `/ai/prompt-injection` page that renders a chat-like interface where the reader types a user message that attempts injection, and the visualizer runs the message through three precomputed defense layers side by side — no defense, instruction hierarchy + delimiters, structured-output-as-defense — showing what each layer's output is for the attempted attack.
 
 **Expected file paths** (when built):
 - `src/app/ai/prompt-injection/page.tsx` — the visualizer page
@@ -588,7 +588,7 @@ If you skipped any: you described the defenses, you didn't argue for the framing
 
 A new chain lands in the planned reincodes AI surface: an "ask a question about the current visualization" chain. The reader types a question; the chain has access to a "show me the next step of the algorithm" tool that can advance the visualization. Walk through the threat model. What injection attacks would you anticipate? Which defenses would you apply at the prompt level? Which defenses would you apply at the runtime level? What would the eval set of attacks look like?
 
-Write your answer (5-7 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed defenses match the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
+Write your answer (5-7 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed defenses match the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -610,5 +610,5 @@ Without opening any files, answer:
 
 Then open the files and verify.
 
-- Pass: `next.config.ts`, `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/`, `CONCEPT_CATEGORIES`, Simon Willison in September 2022
+- Pass: `next.config.ts`, `.aipe/study-ai-engineering/`, `CONCEPT_CATEGORIES`, Simon Willison in September 2022
 - Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.

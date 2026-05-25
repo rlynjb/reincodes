@@ -44,5 +44,5 @@ Topic-focused study guide on prompt engineering as a working discipline. 13 conc
 
 ## Companion guides
 
-- [`.aipe/study-prep-fundamentals-for-ai/`](../study-prep-fundamentals-for-ai/) — the per-codebase study guide for reincodes, covering system design / DSA / AI engineering / interview-prep system-design templates. Section 03 (AI engineering) covers tokenization, embeddings, RAG, agents — concepts orthogonal to prompt engineering.
+- [`.aipe/study-system-design-dsa/`](../study-system-design-dsa/) — the per-codebase study guide for reincodes, covering system design / DSA / AI engineering / interview-prep system-design templates. Section 03 (AI engineering) covers tokenization, embeddings, RAG, agents — concepts orthogonal to prompt engineering.
 - [`.aipe/audit-refactor-prep-fundamentals-for-ai/`](../audit-refactor-prep-fundamentals-for-ai/) — staff-engineer notebook of refactor opinions on the reincodes codebase. Different voice (staff engineer), different scope (refactor catalog vs prompt engineering catalog), same project.

@@ -525,7 +525,7 @@ If you skipped any: you described it, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "summarize this DSA visualization" chain that takes the algorithm name, a description of the current step, and the algorithm's pseudocode, and returns a one-paragraph natural-language explanation. Design the golden set. What inputs? What expected outputs (or, since outputs are free-form, what rubric)? What edge cases?
 
-Write your answer (3-5 sentences minimum). Then open `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed eval design respects the static-export constraint (no live LLM at request time; precompute at build time).
+Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed eval design respects the static-export constraint (no live LLM at request time; precompute at build time).
 
 ### Level 4 — Defend the decision you'd change
 

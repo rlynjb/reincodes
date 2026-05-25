@@ -125,7 +125,7 @@ Constraints inherited from the static-export contract (`next.config.ts`: `output
 
 **Not yet implemented — for the whole AI surface.** Deferred — reincodes is the interview-prep visualizer host per the curriculum; no AI viz built yet. This file is intentionally Case B at the *file level*: there is no production code path under `src/app/ai/` today, no AI tile in `src/components/Home/conceptsData.tsx`, no `scripts/` directory at the repo root.
 
-The single concrete artifact related to AI in the repo today is this very `.aipe/study-prep-fundamentals-for-ai/03-ai-engineering/` directory — the study material that defines what the visualizers will be when they ship. The repo's runtime knows nothing about AI; the repo's *documentation* knows the full plan.
+The single concrete artifact related to AI in the repo today is this very `.aipe/study-ai-engineering/` directory — the study material that defines what the visualizers will be when they ship. The repo's runtime knows nothing about AI; the repo's *documentation* knows the full plan.
 
 ---
 
