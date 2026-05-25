@@ -16,7 +16,7 @@ const skills: SkillChip[] = [
   { label: "next.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
   { label: "data structures & algorithms", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "system design", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "applied agentic ai", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "agentic ai", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
 ];
 
 export default function Hero() {
