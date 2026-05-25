@@ -1,30 +1,55 @@
-# 03 — AI engineering
+# AI engineering study guide
 
-The five concept files in this directory cover LLM application engineering fundamentals as they apply to reincodes' curriculum role: the interview-prep visualizer host. None of the patterns below are implemented in production code today; every file is Case B from the spec's perspective (concept tagged for the project, not yet built). The `## Project exercises` blocks carry the buildable targets — four planned visualizer pages plus the meta aggregation file.
+Per-repo AI engineering study guide for reincodes. Covers LLM foundations, context management, retrieval, agents, evals, production serving, and (when applicable) classical ML — per the `/aipe:study-ai-engineering` spec.
 
-## Files in this section
+## Codebase shape
 
-### LLM foundations
+**None of the three shapes today.** reincodes is a Next.js 15 static-export DSA visualizer + portfolio with zero AI surface in production code. The curriculum positions it as the *interview-prep visualizer host* — the place where AI concepts get taught through visualizers, not the place where AI runs for users. Every concept file in this guide is **Case B** (concept not implemented), and every concept's Project exercises block targets a planned `/ai/{concept}` visualizer under the static-export constraint.
 
-- `01-tokenization.md` — byte-pair encoding, why context windows are sized in tokens, the character-vs-token gap. Plans the `/ai/tokenization` visualizer.
+For where AI/ML actually runs in the portfolio:
+- **LLM application engineering** lives in buffr (Android journal with 5 AI chains)
+- **Prompt engineering as a discipline** lives in aipe (markdown spec workflow)
+- **Classical ML + on-device inference** lives in contrl-mo (calisthenics tracker with MediaPipe pose detection)
 
-### RAG and embeddings
+This guide stays reincodes-focused per spec scope (per-repo, not portfolio-wide).
 
-- `02-embeddings-geometrically.md` — embeddings as vectors in high-dimensional space, cosine similarity, t-SNE for 2D projection. Plans the `/ai/embeddings` cosine-similarity playground.
-- `03-rag-pattern.md` — the five RAG stages (chunk, embed, store, retrieve, generate), with the curriculum's loopd-shape vs aipe-shape RAG variants. Plans the `/ai/rag` pipeline visualizer.
+## Sub-section index
 
-### Agents
+### [01-llm-foundations/](01-llm-foundations/)
+What an LLM is, tokenization, sampling parameters, structured outputs, streaming, token economics, heuristic-before-LLM, provider abstraction, user-override locks. **9 files.**
 
-- `04-agents-and-tool-use.md` — agent loop as a `while` around a typed-response handler, ReAct, termination conditions, when *not* to use an agent. Plans the `/ai/agent-loop` animation.
+### [02-context-and-prompts/](02-context-and-prompts/)
+Context window, lost-in-the-middle, prompt chaining. **3 files.** (Prompt engineering proper lives in [`../study-prompt-engineering/`](../study-prompt-engineering/).)
 
-### Codebase use
+### [03-retrieval-and-rag/](03-retrieval-and-rag/)
+Embeddings, embedding model choice, chunking strategies, vector databases, dense vs sparse, hybrid retrieval (RRF), reranking, query rewriting (HyDE), stale embeddings, incremental indexing, RAG, GraphRAG. **12 files.**
 
-- `05-ai-features-in-this-app.md` — the meta aggregation file. Honest framing of "no AI in production today" plus the buildable surface area (the four visualizer pages from files 01–04 as a coherent sprint).
+### [04-agents-and-tool-use/](04-agents-and-tool-use/)
+Agents vs chains, tool calling, ReAct pattern, tool routing, agent memory, error recovery. **6 files.**
 
-## AI features table
+### [05-evals-and-observability/](05-evals-and-observability/)
+Eval set types, eval methods, LLM-as-judge bias, LLM observability. **4 files.**
 
-| Feature | Pattern used | Why this pattern |
-|---|---|---|
-| (none yet — see `system-design-templates/` for interview reframes) | — | reincodes is the interview-prep visualizer host per the curriculum; the actual AI work lives in loopd (LLM application engineering), aipe (prompt engineering as discipline), and contrl-mo (classical ML). The static-export contract (`output: "export"` in `next.config.ts`) plus the deliberate three-shape portfolio split keep AI runtime out of this project. The four planned visualizers in files 01–04 are the buildable surface; until they ship, this table stays empty. |
+### [06-production-serving/](06-production-serving/)
+LLM caching, LLM cost optimization, prompt injection, rate limiting + backpressure, retry + circuit breaker. **5 files.**
 
-→ See `system-design-templates/` for IK-style interview reframes (search ranking, tech support chatbot).
+### [07-system-design-templates/](07-system-design-templates/)
+IK-style interview-prompt reframes: search ranking, tech support chatbot. **2 files** in the 9-labelled-bullet system-design shape (not the per-concept template).
+
+### Machine learning (omitted)
+**08-machine-learning/ and 09-ml-system-design-templates/ are not generated** — reincodes has no ML surface (no trained models, no recommenders, no on-device inference). When the portfolio needs ML coverage, it lives in the contrl-mo repo's own `study-ai-engineering/` guide.
+
+### Per-codebase synthesis
+- [ai-features-in-this-codebase.md](ai-features-in-this-codebase.md) — meta aggregation file. Lists every AI feature in this codebase (currently: none) with the patterns each uses. Frames the planned `/ai/*` visualizers as the buildable surface.
+
+(No `ml-features-in-this-codebase.md` — see "Machine learning (omitted)" above.)
+
+## Reading order
+
+The sub-sections are mostly independent; read by topic interest rather than in strict order. If you're new to LLM application engineering, start with [01-llm-foundations/](01-llm-foundations/) → [02-context-and-prompts/](02-context-and-prompts/) → [03-retrieval-and-rag/](03-retrieval-and-rag/). If you're already comfortable with the foundations and want the production-side view, jump to [05-evals-and-observability/](05-evals-and-observability/) → [06-production-serving/](06-production-serving/). The 07 templates are read in the *opposite* mode — not as concept study, but as interview-prep reframes for "design X" prompts.
+
+## Companion guides
+
+- [`../study-system-design-dsa/`](../study-system-design-dsa/) — the per-codebase study guide for system design + DSA in reincodes (the working DSA visualizer code, not the planned AI surface)
+- [`../study-prompt-engineering/`](../study-prompt-engineering/) — topic-focused study guide on prompt engineering as a working discipline
+- [`../audit-refactor-prep-fundamentals-for-ai/`](../audit-refactor-prep-fundamentals-for-ai/) — staff-engineer notebook of refactor opinions on reincodes (note: directory still uses the legacy 2-word descriptor naming convention; that skill hasn't migrated to fixed names yet)
