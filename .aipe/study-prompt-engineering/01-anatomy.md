@@ -446,7 +446,7 @@ If you skipped any: you described the structure, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "summarize this DSA visualization" chain that takes the algorithm name, a description of the current step, and the algorithm's pseudocode, and returns a one-paragraph natural-language explanation. Lay out the four-section anatomy for this chain. What goes in system? Context? Few-shot? User?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed anatomy matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed anatomy matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -469,3 +469,6 @@ Then open the files and verify.
 
 ✓ Pass: `next.config.ts`, `.aipe/study-ai-engineering/`, `CONCEPT_CATEGORIES`
 ✗ Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

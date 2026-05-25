@@ -486,7 +486,7 @@ If you skipped any: you described the structure, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "narrate this DSA step" feature that takes the algorithm name, the current step index, the array state, and the recently-completed comparison, and returns three things: a one-sentence natural-language narration, a list of "key observations" (2-3 bullet points), and a "next step prediction" (what the algorithm will do next). Apply the carve test. How many chains? Which models? What's the composition layer?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed pipeline respects the static-export contract (no live LLM at request time) — i.e., whether the precomputed-corpus pattern from that file's tradeoff analysis applies to your design.
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed pipeline respects the static-export contract (no live LLM at request time) — i.e., whether the precomputed-corpus pattern from that file's tradeoff analysis applies to your design.
 
 ### Level 4 — Defend the decision you'd change
 
@@ -509,3 +509,6 @@ Then open the files and verify.
 
 ✓ Pass: `next.config.ts`, `CONCEPT_CATEGORIES`, `02-structured-outputs.md`
 ✗ Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

@@ -525,7 +525,7 @@ If you skipped any: you described it, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "summarize this DSA visualization" chain that takes the algorithm name, a description of the current step, and the algorithm's pseudocode, and returns a one-paragraph natural-language explanation. Design the golden set. What inputs? What expected outputs (or, since outputs are free-form, what rubric)? What edge cases?
 
-Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed eval design respects the static-export constraint (no live LLM at request time; precompute at build time).
+Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed eval design respects the static-export constraint (no live LLM at request time; precompute at build time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -548,3 +548,6 @@ Then open the files and verify.
 
 ✓ Pass: `next.config.ts`, `CONCEPT_CATEGORIES` (in `conceptsData.tsx`), `variant-a-outputs.json` + `variant-b-outputs.json`
 ✗ Fail on details: file and array names matter more than line numbers.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

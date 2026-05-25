@@ -63,9 +63,15 @@ The production failure mode each concept addresses:
                           feature as broken.
 ```
 
-## How this guide differs from `.aipe/study-system-design-dsa/`
+## How this guide differs from the other two
 
-This guide is **topic-focused, portfolio-wide-by-spec** (then redirected to reincodes-only per user instruction). The companion guide `.aipe/study-system-design-dsa/` is **codebase-focused** on reincodes — its `03-ai-engineering/` section already has Case B files for tokenization, embeddings, RAG, agents, and a meta "ai-features-in-this-app" file that frames reincodes as the *visualizer host* for AI concepts. This prompt-engineering guide complements that one by going deeper on the 13 prompt-engineering-specific concepts, each anchored to a planned `/ai/*` visualizer that would exercise the concept in reincodes' static-export contract.
+reincodes' study material is split across three per-repo guides (per the v1.38.0 specs), each topic-focused and anchored to *this* codebase:
+
+- **`.aipe/study-system-design-dsa/`** — the system-design + DSA study guide. Covers the working DSA visualizer code (sorting, trees, recursion, graphs) plus reincodes' architectural patterns (static export, page-per-route, client-only boundary, delayLoop animation contract).
+- **`.aipe/study-ai-engineering/`** — the AI engineering + ML guide. Covers LLM foundations, context window management, retrieval and RAG, agents, evals, production serving. All Case B for reincodes (no AI surface today). The meta file `ai-features-in-this-codebase.md` aggregates the planned `/ai/*` visualizers.
+- **`.aipe/study-prompt-engineering/`** — *this* guide. Covers prompt engineering as a working discipline — 13 concepts focused on the authoring side. All Case B for reincodes. Each concept anchors to a planned `/ai/{concept}` visualizer that demonstrates the concept under the static-export contract.
+
+The split: AI engineering covers the *operational* side (RAG mechanics, eval discipline, production serving); prompt engineering covers the *authoring* side (how to structure a prompt, when CoT helps, how to defend against injection). The two guides cross-reference where concepts overlap.
 
 Every file in this guide is Case B (concept not implemented in reincodes' production code) because reincodes has no AI surface — it's a Next.js static-export DSA visualizer + portfolio site. The `## Project exercises` blocks are the load-bearing content: each one names the planned visualizer that would demonstrate the concept in the browser, with file paths, scope, and effort estimates. The visualizers slot under `/ai/{concept}` and follow the static-export-friendly pattern (precompute model outputs at build time, ship as JSON, animate in the browser).
 
@@ -78,3 +84,6 @@ The eight specific-technique files (06-13) can be read in any order, by need. Us
 ## What's deliberately out of scope
 
 Per the spec: vendor-specific prompt syntax quirks (they appear inside concept files under Tech reference, not as their own concepts), Tree of Thoughts and academic prompt research (not yet production practice), Constitutional AI / alignment-style prompting (safety-critical applications, different scope), vision/multi-modal prompting (not exercised by any current reincodes visualizer plan), jailbreak research from the attacker side (defender side is concept #12), and the history of prompt engineering as a field (this is a working guide, not a reference book). The 13 concepts above are the complete list.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

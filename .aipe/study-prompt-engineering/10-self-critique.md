@@ -226,7 +226,7 @@ The two axes that matter — *symptom shape* and *stakes* — together determine
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero LLM chains to self-critique, zero classifiers to run self-consistency over. The existing study guide (`.aipe/study-ai-engineering/05-ai-features-in-this-app.md`) positions reincodes as the *interview-prep visualizer host*: a place where AI concepts get visualized for teaching, not a place where AI runs for users. The buildable target for this concept is a `/ai/self-critique` page that renders the same input run through two precomputed pipelines side by side — direct generation vs generate -> critique -> revise — with a "trust threshold" slider that re-colors the comparison to show where the critique pass earns its token cost.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero LLM chains to self-critique, zero classifiers to run self-consistency over. The existing study guide (`.aipe/study-ai-engineering/ai-features-in-this-codebase.md`) positions reincodes as the *interview-prep visualizer host*: a place where AI concepts get visualized for teaching, not a place where AI runs for users. The buildable target for this concept is a `/ai/self-critique` page that renders the same input run through two precomputed pipelines side by side — direct generation vs generate -> critique -> revise — with a "trust threshold" slider that re-colors the comparison to show where the critique pass earns its token cost.
 
 **Expected file paths** (when built):
 - `src/app/ai/self-critique/page.tsx` — the visualizer page
@@ -512,7 +512,7 @@ If you skipped any: you recommended the pattern, you didn't argue for or against
 
 A new chain lands in the planned reincodes AI surface: a "narrate this DSA visualization step for a screen-reader user" chain that takes the algorithm name, the current step's state, and produces a one-sentence accessibility narration. The chain runs on every step of every visualizer, so volume is high. Quality matters because screen-reader users depend on it. Walk through the decision: would you add self-critique here? If yes, in what shape? If no, what would you do instead?
 
-Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed pipeline matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
+Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed pipeline matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -536,3 +536,6 @@ Then open the files and verify.
 
 - Pass: `next.config.ts`, `.aipe/study-ai-engineering/`, `CONCEPT_CATEGORIES`, Self-Refine (Madaan et al. 2023) + Self-Consistency (Wang et al. 2022)
 - Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

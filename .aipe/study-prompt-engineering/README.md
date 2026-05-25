@@ -44,5 +44,17 @@ Topic-focused study guide on prompt engineering as a working discipline. 13 conc
 
 ## Companion guides
 
-- [`.aipe/study-system-design-dsa/`](../study-system-design-dsa/) — the per-codebase study guide for reincodes, covering system design / DSA / AI engineering / interview-prep system-design templates. Section 03 (AI engineering) covers tokenization, embeddings, RAG, agents — concepts orthogonal to prompt engineering.
-- [`.aipe/audit-refactor-prep-fundamentals-for-ai/`](../audit-refactor-prep-fundamentals-for-ai/) — staff-engineer notebook of refactor opinions on the reincodes codebase. Different voice (staff engineer), different scope (refactor catalog vs prompt engineering catalog), same project.
+reincodes' study material is split across three per-repo guides (per the v1.38.0 specs):
+
+- [`.aipe/study-system-design-dsa/`](../study-system-design-dsa/) — system-design + DSA. Covers the working DSA visualizer code and reincodes' architectural patterns (static export, page-per-route, client-only boundary, delayLoop animation contract).
+- [`.aipe/study-ai-engineering/`](../study-ai-engineering/) — AI engineering + ML. Covers LLM foundations, context window management, retrieval and RAG, agents, evals, production serving, plus IK-style interview-prompt reframes. All Case B for reincodes; planned `/ai/*` visualizers as the buildable target.
+- [`.aipe/study-prompt-engineering/`](.) — *this* guide. Prompt engineering as a working discipline.
+
+The split: AI engineering covers the *operational* side; this guide covers the *authoring* side. They cross-reference where concepts overlap (structured outputs, chain-of-thought, prompt injection).
+
+Plus the audit-refactor book:
+
+- [`.aipe/audit-refactor-prep-fundamentals-for-ai/`](../audit-refactor-prep-fundamentals-for-ai/) — staff-engineer notebook of refactor opinions on the reincodes codebase. Different voice (staff engineer), different scope (refactor catalog vs concept catalog). The audit-refactor skill still uses the legacy 2-word descriptor naming convention; the directory hasn't been migrated to a fixed name.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

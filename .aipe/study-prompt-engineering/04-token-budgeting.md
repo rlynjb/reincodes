@@ -5,7 +5,7 @@
 
 > Counting tokens, allocating the context window across system/context/history/response, and treating the 80% mark as a danger line. Basic hygiene that distinguishes amateur from professional prompt work.
 
-**See also:** → [01-anatomy](01-anatomy.md) · → [02-structured-outputs](02-structured-outputs.md) · → [05-eval-driven-iteration](05-eval-driven-iteration.md) · → `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` · → `.aipe/study-ai-engineering/01-tokenization.md`
+**See also:** → [01-anatomy](01-anatomy.md) · → [02-structured-outputs](02-structured-outputs.md) · → [05-eval-driven-iteration](05-eval-driven-iteration.md) · → `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` · → `.aipe/study-ai-engineering/01-llm-foundations/02-tokenization.md`
 
 ---
 
@@ -276,7 +276,7 @@ The boundary between step 3 (compare) and step 4 (compress) is where the 80% ala
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are no LLM calls, no context windows, no tokenizers in `package.json`. The existing study guide (`.aipe/study-ai-engineering/05-ai-features-in-this-app.md`) frames reincodes as the *interview-prep visualizer host* — the place where AI concepts get *taught through visualizers*, not the place where AI runs for users. The existing `01-tokenization.md` in that same directory frames the tokenization visualizer that this concept builds on. The buildable target for *token budgeting* specifically is a `/ai/token-budget` page that renders the context window as a horizontal bar, segments colored by section (system / retrieved / history / response), with sliders for "history length" and "retrieved doc count" that recompute the bar in real time using a precomputed tokenizer. A second panel shows the lost-in-the-middle attention curve so the reader sees why middle-position content gets less attention even when it fits.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are no LLM calls, no context windows, no tokenizers in `package.json`. The existing study guide (`.aipe/study-ai-engineering/ai-features-in-this-codebase.md`) frames reincodes as the *interview-prep visualizer host* — the place where AI concepts get *taught through visualizers*, not the place where AI runs for users. The existing `01-tokenization.md` in that same directory frames the tokenization visualizer that this concept builds on. The buildable target for *token budgeting* specifically is a `/ai/token-budget` page that renders the context window as a horizontal bar, segments colored by section (system / retrieved / history / response), with sliders for "history length" and "retrieved doc count" that recompute the bar in real time using a precomputed tokenizer. A second panel shows the lost-in-the-middle attention curve so the reader sees why middle-position content gets less attention even when it fits.
 
 **Expected file paths** (when built):
 - `src/app/ai/token-budget/page.tsx` — the visualizer page
@@ -306,7 +306,7 @@ Token budgeting gets harder in two cases. First, *multi-modal prompts* — image
 - [01-anatomy](01-anatomy.md) → the four sections of the anatomy *are* the four budget claimants; anatomy makes budgeting possible
 - [02-structured-outputs](02-structured-outputs.md) → the schema adds tokens to the request; usually small, but counted
 - [05-eval-driven-iteration](05-eval-driven-iteration.md) → token budget is itself an eval metric (regressions in `chain_input_tokens` should fire alarms)
-- `.aipe/study-ai-engineering/01-tokenization.md` → the foundation: what a token *is*, how the tokenizer works, why character-count is wrong
+- `.aipe/study-ai-engineering/01-llm-foundations/02-tokenization.md` → the foundation: what a token *is*, how the tokenizer works, why character-count is wrong
 
 ---
 
@@ -405,7 +405,7 @@ Doing the token counting on the server (so reincodes wouldn't need the WASM bund
 
 ### [B-reincodes-token-budget-viz] Build the token-budget visualizer
 
-- **Exercise ID:** `[B-reincodes-token-budget-viz]` — curriculum reference: `[C1.2]` (Context windows and the lost-in-the-middle problem) + `[C1.6]` (Token economics). Aligns with the reincodes interview-prep surface in `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and depends on the planned `[B-reincodes-tokenization]` exercise's WASM-tokenizer worker.
+- **Exercise ID:** `[B-reincodes-token-budget-viz]` — curriculum reference: `[C1.2]` (Context windows and the lost-in-the-middle problem) + `[C1.6]` (Token economics). Aligns with the reincodes interview-prep surface in `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and depends on the planned `[B-reincodes-tokenization]` exercise's WASM-tokenizer worker.
 - **What to build:** a page at `/ai/token-budget` with two coordinated panels. Panel 1 is a *horizontal-bar context window visualizer* — a bar representing the model's full window (200k tokens for the default model), color-segmented into the four slots (system / retrieved / history / response budget), with sliders for "history turns" (0–80) and "retrieved chunk count" (0–20). As the reader drags a slider, the corresponding segment grows in real time using the in-browser tokenizer worker to count actual tokens from the precomputed corpus. A 80% line is marked on the bar; when total utilization crosses it, the bar's background flashes amber and a "compression triggered" indicator appears. Panel 2 is an *attention-curve visualizer* — a line chart showing the lost-in-the-middle U-shape across prompt positions, with markers showing where the slider settings would place the highest-signal content. When the reader sets "history turns: 30, retrieved chunks: 15", the panel highlights that the most-relevant retrieved chunk (position 8 of 15) falls in the attention dip and warns "rerank to put this at the edges."
 - **Why it earns its place:** the visualizer makes the two coupled phenomena (budget consumption + attention distribution) *visible together* in a way no separate explanation does. The reader slides the history up and watches both the bar fill *and* the attention curve flatten over middle content — the two failure modes that compound at high utilization. The interview signal is that the candidate understands token budgeting beyond "count and don't overflow" — they understand that *quality* of attention matters as much as *room* in the window.
 - **Files to touch:** `src/app/ai/token-budget/page.tsx` (the page), `src/components/TokenBudgetVisualizer/` (window-bar component, slider controls, attention-curve chart), `src/workers/tokenizer.worker.ts` (reused from tokenization viz; loaded once across both pages), `public/ai/token-budget/example-corpus.json` (precomputed corpus for the four slots — at least 80 conversation turns and 20 retrieved chunks at varying sizes), `public/ai/token-budget/attention-curve.json` (precomputed attention values across positions, from the lost-in-the-middle paper's empirical curve). Add a row to `src/components/Home/conceptsData.tsx`'s `CONCEPT_CATEGORIES` under the `ai-engineering` category.
@@ -564,7 +564,7 @@ If you skipped any: you described one piece of the puzzle, not the system.
 
 A new chain lands in the planned reincodes AI surface: a "compare two DSA algorithms across history" chain that takes two algorithm names, a comparison criterion (time complexity, space complexity, ease of implementation), and a target audience level, plus 5-10 retrieved chunks from algorithm-textbook excerpts. It returns a paragraph-length comparison. Design the token-budget allocation for this chain on Claude Sonnet 4.7 (200k window). What goes in each slot? What's the response budget? At what utilization does compression trigger, and which compression strategy fits this chain best (sliding window doesn't apply — no history)?
 
-Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed allocation respects the static-export constraint (the budget calculation should happen at build time during precompute, since there's no runtime LLM call).
+Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed allocation respects the static-export constraint (the budget calculation should happen at build time during precompute, since there's no runtime LLM call).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -588,3 +588,6 @@ Then open the files and verify.
 
 - Pass: `next.config.ts`, `system + retrieved + history + response`, 80% / 95%, dynamic interpolation in the prefix invalidates the cache and forfeits ~90% cost savings
 - Fail on details: that's fine — the shape is what matters. The four slots and the 80% rule should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

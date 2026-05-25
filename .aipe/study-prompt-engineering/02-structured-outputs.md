@@ -5,7 +5,7 @@
 
 > The 2026 way to get reliable JSON out of an LLM — declare a schema, let the provider enforce it, validate at the boundary, retry on schema fail. Putting "respond only in JSON" in the prompt text is not how this is done anymore.
 
-**See also:** → [01-anatomy](01-anatomy.md) · → [03-prompts-as-code](03-prompts-as-code.md) · → [05-eval-driven-iteration](05-eval-driven-iteration.md) · → `.aipe/study-ai-engineering/05-ai-features-in-this-app.md`
+**See also:** → [01-anatomy](01-anatomy.md) · → [03-prompts-as-code](03-prompts-as-code.md) · → [05-eval-driven-iteration](05-eval-driven-iteration.md) · → `.aipe/study-ai-engineering/ai-features-in-this-codebase.md`
 
 ---
 
@@ -245,7 +245,7 @@ The boundary between step 2 (provider enforcement) and step 4 (your validation) 
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there is no schema enforcement to demonstrate because there is no LLM call. The existing study guide (`.aipe/study-ai-engineering/05-ai-features-in-this-app.md`) frames reincodes as the *interview-prep visualizer host* per the curriculum: the place where AI concepts get *taught through visualizers*, not the place where AI runs for users. The buildable target for this concept is a `/ai/structured-outputs` page that renders a schema as a tree, runs the same prompt against three precomputed variants (strict mode on, no "be polite" instruction, courtesy-fence bug active), and lets the reader toggle which variant is active to see what breaks.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there is no schema enforcement to demonstrate because there is no LLM call. The existing study guide (`.aipe/study-ai-engineering/ai-features-in-this-codebase.md`) frames reincodes as the *interview-prep visualizer host* per the curriculum: the place where AI concepts get *taught through visualizers*, not the place where AI runs for users. The buildable target for this concept is a `/ai/structured-outputs` page that renders a schema as a tree, runs the same prompt against three precomputed variants (strict mode on, no "be polite" instruction, courtesy-fence bug active), and lets the reader toggle which variant is active to see what breaks.
 
 **Expected file paths** (when built):
 - `src/app/ai/structured-outputs/page.tsx` — the visualizer page
@@ -375,7 +375,7 @@ A "live demo" that calls the provider from the browser was not a real option. Pr
 
 ### [B-reincodes-structured-outputs-viz] Build the structured-outputs visualizer
 
-- **Exercise ID:** `[B-reincodes-structured-outputs-viz]` — curriculum reference: `[C1.4]` (Structured outputs: JSON mode, tool schemas, typed contracts). Aligns with the reincodes interview-prep surface in `.aipe/study-ai-engineering/05-ai-features-in-this-app.md`.
+- **Exercise ID:** `[B-reincodes-structured-outputs-viz]` — curriculum reference: `[C1.4]` (Structured outputs: JSON mode, tool schemas, typed contracts). Aligns with the reincodes interview-prep surface in `.aipe/study-ai-engineering/ai-features-in-this-codebase.md`.
 - **What to build:** a page at `/ai/structured-outputs` that takes one example chain (a tag extractor over a journal entry), renders its Zod schema as a tree (root → properties → types → constraints), and lets the reader toggle between three precomputed variants of the same input: (1) `strict: true` JSON Schema mode, (2) plain JSON mode with a neutral system prompt, (3) plain JSON mode with "be friendly" added to force the courtesy-fence bug. The page shows three panels — *system prompt*, *raw model output*, *parse result* — that swap as the variant toggles. Variant 3 visibly fails the parse step; the page highlights the markdown fence in the raw output and shows the `SyntaxError` in the parse panel.
 - **Why it earns its place:** the visualizer makes the "schema enforcement at the boundary" concept *operable* — the reader breaks the parse by changing one word in the system prompt and watches the failure happen in real time (against captured-real outputs, not simulated). The interview signal is that the candidate understands the bug deeply enough to *demonstrate* it on demand.
 - **Files to touch:** `src/app/ai/structured-outputs/page.tsx` (the page), `src/components/StructuredOutputsVisualizer/` (schema tree, variant toggle, output/parse panels), `public/ai/structured-outputs/example-prompts.json` (the precomputed triples), `scripts/precompute-structured-outputs.ts` (build-time script that runs each variant against the provider, captures raw output + parse result, commits JSON). Add a row to `src/components/Home/conceptsData.tsx`'s `CONCEPT_CATEGORIES` under the new `ai-engineering` category (introduced by the `01-anatomy.md` exercise if built first).
@@ -537,7 +537,7 @@ If you skipped any: you described the API surface, you didn't argue for the disc
 
 A new chain lands in the planned reincodes AI surface: an "explain this DSA visualization" chain that takes the algorithm name, current step description, and the user's question, and returns a structured response with `{ explanation: string, related_concepts: string[], difficulty: 'beginner' | 'intermediate' | 'advanced' }`. Design the structured-output approach. Which mode (tool calling / strict / JSON mode)? Which provider? What does the Zod schema look like? Where does the schema_fail retry land?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed approach respects the static-export constraints (precompute at build time, no live LLM at request time).
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed approach respects the static-export constraints (precompute at build time, no live LLM at request time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -561,3 +561,6 @@ Then open the files and verify.
 
 - Pass: `next.config.ts`, `response_format: { type: "json_schema", strict: true }`, markdown code fences / friendly preambles, adapter pattern (one schema, N provider-specific adapters)
 - Fail on details: that's fine — the shape is what matters. Mode names and the courtesy-fence bug should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

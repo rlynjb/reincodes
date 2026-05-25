@@ -233,7 +233,7 @@ The curve shows where the technique earns its cost: on simple prompts, meta-prom
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero prompts being authored, with or without meta-prompting. The existing study guide (`.aipe/study-ai-engineering/05-ai-features-in-this-app.md`) positions reincodes as the *interview-prep visualizer host*: a place where AI concepts get visualized for teaching, not a place where AI runs for users. The buildable target for this concept is a `/ai/meta-prompting` page that renders the three-card workflow (human goal -> LLM draft -> human edit) with toggleable view modes that surface what changes a senior engineer makes to an LLM-drafted prompt across simple, medium, and complex goal complexities.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are zero prompts being authored, with or without meta-prompting. The existing study guide (`.aipe/study-ai-engineering/ai-features-in-this-codebase.md`) positions reincodes as the *interview-prep visualizer host*: a place where AI concepts get visualized for teaching, not a place where AI runs for users. The buildable target for this concept is a `/ai/meta-prompting` page that renders the three-card workflow (human goal -> LLM draft -> human edit) with toggleable view modes that surface what changes a senior engineer makes to an LLM-drafted prompt across simple, medium, and complex goal complexities.
 
 **Expected file paths** (when built):
 - `src/app/ai/meta-prompting/page.tsx` — the visualizer page
@@ -537,7 +537,7 @@ If you skipped any: you described the technique, you didn't argue for the discip
 
 A new chain lands in the planned reincodes AI surface: an "explain this DSA visualization to a beginner" chain that takes the algorithm name, the current step's state, and a target audience level (beginner / intermediate / expert), and produces a paragraph-length explanation. The prompt needs to handle three audience modes, the algorithm-name space is open (any DSA algorithm), and the output is free text (no schema). Lay out the meta-prompting workflow for this chain. Is the LLM draft worth the cost here? What would the goal spec look like? What edits would you expect to make to the draft?
 
-Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed approach matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
+Write your answer (3-5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed approach matches the constraints that file names for any planned AI feature in reincodes (static-export contract, precomputed corpus, no live LLM at request time).
 
 ### Level 4 — Defend the decision you'd change
 
@@ -561,3 +561,6 @@ Then open the files and verify.
 
 - Pass: `next.config.ts`, `.aipe/study-ai-engineering/`, `CONCEPT_CATEGORIES`, aipe (the separate prompt-engineering-as-discipline project)
 - Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

@@ -5,7 +5,7 @@
 
 > Treating prompts as source files — version-controlled, reviewed in PRs, paired with a model version, logged in production so you know which prompt produced which output. The opposite of "the prompt is a string in a Slack message someone pasted in three months ago."
 
-**See also:** → [01-anatomy](01-anatomy.md) · → [02-structured-outputs](02-structured-outputs.md) · → [05-eval-driven-iteration](05-eval-driven-iteration.md) · → `.aipe/study-ai-engineering/05-ai-features-in-this-app.md`
+**See also:** → [01-anatomy](01-anatomy.md) · → [02-structured-outputs](02-structured-outputs.md) · → [05-eval-driven-iteration](05-eval-driven-iteration.md) · → `.aipe/study-ai-engineering/ai-features-in-this-codebase.md`
 
 ---
 
@@ -244,7 +244,7 @@ The boundary between "draft" and "merge + deploy" is the eval gate — every pro
 
 ## In this codebase
 
-**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are no prompts to version, no chains to log, no model versions to pin. The existing study guide (`.aipe/study-ai-engineering/05-ai-features-in-this-app.md`) frames reincodes as the *interview-prep visualizer host* — the place where AI concepts get *taught through visualizers*, not the place where AI runs for users. The canonical implementation of prompts-as-code in the portfolio lives in another project (aipe, which encodes the pattern as its primary purpose); reincodes' role here is to *teach the lifecycle* through a visualizer that renders the prompt history as a timeline.
+**Not yet implemented.** reincodes is a Next.js static-export DSA visualizer with no AI surface in production code — there are no prompts to version, no chains to log, no model versions to pin. The existing study guide (`.aipe/study-ai-engineering/ai-features-in-this-codebase.md`) frames reincodes as the *interview-prep visualizer host* — the place where AI concepts get *taught through visualizers*, not the place where AI runs for users. The canonical implementation of prompts-as-code in the portfolio lives in another project (aipe, which encodes the pattern as its primary purpose); reincodes' role here is to *teach the lifecycle* through a visualizer that renders the prompt history as a timeline.
 
 **Expected file paths** (when built):
 - `src/app/ai/prompts-as-code/page.tsx` — the visualizer page
@@ -369,7 +369,7 @@ Building the visualizer *inside* aipe (as one of aipe's own slash commands rathe
 
 ### [B-reincodes-prompts-as-code-viz] Build the prompt-timeline visualizer
 
-- **Exercise ID:** `[B-reincodes-prompts-as-code-viz]` — curriculum reference: `[C1.7]` (Prompt engineering as a discipline — what aipe encodes). Aligns with the reincodes interview-prep surface in `.aipe/study-ai-engineering/05-ai-features-in-this-app.md`.
+- **Exercise ID:** `[B-reincodes-prompts-as-code-viz]` — curriculum reference: `[C1.7]` (Prompt engineering as a discipline — what aipe encodes). Aligns with the reincodes interview-prep surface in `.aipe/study-ai-engineering/ai-features-in-this-codebase.md`.
 - **What to build:** a page at `/ai/prompts-as-code` that renders the history of one example chain (a tag extractor or a summarizer) as a git-log-style timeline of 5–6 versions. Each timeline entry shows version label, date, commit message ("PM asked for terser summaries"), and the model version paired at that point. Clicking a version opens a center panel with a unified diff between that version and the previous one. A right-side "replay" panel shows sample outputs from running that version against the same fixed input, demonstrating how the same prompt evolved across model versions (Sonnet 3 → Sonnet 4 → Sonnet 4.5). A "play" button advances the timeline one version at a time, animating the diff and the output change. The reader sees, in one interaction, *why* the prompt+model pairing matters — outputs change not just when prompts change but when models change underneath stable prompts.
 - **Why it earns its place:** the visualizer makes the *lifecycle* of a prompt observable in a way no static file structure does. The reader scrubs through six months of prompt history in 30 seconds and sees both the explicit changes (prompt edits) and the implicit changes (model upgrades affecting stable prompts). The interview signal is that the candidate understands prompts as artifacts with a history, not as static strings.
 - **Files to touch:** `src/app/ai/prompts-as-code/page.tsx` (the page), `src/components/PromptTimelineVisualizer/` (timeline component, diff renderer using a simple line-diff utility, output replay panel), `public/ai/prompts-as-code/example-history.json` (the precomputed 5–6 version history with paired models and sample outputs), `scripts/precompute-prompt-history.ts` (build-time script that runs each version against its paired model, captures sample outputs, commits JSON). Add a row to `src/components/Home/conceptsData.tsx`'s `CONCEPT_CATEGORIES` under the `ai-engineering` category.
@@ -525,7 +525,7 @@ If you skipped any: you described the practice, you didn't argue for it.
 
 A new chain lands in the planned reincodes AI surface: a "generate an interview-style explanation of this algorithm" chain that takes the algorithm name, target audience level (junior / senior), and length budget, and returns a paragraph of explanation. Design the prompts-as-code setup. Where does the prompt file live? What's in the frontmatter? Which model do you pin to? What does the production log row look like (assume the visualizer ever runs live)? How would you handle a Sonnet 4.5 → Sonnet 5 upgrade six months from now?
 
-Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/05-ai-features-in-this-app.md` and check whether your proposed setup respects the static-export constraints (no live LLM at request time — the "production logs" answer should be hypothetical, framed as "if this ever ran live, here's the schema").
+Write your answer (3–5 sentences minimum). Then open `.aipe/study-ai-engineering/ai-features-in-this-codebase.md` and check whether your proposed setup respects the static-export constraints (no live LLM at request time — the "production logs" answer should be hypothetical, framed as "if this ever ran live, here's the schema").
 
 ### Level 4 — Defend the decision you'd change
 
@@ -549,3 +549,6 @@ Then open the files and verify.
 
 - Pass: `next.config.ts`, `(prompt_id, prompt_version, model)`, aipe, `CONCEPT_CATEGORIES` (with a new `ai-engineering` category if not yet introduced)
 - Fail on details: that's fine — the shape is what matters. The log schema and the (prompt, model) pairing should be recoverable.
+
+---
+Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.
