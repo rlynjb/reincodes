@@ -367,6 +367,15 @@ The page (`src/app/trees/binary-search-tree/page.tsx`):
 
 The duplication of recursive and iterative variants for `insert`, `delete`, `preOrder`, `postOrder` is deliberate. The file is a study notebook — the page only calls the recursive variants, but both shapes are kept side by side so a reader (the project owner, preparing for interviews) can compare them directly.
 
+**Study notebook reference (parallel implementations in `src/utils/notes/BST/`):**
+
+- `Insert.ts` — standalone `insert_in_bst` function plus a `BinaryTreeNode` class; the variant that `BinarySearchTree.ts`'s `insert_iterative` references (and currently leaves dangling, since `BinaryTreeNode` isn't imported into the main class file).
+- `MaxValuedNode.ts` — finding the maximum, separated from the BST class.
+- `PreorderTraversalBinaryTree.ts`, `InorderTraversalBinaryTree.ts`, `PostorderTraversalBinaryTree.ts` — the three depth-first traversals, each in its own file with the recursive form.
+- `Delete_recursive.ts`, `Delete_iterative.ts` — both delete variants kept as standalone exercises, matching the duplication pattern in `BinarySearchTree.ts` itself.
+
+None of these are imported by the visualizer page. They exist as parallel reference implementations the project owner can read without the class wrapper — the same pattern as the `notes/Sorting/` files, applied to BST operations.
+
 ---
 
 ## Elaborate

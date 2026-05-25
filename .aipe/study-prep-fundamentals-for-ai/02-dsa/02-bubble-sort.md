@@ -164,6 +164,8 @@ The full picture is below.
 **Function:** `bubbleSort` (inner async function inside `BubbleSort` component)
 **Line range:** L54–L76
 
+**Study notebook reference:** `src/utils/notes/Sorting/BubbleSort.ts` — standalone reference implementation, not imported by the visualizer page; kept for direct side-by-side comparison with the inline animation-coupled body. Re-exported through `src/utils/notes/Sorting/index.ts`.
+
 The shape, trimmed:
 
 ```

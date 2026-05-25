@@ -251,6 +251,8 @@ The full picture is below.
 **Functions:** `quickSort` (outer kickoff, L55), `swapHelper` (L58), `divide_and_combine` (L64)
 **Line range:** L55–L123
 
+**Study notebook reference:** `src/utils/notes/Sorting/QuickSort.ts` — standalone reference implementation, not imported by the visualizer; useful for reading the Lomuto partition without the React-state-mutation interleaving. Re-exported through `src/utils/notes/Sorting/index.ts`.
+
 The shape, trimmed:
 
 ```

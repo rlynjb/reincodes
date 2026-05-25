@@ -1,8 +1,8 @@
 # Section 02 — Data structures & algorithms
 
-The reincodes codebase is an interactive DSA visualizer plus a portfolio. Every operation here ships as a `useState`-driven animation under `src/app/{sorting,trees,recursions,graphs}/*/page.tsx`, anchored on reference data structures in `src/utils/data_structures/`.
+The reincodes codebase is an interactive DSA visualizer plus a portfolio. Every operation here ships as a `useState`-driven animation under `src/app/{sorting,trees,recursions,graphs}/*/page.tsx`, anchored on reference data structures in `src/utils/data_structures/`. The project owner also maintains a parallel study notebook at `src/utils/notes/` (organized as `BST/`, `Graph/`, `Recursions/`, `Sorting/`) — standalone reference implementations that are not imported by the visualizers but kept for direct comparison; concept files below cite the corresponding `notes/` file under a **Study notebook reference** block in `## In this codebase`.
 
-This section walks each operation as its own file: the data shape, the brute-force baseline, the optimal version with its insight, the codebase implementation with line refs, and the interview defense.
+This section walks each operation as its own file: the data shape, the brute-force baseline, the optimal version with its insight, the codebase implementation with line refs (production + study-notebook), and the interview defense.
 
 ## File index
 

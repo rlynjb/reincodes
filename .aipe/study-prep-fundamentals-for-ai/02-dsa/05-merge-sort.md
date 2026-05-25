@@ -208,6 +208,8 @@ The full picture is below.
 **Functions:** `mergeSort` (outer kickoff, L53), `divide` (L56), `combine` (L67), `updateOriginalArray` (L112)
 **Line range:** L53–L156
 
+**Study notebook reference:** `src/utils/notes/Sorting/MergeSort.ts` — standalone reference implementation, not imported by the visualizer; useful for reading the merge-step logic without the animation-coupled `updateOriginalArray` callback. Re-exported through `src/utils/notes/Sorting/index.ts`.
+
 The shape, trimmed:
 
 ```

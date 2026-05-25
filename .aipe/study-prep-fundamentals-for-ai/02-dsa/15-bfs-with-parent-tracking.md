@@ -354,6 +354,8 @@ BFS-with-parent is the canonical answer to "shortest path in an unweighted graph
 **Function:** `breadth_first_search` (exported as a free function, not a method)
 **Lines:** L201–L225
 
+**Study notebook reference:** `src/utils/notes/Graph/BFSTraversal.ts` — standalone BFS traversal kept outside the `Graph2` class; useful for reading the queue + visited-array bookkeeping without the parent-array reconstruction logic that the visualizer needs.
+
 Trimmed shape:
 
 ```

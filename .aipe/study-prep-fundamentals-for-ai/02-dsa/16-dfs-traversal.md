@@ -332,6 +332,11 @@ DFS and BFS are the same algorithm with two different frontier disciplines. Swap
 **Function:** `dfs_traversal` (with inner `dfs_traversal_helper`)
 **Lines:** L241–L273 (helper at L255–L264)
 
+**Study notebook reference (in `src/utils/notes/Graph/`):**
+
+- `DFSTraversalRecursion.ts` — standalone recursive DFS, the pure-algorithm sibling of the class-bound `Graph.dfs_traversal`.
+- `DFSTraversalRecursionWithComponent.ts` — DFS that also tracks connected-components count; the building block for `numberOfConnectedComponents` in `Graph.ts`.
+
 ```
 dfs_traversal(n, edges) {
   const visited = new Array(n).fill(false)

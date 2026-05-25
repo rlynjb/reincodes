@@ -184,6 +184,8 @@ The full picture is below.
 **Function:** `insertionSort` (inner async function inside `InsertionSort` component)
 **Line range:** L53–L74
 
+**Study notebook reference:** `src/utils/notes/Sorting/InsertionSort.ts` — standalone reference implementation, not imported by the visualizer; kept as a pure-algorithm sibling of the inline animation-coupled body. Re-exported through `src/utils/notes/Sorting/index.ts`.
+
 The shape, trimmed:
 
 ```

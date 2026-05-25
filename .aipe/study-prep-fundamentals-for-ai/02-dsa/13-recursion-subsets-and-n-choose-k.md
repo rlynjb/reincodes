@@ -357,6 +357,11 @@ Every problem that can be framed as "for each item, two choices" maps onto this 
 **Function:** `decrease_and_conquer_count_all_subsets`
 **Lines:** L21–L45
 
+**Study notebook reference (in `src/utils/notes/Recursions/`):**
+
+- `Count_all_subsets.ts` — standalone include/exclude recursion for the power set; pure-algorithm sibling of the visualizer's `page.tsx` body.
+- `N_choose_k_combinations.ts` — pruned combinations variant; the `n-choose-k/page.tsx` route is currently a stub, and this file holds the implementation the future page would render.
+
 Trimmed shape:
 
 ```

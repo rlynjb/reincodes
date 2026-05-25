@@ -431,6 +431,8 @@ CallstackVisualizer.
 **Renders via:** `src/components/CallstackVisualizer`
 **Backed by:** `src/utils/data_structures/Tree.ts` (the n-ary tree)
 
+**Study notebook reference:** `src/utils/notes/Recursions/Fibonacci_number.ts` — standalone reference implementations of Fibonacci, kept outside the visualizer for direct comparison between recursive and iterative shapes (the visualizer page ships only the iterative form).
+
 Key line ranges in `page.tsx`:
 
 - Tree instantiation: L17 — `new Tree(initialParent, null, ...)`

@@ -209,6 +209,8 @@ The full picture is below.
 **Function:** `selectionSort` (inner async function inside `SelectionSort` component)
 **Line range:** L53–L77
 
+**Study notebook reference:** `src/utils/notes/Sorting/SelectionSort.ts` — standalone reference implementation, not imported by the visualizer; kept as a pure-algorithm sibling of the inline animation-coupled body. Re-exported through `src/utils/notes/Sorting/index.ts`.
+
 The shape, trimmed:
 
 ```

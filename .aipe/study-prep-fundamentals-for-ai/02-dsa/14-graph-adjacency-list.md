@@ -300,6 +300,13 @@ Pick your data structure to match where the inner loop is. Almost every graph al
 
 ## In this codebase
 
+**Study notebook reference (in `src/utils/notes/Graph/`):**
+
+- `ConvertEdgeListToAdjList.ts` — standalone helper that builds an adjacency list from an edge list; the pattern the `Graph2` constructor encodes inline.
+- `ConvertEdgeListToAdjMatrix.ts` — the adjacency-matrix counterpart, kept alongside for side-by-side comparison of the two representations.
+
+Neither is imported by the visualizer pages; both are pure-algorithm exercises held as parallel references to the class-based `Graph` / `Graph2` implementations described below.
+
 **File:** `src/utils/data_structures/Graph2.ts`
 **Class:** `Edge`
 **Lines:** L7–L19
