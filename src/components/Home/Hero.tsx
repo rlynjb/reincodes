@@ -24,7 +24,7 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px]">
-        I&apos;m a front-end engineer pivoting deliberately into AI engineering. After 7+ years shipping Vue and React apps to customers like FedEx, Amazon, Netflix, and CoreWeave — ~$700k in client cost savings along the way — I&apos;m retooling for the next decade of product work, where the interface is the LLM and the engineering challenge is everything that surrounds it.
+        I&apos;m a Software Engineer - Front-End, pivoting deliberately into AI engineering. After 7+ years shipping Vue and React apps to customers like FedEx, Amazon, Netflix, and CoreWeave — ~$700k in client cost savings along the way — I&apos;m retooling for the next decade of product work, where the interface is the LLM and the engineering challenge is everything that surrounds it.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
         seattle, wa · open to frontend / ai engineering roles
