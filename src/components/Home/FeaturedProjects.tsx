@@ -16,28 +16,16 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: "dryrun",
-    subtitle: "codebase-native study app",
+    name: "LoomiConnect",
+    subtitle: "agent-driven anomaly detection",
     description:
-      "Built an Android app that turns aipe-generated study guides into a four-level validation flow — reconstruct, explain, apply, defend — graded on-device by Gemini Nano with API fallback. Local-first, GitHub-synced, spaced-repetition driven.",
-    tech: ["android", "kotlin", "gemini-nano", "local-first", "spaced-repetition", "on-device-ai", "github-sync"],
-    href: "https://github.com/rlynjb/dryrun",
+      "Hackathon project: a workspace monitoring platform that scans business metrics across 10 categories — cart abandonment, churn, fraud, conversion drops — then routes triggered anomalies through a three-stage agent pipeline: monitor → investigate → recommend.",
+    tech: ["agentic-ai", "anomaly-detection", "real-time", "vercel", "snapshot-cache"],
+    href: "https://blooming-insights.vercel.app/",
     external: true,
-    iconBg: "bg-[#FBF1D6]",
-    iconText: "text-[#5A4308]",
-    initials: "dr",
-  },
-  {
-    name: "buffr",
-    subtitle: "daily journal and vlog",
-    description:
-      "Built a native Android app to capture my day in one journal — prose, todos, habits, nutrition, project tags, video clips — and render a vlog from the clips at the end of it. Local-first, AI-assisted compose.",
-    tech: ["react-native", "expo", "typescript", "android", "sqlite", "supabase", "anthropic", "ffmpeg", "local-first"],
-    href: "https://github.com/rlynjb/buffr",
-    external: true,
-    iconBg: "bg-[#E1F5EE]",
-    iconText: "text-[#085041]",
-    initials: "lp",
+    iconBg: "bg-[#DFF2F0]",
+    iconText: "text-[#0E5757]",
+    initials: "lc",
   },
   {
     name: "contrl",
@@ -50,18 +38,6 @@ const projects: Project[] = [
     iconBg: "bg-[#FAECE7]",
     iconText: "text-[#712B13]",
     initials: "ct",
-  },
-  {
-    name: "aipe",
-    subtitle: "spec workflow plugin",
-    description:
-      "Spec workflow plugin for Claude Code + Codex. 7 disciplined templates across Describe → Diagnose → Act layers — plus a visual codebase study guide.",
-    tech: ["claude-code", "codex-cli", "slash-commands", "prompt-engineering", "context-engineering", "markdown-templates", "agent-spec", "ai-workflow"],
-    href: "https://rlynjb.github.io/aipe/",
-    external: true,
-    iconBg: "bg-[#FBEAF0]",
-    iconText: "text-[#72243E]",
-    initials: "ai",
   },
   {
     name: "AdvntrCue",
