@@ -39,18 +39,6 @@ const projects: Project[] = [
     iconText: "text-[#712B13]",
     initials: "ct",
   },
-  {
-    name: "AdvntrCue",
-    subtitle: "rag travel guide",
-    description:
-      "Built a Next.js RAG app with pgvector, GPT-4 streaming, tool-calling, and session memory (MemoRAG) — a learning project for modern AI engineering.",
-    tech: ["Next.js", "TypeScript", "RAG", "pgvector", "OpenAI", "Vercel AI SDK", "Drizzle ORM", "Netlify Functions"],
-    href: "https://github.com/rlynjb/advntrCue",
-    external: true,
-    iconBg: "bg-[#EEEDFE]",
-    iconText: "text-[#3C3489]",
-    initials: "ac",
-  },
 ];
 
 const baseCardClass =
