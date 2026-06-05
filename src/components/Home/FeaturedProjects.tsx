@@ -32,7 +32,7 @@ const projects: Project[] = [
     subtitle: "skilltree calisthenics workout",
     description:
       "Side project: a calisthenics tracker that maps bodyweight progression across three axes — push, pull, squat — into a 5-level skill tree, with an on-device pose pipeline: camera → MediaPipe landmarks → auto rep count.",
-    tech: ["react-native", "expo", "typescript", "expo-sqlite", "mediapipe", "react-native-vision-camera", "react-native-worklets-core", "pose-detection"],
+    tech: ["pose-detection", "on-device-ml", "computer-vision", "react-native", "skill-tree-progression"],
     href: "https://github.com/rlynjb/contrl",
     external: true,
     iconBg: "bg-[#FAECE7]",
