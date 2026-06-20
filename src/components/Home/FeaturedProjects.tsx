@@ -28,16 +28,40 @@ const projects: Project[] = [
     initials: "lc",
   },
   {
-    name: "contrl",
-    subtitle: "skilltree calisthenics workout",
+    name: "aptkit",
+    subtitle: "reusable ai agent toolkit",
     description:
-      "Side project: a calisthenics tracker that maps bodyweight progression across three axes — push, pull, squat — into a 5-level skill tree, with an on-device pose pipeline: camera → MediaPipe landmarks → auto rep count.",
-    tech: ["pose-detection", "on-device-ml", "computer-vision", "react-native", "skill-tree-progression"],
-    href: "https://github.com/rlynjb/contrl",
+      "An AI capability library extracted from production apps: provider-agnostic model adapters (Anthropic, OpenAI, local Gemma), a tool registry, structured-output parsing, and a replay-based eval harness — published to npm and consumed by my other agent projects.",
+    tech: ["typescript", "agentic-ai", "llm-evals", "monorepo", "npm-package"],
+    href: "https://github.com/rlynjb/aptkit",
     external: true,
-    iconBg: "bg-[#FAECE7]",
-    iconText: "text-[#712B13]",
-    initials: "ct",
+    iconBg: "bg-[#ECE8F7]",
+    iconText: "text-[#3A2B71]",
+    initials: "ak",
+  },
+  {
+    name: "buffr",
+    subtitle: "personal rag knowledge agent",
+    description:
+      "A local-first RAG agent that indexes your notes into pgvector (HNSW) and answers grounded questions through a Gemma model, capturing full retrieval trajectories for evaluation and fine-tuning. Cross-surface mobile client in progress.",
+    tech: ["rag", "pgvector", "embeddings", "llm-evals", "trajectory-capture"],
+    href: "https://github.com/rlynjb/buffr",
+    external: true,
+    iconBg: "bg-[#F7F0E2]",
+    iconText: "text-[#6B4E0E]",
+    initials: "bf",
+  },
+  {
+    name: "flattr",
+    subtitle: "grade-aware route planning",
+    description:
+      "A routing engine for self-powered travel that optimizes for flat routes, not fast ones — a hand-rolled A* (Dijkstra → A* → directional cost function) over an OSM + elevation graph, with admissibility and edge-case correctness proven by 130 tests.",
+    tech: ["a-star", "graph-algorithms", "pathfinding", "typescript", "osm-elevation"],
+    href: "https://github.com/rlynjb/flattr",
+    external: true,
+    iconBg: "bg-[#E5EEF7]",
+    iconText: "text-[#13406F]",
+    initials: "fl",
   },
 ];
 
