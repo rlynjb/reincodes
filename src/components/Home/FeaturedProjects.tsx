@@ -33,7 +33,7 @@ const projects: Project[] = [
     description:
       "An AI capability library extracted from production apps: provider-agnostic model adapters (Anthropic, OpenAI, local Gemma), a tool registry, structured-output parsing, and a replay-based eval harness — published to npm and consumed by my other agent projects.",
     tech: ["typescript", "agentic-ai", "llm-evals", "monorepo", "npm-package"],
-    href: "https://github.com/rlynjb/aptkit",
+    href: "https://rlynjb.github.io/aptkit/",
     external: true,
     iconBg: "bg-[#ECE8F7]",
     iconText: "text-[#3A2B71]",
