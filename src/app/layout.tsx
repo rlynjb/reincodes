@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Reincodes",
-  description: "Portfolio, DSA Visualizer",
+  description: "Portfolio",
 };
 
 export default function RootLayout({
