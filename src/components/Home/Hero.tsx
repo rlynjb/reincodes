@@ -27,7 +27,10 @@ export default function Hero() {
         I&apos;m currently a front-end software engineer, studying and building projects toward AI engineering. Across 7+ years I&apos;ve shipped Vue and React apps to enterprise customers — FedEx, Amazon, CoreWeave — with ~$700k in client cost savings along the way.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px] mt-4">
-        On my own time I build production systems on the Claude API: a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG with real evals. That pairing is what I&apos;m after — pairing real product-shipping experience with the engineering it takes to build around an LLM, the same blend needed to embed with a customer&apos;s product and engineering teams and get them shipping on Claude.
+        On my own time I build production systems on the Claude API: a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG with real evals.
+      </p>
+      <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px] mt-4">
+        That pairing is what I&apos;m after — pairing real product-shipping experience with the engineering it takes to build around an LLM, the same blend needed to embed with a customer&apos;s product and engineering teams and get them shipping on Claude.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
         seattle, wa · open to applied ai / ai engineering roles
