@@ -24,10 +24,10 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px]">
-        I&apos;m a Software Engineer - Front-End, pivoting deliberately into AI engineering. After 7+ years shipping Vue and React apps to customers like FedEx, Amazon, and CoreWeave — ~$700k in client cost savings along the way — I&apos;m retooling for the next decade of product work, where the interface is the LLM and the engineering challenge is everything that surrounds it.
+        I&apos;m a product engineer building toward an Applied AI Engineer role. Across 7+ years I shipped Vue and React apps to enterprise customers — FedEx, Amazon, CoreWeave — with ~$700k in client cost savings along the way. Now I build production systems on the Claude API: a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG with real evals. The mix is the point — I know how to ship customer-facing product <em>and</em> how to engineer everything that surrounds the LLM, which is exactly what it takes to sit with a customer&apos;s product and engineering teams and help them ship on Claude.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
-        seattle, wa · open to frontend / ai engineering roles
+        seattle, wa · open to applied ai / ai engineering roles
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-8">
