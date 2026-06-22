@@ -24,7 +24,10 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px]">
-        I&apos;m currently a front-end software engineer, studying and building projects toward AI engineering. Across 7+ years I&apos;ve shipped Vue and React apps to enterprise customers — FedEx, Amazon, CoreWeave — with ~$700k in client cost savings along the way. On my own time I build production systems on the Claude API: a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG with real evals. The mix is the point — I know how to ship customer-facing product <em>and</em> how to engineer everything that surrounds the LLM, which is exactly what it takes to sit with a customer&apos;s product and engineering teams and help them ship on Claude.
+        I&apos;m currently a front-end software engineer, studying and building projects toward AI engineering. Across 7+ years I&apos;ve shipped Vue and React apps to enterprise customers — FedEx, Amazon, CoreWeave — with ~$700k in client cost savings along the way.
+      </p>
+      <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px] mt-4">
+        On my own time I build production systems on the Claude API: a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG with real evals. That pairing is what I&apos;m after — pairing real product-shipping experience with the engineering it takes to build around an LLM, the same blend needed to embed with a customer&apos;s product and engineering teams and get them shipping on Claude.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
         seattle, wa · open to applied ai / ai engineering roles
