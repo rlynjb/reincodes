@@ -53,6 +53,7 @@ const projects: Project[] = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- hidden for now, kept for easy restore
 const supporting: Project[] = [
   {
     name: "loopd / dryrun",
@@ -167,6 +168,7 @@ export default function FeaturedProjects() {
         ))}
       </div>
 
+      {/* Supporting apps hidden for now
       <div className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mt-8 mb-4">
         supporting apps
       </div>
@@ -175,6 +177,7 @@ export default function FeaturedProjects() {
           <ProjectCard key={p.name} project={p} />
         ))}
       </div>
+      */}
     </section>
   );
 }
