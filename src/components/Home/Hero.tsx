@@ -49,7 +49,7 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px]">
-        I&apos;m a software engineer with 7+ years building and shipping production web apps — React, Vue, Next.js, TypeScript — to enterprise customers like FedEx, Amazon, and CoreWeave, with around $700k in annual client cost savings along the way.
+        I&apos;m a software engineer with 8+ years building and shipping production web apps — React, Vue, Next.js, TypeScript — to enterprise customers like FedEx, Amazon, and CoreWeave, with around $700k in annual client cost savings along the way.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed max-w-[560px] mt-4">
         These days I&apos;m focused on applied AI engineering: building production systems on LLM APIs — a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG pipelines with proper eval harnesses.
@@ -76,7 +76,7 @@ export default function Hero() {
         </div>
         <div className="bg-neutral-900 rounded-lg px-3.5 py-3">
           <div className="text-[10px] text-neutral-400 uppercase tracking-wider">years at switch</div>
-          <div className="text-xl">7+</div>
+          <div className="text-xl">8+</div>
         </div>
       </div>
 
