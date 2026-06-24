@@ -551,4 +551,3 @@ Then open the files and verify.
 - Fail on details: that's fine — the shape is what matters. The log schema and the (prompt, model) pairing should be recoverable.
 
 ---
-Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

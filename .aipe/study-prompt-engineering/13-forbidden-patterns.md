@@ -523,4 +523,3 @@ Then open the files and verify.
 ✗ Fail on details: file and array names matter more than line numbers.
 
 ---
-Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

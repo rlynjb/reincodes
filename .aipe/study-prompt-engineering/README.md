@@ -57,4 +57,3 @@ Plus the audit-refactor book:
 - [`.aipe/audit-refactor-prep-fundamentals-for-ai/`](../audit-refactor-prep-fundamentals-for-ai/) — staff-engineer notebook of refactor opinions on the reincodes codebase. Different voice (staff engineer), different scope (refactor catalog vs concept catalog). The audit-refactor skill still uses the legacy 2-word descriptor naming convention; the directory hasn't been migrated to a fixed name.
 
 ---
-Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

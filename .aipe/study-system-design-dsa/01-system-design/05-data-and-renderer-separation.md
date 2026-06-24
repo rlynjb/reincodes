@@ -653,4 +653,3 @@ Without opening any files, answer:
 Then open the files and verify.
 
 ---
-Updated: 2026-05-24 — IMPLEMENTATIONS shrank from 5 to 4 entries (relational-store wip dropped); FeaturedProjects grew from 4 to 5 entries (dryrun added, loopd → buffr renamed); line range refreshed.

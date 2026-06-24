@@ -86,4 +86,3 @@ The eight specific-technique files (06-13) can be read in any order, by need. Us
 Per the spec: vendor-specific prompt syntax quirks (they appear inside concept files under Tech reference, not as their own concepts), Tree of Thoughts and academic prompt research (not yet production practice), Constitutional AI / alignment-style prompting (safety-critical applications, different scope), vision/multi-modal prompting (not exercised by any current reincodes visualizer plan), jailbreak research from the attacker side (defender side is concept #12), and the history of prompt engineering as a field (this is a working guide, not a reference book). The 13 concepts above are the complete list.
 
 ---
-Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.

@@ -471,4 +471,3 @@ Then open the files and verify.
 ✗ Fail on details: that's fine — the shape is what matters. File and directory names should be recoverable.
 
 ---
-Updated: 2026-05-25 — cross-references refreshed for the new study-ai-engineering/ layout; companion-guides framing updated for v1.38.0 per-repo spec.
