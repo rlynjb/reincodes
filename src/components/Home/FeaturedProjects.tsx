@@ -17,10 +17,10 @@ type Project = {
 const projects: Project[] = [
   {
     name: "LoomiConnect",
-    subtitle: "agent-driven anomaly detection",
+    subtitle: "multi-agent anomaly detection",
     description:
-      "Scans workspace metrics for anomalies, then routes each through a three-stage Claude agent pipeline — monitor → investigate → recommend — over MCP, streaming every hypothesis and tool call to the UI.",
-    tech: ["agentic-ai", "claude", "mcp", "anomaly-detection", "streaming"],
+      "Built for a multi-agent AI hackathon (Loomi Connect / Bloomreach, Analytics Agents track): a three-stage Claude agent pipeline — monitor → investigate → recommend — over MCP that scans workspace metrics for anomalies and streams every hypothesis and tool call to the UI via SSE. Backed by an eval harness (precision@k / recall@k scorers and a rubric-as-judge) so agent quality is measurable, not anecdotal.",
+    tech: ["next.js", "typescript", "anthropic-sdk", "mcp", "sse-streaming", "vercel"],
     href: "https://blooming-insights.vercel.app/",
     external: true,
     iconBg: "bg-[#DFF2F0]",
@@ -29,10 +29,10 @@ const projects: Project[] = [
   },
   {
     name: "aptkit",
-    subtitle: "reusable ai agent toolkit",
+    subtitle: "provider-agnostic agent toolkit",
     description:
-      "A provider-agnostic agent runtime: model adapters (Claude, OpenAI, local Gemma), bounded tool-use loops, structured-output-with-retry, and a deterministic replay eval harness. Published to npm and reused across my agent projects.",
-    tech: ["typescript", "agentic-ai", "llm-evals", "replay-testing", "npm-package"],
+      "A reusable agent runtime with model adapters (Claude, OpenAI, local Gemma), bounded tool-use loops, and structured-output-with-retry — published to npm and reused across multiple agent projects. Includes a deterministic replay eval harness for regression-testing agent trajectories across model and prompt changes.",
+    tech: ["typescript", "agent-frameworks", "llm-evals", "replay-testing", "npm"],
     href: "https://rlynjb.github.io/aptkit/",
     external: true,
     iconBg: "bg-[#ECE8F7]",
@@ -43,13 +43,25 @@ const projects: Project[] = [
     name: "buffr",
     subtitle: "rag agent with real evals",
     description:
-      "A self-hosted RAG agent that indexes notes into pgvector (HNSW) and answers grounded questions via a local Gemma model — built around eval discipline: precision@5, a faithfulness rubric, and full trajectory capture for data-driven fine-tuning.",
-    tech: ["rag", "pgvector", "embeddings", "llm-evals", "trajectory-capture"],
+      "A self-hosted RAG agent that indexes notes into pgvector (HNSW) and answers grounded questions via a local Gemma model. Built around eval discipline: precision@5, a faithfulness rubric, and full trajectory capture to drive data-driven fine-tuning.",
+    tech: ["rag", "pgvector", "embeddings", "llm-evals", "on-device-inference"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
     iconBg: "bg-[#F7F0E2]",
     iconText: "text-[#6B4E0E]",
     initials: "bf",
+  },
+  {
+    name: "flattr",
+    subtitle: "grade-aware route planning",
+    description:
+      "A routing engine that optimizes for flat routes over fast ones — a hand-rolled A* over an OpenStreetMap + elevation graph, with admissibility and edge cases proven by 130 tests.",
+    tech: ["typescript", "a-star", "graph-algorithms", "pathfinding"],
+    href: "https://github.com/rlynjb/flattr",
+    external: true,
+    iconBg: "bg-[#E5EEF7]",
+    iconText: "text-[#13406F]",
+    initials: "fl",
   },
 ];
 
@@ -64,18 +76,6 @@ const supporting: Project[] = [
     iconBg: "bg-[#EAE2F7]",
     iconText: "text-[#4A2B71]",
     initials: "ld",
-  },
-  {
-    name: "flattr",
-    subtitle: "grade-aware route planning",
-    description:
-      "A routing engine for self-powered travel that optimizes for flat routes, not fast ones — a hand-rolled A* over an OSM + elevation graph, with admissibility and edge cases proven by 130 tests.",
-    tech: ["a-star", "graph-algorithms", "pathfinding", "typescript"],
-    href: "https://github.com/rlynjb/flattr",
-    external: true,
-    iconBg: "bg-[#E5EEF7]",
-    iconText: "text-[#13406F]",
-    initials: "fl",
   },
   {
     name: "contrl",
