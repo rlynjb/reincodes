@@ -36,8 +36,7 @@ export default function RootLayout({
               href={"/"}
             >
               <h1 className="text-xl leading-none">
-                Reincodes<br/>
-                <span className="text-xs text-gray-400">Portfolio</span>
+                Reincodes
               </h1>
             </Link>
 
