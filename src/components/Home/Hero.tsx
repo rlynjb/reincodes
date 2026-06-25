@@ -6,14 +6,8 @@ interface SkillChip {
 
 const skills: SkillChip[] = [
   // AI / LLM engineering — the focus
-  { label: "llm apis (claude, openai)", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "agent runtimes", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "multi-agent orchestration", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "mcp", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "rag", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "vector search (pgvector)", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "evals", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "prompt engineering", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "on-device llm (gemma)", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   // Languages
   { label: "typescript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
