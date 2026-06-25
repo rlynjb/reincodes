@@ -20,9 +20,7 @@ const skills: SkillChip[] = [
   { label: "next.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
   { label: "vue", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
   { label: "nuxt", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "accessibility", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
   // Backend & data
-  { label: "node.js", bg: "bg-[#1E466E]", text: "text-[#E5EFF9]" },
   { label: "hono", bg: "bg-[#1E466E]", text: "text-[#E5EFF9]" },
   { label: "rest apis", bg: "bg-[#1E466E]", text: "text-[#E5EFF9]" },
   { label: "postgresql", bg: "bg-[#1E466E]", text: "text-[#E5EFF9]" },
