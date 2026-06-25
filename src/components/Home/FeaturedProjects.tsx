@@ -31,8 +31,8 @@ const projects: Project[] = [
     name: "aptkit",
     subtitle: "provider-agnostic agent toolkit",
     description:
-      "A reusable agent runtime with model adapters (Claude, OpenAI, local Gemma), bounded tool-use loops, and structured-output-with-retry — published to npm and reused across multiple agent projects. Includes a deterministic replay eval harness for regression-testing agent trajectories across model and prompt changes.",
-    tech: ["typescript", "agent-frameworks", "llm-evals", "replay-testing", "npm"],
+      "A TypeScript monorepo of composable agent packages: a runtime with bounded tool-use loops and structured-output-with-retry, model adapters (Claude, OpenAI, local Gemma), plus RAG with swappable embeddings/vector stores and episodic conversation memory. Published to npm and reused across my agent projects, with deterministic replay evals (precision@k / recall@k) for regression-testing trajectories across model and prompt changes.",
+    tech: ["typescript", "agent-runtime", "rag", "llm-evals", "npm"],
     href: "https://rlynjb.github.io/aptkit/",
     external: true,
     iconBg: "bg-[#ECE8F7]",
@@ -43,8 +43,8 @@ const projects: Project[] = [
     name: "buffr",
     subtitle: "rag agent with real evals",
     description:
-      "A self-hosted RAG agent that indexes notes into pgvector (HNSW) and answers grounded questions via a local Gemma model. Built around eval discipline: precision@5, a faithfulness rubric, and full trajectory capture to drive data-driven fine-tuning.",
-    tech: ["rag", "pgvector", "embeddings", "llm-evals", "on-device-inference"],
+      "A self-hosted RAG agent with an interactive chat CLI: indexes notes into pgvector (HNSW) on Supabase Postgres and answers grounded questions via a local Gemma model, with persistent cross-session conversation memory and profile-based grounding. Built around eval discipline — precision@k / recall@k scorers and full per-step trajectory capture to drive data-driven fine-tuning.",
+    tech: ["rag", "pgvector", "embeddings", "llm-evals", "conversation-memory"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
     iconBg: "bg-[#F7F0E2]",
