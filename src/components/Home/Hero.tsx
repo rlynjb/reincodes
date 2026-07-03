@@ -33,13 +33,13 @@ export default function Hero() {
         I&apos;m a software engineer with 8+ years building and shipping production web apps — React, Vue, Next.js, TypeScript — to enterprise customers like FedEx, Amazon, and CoreWeave, with around $700k in annual client cost savings along the way.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-4">
-        These days I&apos;m focused on applied AI engineering: building production systems on LLM APIs — a provider-agnostic agent runtime, multi-agent diagnostics over MCP, and RAG pipelines with proper eval harnesses.
+        These days I&apos;m focused on applied AI engineering: building production-grade systems on LLM APIs — a provider-agnostic agent runtime, multi-agent diagnostics on synthetic data, and evaluated RAG pipelines.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-4">
-        I&apos;m after an applied AI / product engineering role — somewhere I can pair full-stack product delivery with hands-on LLM and agent work.
+        I&apos;m looking for a role I can contribute to from day one on what I know best — full-stack, front-end-leaning product engineering — while growing into the applied AI and agent work I&apos;ve been building toward.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
-        seattle, wa · open to applied ai / product engineering roles
+        seattle, wa · open to front-end / ai engineering roles
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-8">

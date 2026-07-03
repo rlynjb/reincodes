@@ -17,10 +17,10 @@ type Project = {
 const projects: Project[] = [
   {
     name: "LoomiConnect",
-    subtitle: "multi-agent anomaly detection",
+    subtitle: "production multi-agent analyst",
     description:
-      "Built for a multi-agent AI hackathon (Loomi Connect / Bloomreach, Analytics Agents track): a three-stage Claude agent pipeline — monitor → investigate → recommend — over MCP that scans workspace metrics for anomalies and streams every hypothesis and tool call to the UI via SSE. Backed by an eval harness (precision@k / recall@k scorers and a rubric-as-judge) so agent quality is measurable, not anecdotal.",
-    tech: ["next.js", "typescript", "anthropic-sdk", "mcp", "sse-streaming", "vercel"],
+      "A production-grade AI analyst for ecommerce workspaces: three specialist agents — monitor → diagnose → recommend — over MCP, streaming full reasoning provenance (every tool call, metric delta, and hypothesis) to the UI via SSE. Hardened for production — OAuth 2.1 / PKCE auth, per-call timeouts with retry ladders and budget ceilings, CI/CD, and an eval harness (221 tests, rubric-as-judge over golden cases) so agent quality is measurable.",
+    tech: ["next.js", "anthropic-sdk", "mcp", "sse-streaming", "llm-evals", "oauth-2.1"],
     href: "https://blooming-insights.vercel.app/",
     external: true,
     iconBg: "bg-[#DFF2F0]",
