@@ -28,18 +28,6 @@ const projects: Project[] = [
     initials: "lc",
   },
   {
-    name: "aptkit",
-    subtitle: "provider-agnostic agent toolkit",
-    description:
-      "A TypeScript monorepo of composable agent packages: a runtime with bounded tool-use loops and structured-output-with-retry, model adapters (Claude, OpenAI, local Gemma), plus RAG with swappable embeddings/vector stores and episodic conversation memory. Published to npm and reused across my agent projects, with deterministic replay evals (precision@k / recall@k) for regression-testing trajectories across model and prompt changes.",
-    tech: ["typescript", "agent-runtime", "rag", "llm-evals", "npm"],
-    href: "https://rlynjb.github.io/aptkit/",
-    external: true,
-    iconBg: "bg-[#ECE8F7]",
-    iconText: "text-[#3A2B71]",
-    initials: "ak",
-  },
-  {
     name: "buffr",
     subtitle: "rag agent with real evals",
     description:
@@ -50,18 +38,6 @@ const projects: Project[] = [
     iconBg: "bg-[#F7F0E2]",
     iconText: "text-[#6B4E0E]",
     initials: "bf",
-  },
-  {
-    name: "flattr",
-    subtitle: "grade-aware route planning",
-    description:
-      "A routing engine that optimizes for flat routes over fast ones — a hand-rolled A* over an OpenStreetMap + elevation graph, with admissibility and edge cases proven by 130 tests.",
-    tech: ["typescript", "a-star", "graph-algorithms", "pathfinding"],
-    href: "https://github.com/rlynjb/flattr",
-    external: true,
-    iconBg: "bg-[#E5EEF7]",
-    iconText: "text-[#13406F]",
-    initials: "fl",
   },
 ];
 
