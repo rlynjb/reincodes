@@ -31,7 +31,7 @@ const projects: Project[] = [
     name: "buffr",
     subtitle: "rag agent with real evals",
     description:
-      "A self-hosted RAG agent with an interactive chat CLI: indexes notes into pgvector (HNSW) on Supabase Postgres and answers grounded questions via a local Gemma model, with persistent cross-session conversation memory and profile-based grounding. Built around eval discipline — precision@k / recall@k scorers and full per-step trajectory capture to drive data-driven fine-tuning.",
+      "A self-hosted decision-intelligence CLI that combines personal RAG with live research workflows: pgvector-backed notes, DB sources, profile context, and cross-session memory feed a local Gemma model through an OpenTUI chat. The newer engine layer turns web, trends, Reddit, RSS, and review evidence into scored market-research and investing reports via typed domain packs, deterministic scorecards, trace capture, evals, and a decision journal with scheduled review loops.",
     tech: ["rag", "pgvector", "embeddings", "llm-evals", "conversation-memory"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
