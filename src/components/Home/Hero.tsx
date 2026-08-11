@@ -30,13 +30,7 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed">
-        I&apos;m a software engineer with 8+ years building and shipping production web apps — React, Vue, Next.js, TypeScript — to enterprise customers like FedEx, Amazon, and CoreWeave, with around $700k in annual client cost savings along the way.
-      </p>
-      <p className="text-[15px] text-neutral-300 leading-relaxed mt-4">
-        These days I&apos;m focused on applied AI engineering: building production-grade systems on LLM APIs — a provider-agnostic agent runtime, multi-agent diagnostics on synthetic data, and evaluated RAG pipelines.
-      </p>
-      <p className="text-[15px] text-neutral-300 leading-relaxed mt-4">
-        I&apos;m looking for a role I can contribute to from day one on what I know best — full-stack, front-end-leaning product engineering — while growing into the applied AI and agent work I&apos;ve been building toward.
+        I&apos;m a self-taught software engineer who learns by reading, building, and putting ideas into practice. Right now, I&apos;m focused on understanding how AI systems are designed layer by layer, starting with prompting and reasoning, then applying what I learn through hands-on projects and AI-assisted development.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
         seattle, wa · open to front-end / ai engineering roles

@@ -47,7 +47,7 @@ export default function RootLayout({
                  className="text-gray-400 hover:text-white">linkedin</a>
               <a href="mailto:rlynjb@gmail.com"
                  className="text-gray-400 hover:text-white">email</a>
-              <a href="https://drive.google.com/file/d/1egeJunnCiQn9jGDP08KphynclI5cyBdb/view?usp=sharing"
+              <a href="https://drive.google.com/file/d/1xftvl84Dr7AFWwVGbcfNsO5wk7K0XIrk/view?usp=sharing"
                  target="_blank" rel="noopener noreferrer"
                  className="text-gray-400 hover:text-white">resume</a>
             </nav>
