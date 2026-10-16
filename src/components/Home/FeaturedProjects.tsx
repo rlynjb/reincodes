@@ -31,7 +31,7 @@ const projects: Project[] = [
     name: "buffr",
     subtitle: "rag agent with real evals",
     description:
-      "A self-hosted decision-intelligence CLI that combines personal RAG with live research workflows: pgvector-backed notes, DB sources, profile context, and cross-session memory feed a local Gemma model through an OpenTUI chat. The newer engine layer turns web, trends, Reddit, RSS, and review evidence into scored market-research and investing reports via typed domain packs, deterministic scorecards, trace capture, evals, and a decision journal with scheduled review loops.",
+      "A personal, CLI-based decision-intelligence project built with the OpenAI Agents SDK, with modules for context, metrics, research, diagnosis, hypotheses, test planning, and learning.",
     tech: ["rag", "pgvector", "embeddings", "llm-evals", "conversation-memory"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
