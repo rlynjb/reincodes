@@ -31,7 +31,7 @@ const projects: Project[] = [
     name: "buffr",
     subtitle: "rag agent with real evals",
     description:
-      "A personal, CLI-based decision-intelligence project built with the OpenAI Agents SDK, with modules for context, metrics, research, diagnosis, hypotheses, test planning, and learning.",
+      "A CLI-based multi-agent decision-support system that helps turn product data and research into actionable experiments and learning. Built with the OpenAI Agents SDK.",
     tech: ["rag", "pgvector", "embeddings", "llm-evals", "conversation-memory"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
