@@ -32,7 +32,7 @@ export default function Hero() {
       <p className="text-[15px] text-neutral-300 leading-relaxed">
         I&apos;m a software engineer. I enjoy reading, building side projects, and experimenting with ideas. Lately, I&apos;ve been particularly interested in AI engineering and digging deeper into system design and algorithms.
       </p>
-      <p className="text-[13px] text-neutral-500 mb-8">
+      <p className="text-[13px] text-neutral-500 mt-4 mb-8">
         Based in Seattle, Washington · front-end engineer, building towards AI engineering / full stack
       </p>
 
