@@ -19,7 +19,7 @@ const projects: Project[] = [
     name: "LoomiConnect",
     subtitle: "production multi-agent analyst",
     description:
-      "A hackathon AI analyst project for e-commerce workspaces with three specialist agents that monitor, diagnose, and recommend.",
+      "A hackathon project that uses three specialized AI agents to monitor e-commerce performance, diagnose issues, and recommend actionable steps. Built with Next.js, Anthropic SDK, and MCP.",
     tech: ["next.js", "anthropic-sdk", "mcp", "sse-streaming", "llm-evals", "oauth-2.1"],
     href: "https://blooming-insights.vercel.app/",
     external: true,
