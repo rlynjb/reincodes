@@ -30,7 +30,7 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed">
-        I&apos;m a self-taught software engineer who learns by reading, building, and putting ideas into practice. Right now, I&apos;m focused on understanding how AI systems are designed layer by layer, starting with prompting and reasoning, then applying what I learn through hands-on projects and AI-assisted development.
+        I&apos;m a software engineer. I enjoy reading, building side projects, and experimenting with ideas. Lately, I&apos;ve been particularly interested in AI engineering and digging deeper into system design and algorithms.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
         seattle, wa · open to front-end / ai engineering roles
