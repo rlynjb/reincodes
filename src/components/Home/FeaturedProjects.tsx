@@ -17,9 +17,9 @@ type Project = {
 const projects: Project[] = [
   {
     name: "LoomiConnect",
-    subtitle: "production multi-agent analyst",
+    subtitle: "Built with Next.js, Anthropic SDK, and MCP",
     description:
-      "A hackathon project that uses three specialized AI agents to monitor e-commerce performance, diagnose issues, and recommend actionable steps. Built with Next.js, Anthropic SDK, and MCP.",
+      "A hackathon project that uses three specialized AI agents to monitor e-commerce performance, diagnose issues, and recommend actionable steps.",
     tech: ["next.js", "anthropic-sdk", "mcp", "sse-streaming", "llm-evals", "oauth-2.1"],
     href: "https://blooming-insights.vercel.app/",
     external: true,
@@ -29,9 +29,9 @@ const projects: Project[] = [
   },
   {
     name: "buffr",
-    subtitle: "rag agent with real evals",
+    subtitle: "Built with the OpenAI Agents SDK",
     description:
-      "A CLI-based multi-agent decision-support system that helps turn product data and research into actionable experiments and learning. Built with the OpenAI Agents SDK.",
+      "A CLI-based multi-agent decision-support system that helps turn product data and research into actionable experiments and learning.",
     tech: ["rag", "pgvector", "embeddings", "llm-evals", "conversation-memory"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
