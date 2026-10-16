@@ -5,7 +5,6 @@ type Project = {
   name: string;
   subtitle: string;
   description: string;
-  tech: string[];
   href?: string;
   external?: boolean;
   privateRepo?: boolean;
@@ -20,7 +19,6 @@ const projects: Project[] = [
     subtitle: "Built with Next.js, Anthropic SDK, and MCP",
     description:
       "A hackathon project that uses three specialized AI agents to monitor e-commerce performance, diagnose issues, and recommend actionable steps.",
-    tech: ["next.js", "anthropic-sdk", "mcp", "sse-streaming", "llm-evals", "oauth-2.1"],
     href: "https://blooming-insights.vercel.app/",
     external: true,
     iconBg: "bg-[#DFF2F0]",
@@ -32,7 +30,6 @@ const projects: Project[] = [
     subtitle: "Built with the OpenAI Agents SDK",
     description:
       "A CLI-based multi-agent decision-support system that helps turn product data and research into actionable experiments and learning.",
-    tech: ["rag", "pgvector", "embeddings", "llm-evals", "conversation-memory"],
     href: "https://github.com/rlynjb/buffr",
     external: true,
     iconBg: "bg-[#F7F0E2]",
@@ -48,7 +45,6 @@ const supporting: Project[] = [
     subtitle: "hybrid cloud↔on-device llm, mobile",
     description:
       "Mobile apps (React Native / Android) with hybrid LLM routing — Claude primary, local Gemma / Gemini Nano fallback, adaptive latency probing. loopd: AI-captioned daily vlogging. dryrun: validates code comprehension.",
-    tech: ["react-native", "claude", "on-device-llm", "fallback-routing"],
     iconBg: "bg-[#EAE2F7]",
     iconText: "text-[#4A2B71]",
     initials: "ld",
@@ -58,7 +54,6 @@ const supporting: Project[] = [
     subtitle: "on-device pose detection",
     description:
       "A React Native fitness app using on-device MediaPipe pose detection to count reps in real time — worklet-based frame processing, a per-exercise rep-counter FSM, skill-tree progression, and Notion sync.",
-    tech: ["react-native", "mediapipe", "computer-vision", "on-device-ml"],
     iconBg: "bg-[#E2F2EC]",
     iconText: "text-[#0E5740]",
     initials: "ct",
@@ -91,16 +86,6 @@ function CardBody({ project }: { project: Project }) {
         </div>
       </div>
       <p className="text-xs text-neutral-300 leading-snug">{project.description}</p>
-      <div className="flex flex-wrap gap-1 mt-auto pt-1">
-        {project.tech.map((t) => (
-          <span
-            key={t}
-            className="font-mono text-[11px] px-1.5 py-0.5 rounded-md bg-neutral-900 text-neutral-400"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
     </>
   );
 }
