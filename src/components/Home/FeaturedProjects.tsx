@@ -19,7 +19,7 @@ const projects: Project[] = [
     name: "LoomiConnect",
     subtitle: "production multi-agent analyst",
     description:
-      "A production-grade AI analyst for ecommerce workspaces: three specialist agents — monitor → diagnose → recommend — over MCP, streaming full reasoning provenance (every tool call, metric delta, and hypothesis) to the UI via SSE. Hardened for production — OAuth 2.1 / PKCE auth, per-call timeouts with retry ladders and budget ceilings, CI/CD, and an eval harness (221 tests, rubric-as-judge over golden cases) so agent quality is measurable.",
+      "A production-grade AI analyst for e-commerce workspaces, with three specialist agents that monitor, diagnose, and recommend. Originally built for a hackathon.",
     tech: ["next.js", "anthropic-sdk", "mcp", "sse-streaming", "llm-evals", "oauth-2.1"],
     href: "https://blooming-insights.vercel.app/",
     external: true,
