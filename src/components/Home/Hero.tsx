@@ -33,7 +33,7 @@ export default function Hero() {
         I&apos;m a software engineer. I enjoy reading, building side projects, and experimenting with ideas. Lately, I&apos;ve been particularly interested in AI engineering and digging deeper into system design and algorithms.
       </p>
       <p className="text-[13px] text-neutral-500 mb-8">
-        based in Seattle, Washington · front-end engineer exploring AI engineering
+        Based in Seattle, Washington · front-end engineer, building towards AI engineering / full stack
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-8">
