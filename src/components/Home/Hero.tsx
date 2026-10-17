@@ -5,24 +5,38 @@ interface SkillChip {
 }
 
 const skills: SkillChip[] = [
-  // AI / LLM engineering — the focus
-  { label: "agent runtimes", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "multi-agent orchestration", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "on-device llm (gemma)", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  // AI Engineering (Personal Projects)
+  { label: "OpenAI Agents SDK", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "Anthropic SDK", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "multi-agent workflows", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "MCP", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "LLM evaluation", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+
   // Languages
-  { label: "typescript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "javascript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "python", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "html", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "css", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "TypeScript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "JavaScript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "Python (dabbled)", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "HTML", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "CSS", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+
   // Frontend
-  { label: "react", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "next.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "vue", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "nuxt", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  // Foundations
-  { label: "data structures & algorithms", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
-  { label: "system design", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+  { label: "React", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "Next.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "Vue", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+  { label: "Nuxt", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
+
+  // Backend
+  { label: "Node.js", bg: "bg-[#164E63]", text: "text-[#E0F2FE]" },
+  { label: "Go (working familiarity)", bg: "bg-[#164E63]", text: "text-[#E0F2FE]" },
+  { label: "PostgreSQL / pgvector", bg: "bg-[#164E63]", text: "text-[#E0F2FE]" },
+
+  // Tooling & Cloud
+  { label: "Git", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+  { label: "Jenkins", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+  { label: "Rancher", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+  { label: "Fly.io (personal projects)", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+  { label: "Netlify (serverless)", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+  { label: "Vercel (basic familiarity)", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
 ];
 
 export default function Hero() {
