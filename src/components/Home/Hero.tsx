@@ -8,16 +8,14 @@ const skills: SkillChip[] = [
   // AI Engineering (Personal Projects)
   { label: "OpenAI Agents SDK", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "Anthropic SDK", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "multi-agent workflows", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
+  { label: "Multi-Agent Workflows", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "MCP", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
   { label: "LLM evaluation", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
 
   // Languages
   { label: "TypeScript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "JavaScript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
   { label: "Python (dabbled)", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "HTML", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "CSS", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
+  { label: "HTML/CSS", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
 
   // Frontend
   { label: "React", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
