@@ -51,25 +51,6 @@ export default function Hero() {
         Based in Seattle, Washington · AI Engineering / Full-Stack
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-8">
-        <div className="bg-neutral-900 rounded-lg px-3.5 py-3">
-          <div className="text-[10px] text-neutral-400 uppercase tracking-wider">client cost savings</div>
-          <div className="text-xl">$700k</div>
-        </div>
-        <div className="bg-neutral-900 rounded-lg px-3.5 py-3">
-          <div className="text-[10px] text-neutral-400 uppercase tracking-wider">customers shipped to</div>
-          <div className="text-[13px] leading-tight">
-            fedex · amazon
-            <br />
-            coreweave
-          </div>
-        </div>
-        <div className="bg-neutral-900 rounded-lg px-3.5 py-3">
-          <div className="text-[10px] text-neutral-400 uppercase tracking-wider">years at switch</div>
-          <div className="text-xl">8+</div>
-        </div>
-      </div>
-
       <div className="flex flex-wrap gap-1.5">
         {skills.map((s) => (
           <span
