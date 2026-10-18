@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     name: "contrl",
-    subtitle: "Fitness & Pose Detection · React Native, MediaPipe",
+    subtitle: "Built with Google ML Kit, React, Pose Detection",
     description:
       "A calisthenics workout app using on-device pose detection to identify body landmarks and track movement during workouts, with rep counting and skill-tree progression.",
     href: "https://github.com/rlynjb/contrl",
