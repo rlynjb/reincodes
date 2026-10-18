@@ -36,6 +36,17 @@ const projects: Project[] = [
     iconText: "text-[#6B4E0E]",
     initials: "bf",
   },
+  {
+    name: "Workout Calisthenics App",
+    subtitle: "Fitness & Pose Detection · React Native, MediaPipe",
+    description:
+      "A calisthenics workout app using on-device pose detection to identify body landmarks and track movement during workouts, with rep counting and skill-tree progression.",
+    href: "https://github.com/rlynjb/contrl",
+    external: true,
+    iconBg: "bg-[#E2F2EC]",
+    iconText: "text-[#0E5740]",
+    initials: "ct",
+  },
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- hidden for now, kept for easy restore
@@ -48,15 +59,6 @@ const supporting: Project[] = [
     iconBg: "bg-[#EAE2F7]",
     iconText: "text-[#4A2B71]",
     initials: "ld",
-  },
-  {
-    name: "contrl",
-    subtitle: "on-device pose detection",
-    description:
-      "A React Native fitness app using on-device MediaPipe pose detection to count reps in real time — worklet-based frame processing, a per-exercise rep-counter FSM, skill-tree progression, and Notion sync.",
-    iconBg: "bg-[#E2F2EC]",
-    iconText: "text-[#0E5740]",
-    initials: "ct",
   },
 ];
 
