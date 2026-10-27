@@ -48,7 +48,7 @@ export default function Hero() {
         When I&apos;m not studying, I enjoy exploring cities and looking for fun experiences to try.
       </p>
       <p className="text-[13px] text-neutral-500 mt-4 mb-8">
-        Based in Seattle, Washington · AI Engineering / Full-Stack
+        Seattle, Washington · Front-end engineer building toward AI engineering / full stack
       </p>
 
       <div className="flex flex-wrap gap-1.5">
