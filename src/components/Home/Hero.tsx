@@ -42,13 +42,13 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed">
-        I&apos;m a software engineer. I enjoy reading, building side projects, and experimenting with ideas. Lately, I&apos;ve been particularly interested in AI engineering.
+        I&apos;m a software engineer. I enjoy reading, building side projects, and experimenting with ideas. Lately, I&apos;ve been particularly interested in applied AI engineering.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
         When I&apos;m not studying, I enjoy exploring cities and looking for fun experiences to try.
       </p>
       <p className="text-[13px] text-neutral-500 mt-4 mb-8">
-        Seattle, Washington · Front-end engineer building toward AI engineering / full stack
+        Seattle, Washington · Front-end engineer building toward Applied AI Engineer and full-stack roles
       </p>
 
       <div className="flex flex-wrap gap-1.5">
