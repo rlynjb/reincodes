@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "DotSkills | Reincodes",
+  title: "Evaluate Skill | Reincodes",
   description:
     "A case study in designing human-gated, evidence-based evaluation workflows for AI agent skills, including their safety and execution boundaries.",
 };
@@ -53,7 +53,7 @@ const decisions = [
   },
 ];
 
-export default function DotSkillsCaseStudy() {
+export default function EvaluateSkillCaseStudy() {
   return (
     <article className="max-w-[720px] mx-auto px-4 sm:px-6 py-6 pb-20 text-left text-neutral-300">
       <Link
@@ -68,16 +68,28 @@ export default function DotSkillsCaseStudy() {
           featured project / engineering case study
         </p>
         <h1 className="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-3">
-          DotSkills
+          Evaluate Skill
         </h1>
+        <p className="text-xs text-neutral-500 mb-4">
+          Parent project:{" "}
+          <a
+            href="https://github.com/rlynjb/dotskills"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-300 underline underline-offset-4 hover:text-white"
+          >
+            DotSkills ↗
+          </a>
+        </p>
         <p className="text-base sm:text-lg text-neutral-200 leading-relaxed mb-4">
           Designing repeatable, human-gated evaluations for AI agent skills.
         </p>
         <p className="text-sm leading-relaxed text-neutral-400 max-w-[620px]">
-          DotSkills is a harness-agnostic library of reusable agent skills.
-          Its Evaluate Skill workflow is a case study in applying requirements,
-          system boundaries, evaluation design, and safety checks to AI-assisted engineering.
-          Other skills support requirements refinement, codebase learning, and audits.
+          Evaluate Skill is a guided workflow developed within DotSkills,
+          the broader open-source library of reusable agent skills.
+          This case study focuses specifically on Evaluate Skill&apos;s
+          methodology, execution architecture, trust boundaries, and
+          evidence-based improvement process.
         </p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5 text-xs">
           <a
@@ -86,7 +98,7 @@ export default function DotSkillsCaseStudy() {
             rel="noopener noreferrer"
             className="text-neutral-200 underline underline-offset-4 hover:text-white"
           >
-            source repository ↗
+            parent repository · DotSkills ↗
           </a>
           <a
             href="https://github.com/rlynjb/dotskills/blob/main/skills/evaluate-skill/README.md"
@@ -94,7 +106,7 @@ export default function DotSkillsCaseStudy() {
             rel="noopener noreferrer"
             className="text-neutral-200 underline underline-offset-4 hover:text-white"
           >
-            evaluation workflow ↗
+            Evaluate Skill documentation ↗
           </a>
         </div>
       </header>
@@ -213,7 +225,7 @@ export default function DotSkillsCaseStudy() {
           <div>
             <h3 className="text-sm font-medium text-neutral-100 mb-2">Implemented offline</h3>
             <ul className="list-disc pl-4 space-y-2 text-xs text-neutral-400 leading-relaxed">
-              <li>Reusable DotSkills library and 12-stage guided methodology</li>
+              <li>Evaluate Skill package and 12-stage guided methodology</li>
               <li>Claude- and Codex-specific test case preparation</li>
               <li>Run-plan, approval, policy, and evidence-checking modules</li>
               <li>Offline probes, bounded/mock authorization interfaces, and test coverage</li>
