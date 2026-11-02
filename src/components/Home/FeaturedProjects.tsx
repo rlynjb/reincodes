@@ -15,6 +15,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: "Evaluate Skill",
+    subtitle: "Parent project: DotSkills",
+    description:
+      "A guided 12-stage workflow for evaluating agent skills with approved test cases, evidence-based review, and safety checkpoints.",
+    href: "/projects/dotskills",
+    iconBg: "bg-[#E4E5F8]",
+    iconText: "text-[#373C78]",
+    initials: "ev",
+  },
+  {
     name: "LoomiConnect",
     subtitle: "Built with Next.js, Anthropic SDK, and MCP",
     description:
@@ -35,16 +45,6 @@ const projects: Project[] = [
     iconBg: "bg-[#F7F0E2]",
     iconText: "text-[#6B4E0E]",
     initials: "bf",
-  },
-  {
-    name: "DotSkills",
-    subtitle: "Agent skills · evaluations · safety gates",
-    description:
-      "A reusable agent skill library featuring a 12-stage evaluation workflow, human checkpoints, and evidence-based engineering safeguards.",
-    href: "/projects/dotskills",
-    iconBg: "bg-[#E4E5F8]",
-    iconText: "text-[#373C78]",
-    initials: "ds",
   },
 ];
 
