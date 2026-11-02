@@ -47,6 +47,16 @@ const projects: Project[] = [
     iconText: "text-[#0E5740]",
     initials: "ct",
   },
+  {
+    name: "DotSkills",
+    subtitle: "Agent skills · evaluations · safety gates",
+    description:
+      "A reusable agent skill library featuring a 12-stage evaluation workflow, human checkpoints, and evidence-based engineering safeguards.",
+    href: "/projects/dotskills",
+    iconBg: "bg-[#E4E5F8]",
+    iconText: "text-[#373C78]",
+    initials: "ds",
+  },
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- hidden for now, kept for easy restore
