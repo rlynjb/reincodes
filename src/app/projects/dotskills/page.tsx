@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Evaluate Skill | Reincodes",
   description:
-    "A case study in designing human-gated, evidence-based evaluation workflows for AI agent skills, including their safety and execution boundaries.",
+    "A 12-stage, human-gated evaluation workflow for testing agent skills, diagnosing failures, and verifying evidence-based improvements.",
 };
 
 const phases = [
@@ -82,23 +82,23 @@ export default function EvaluateSkillCaseStudy() {
           </a>
         </p>
         <p className="text-base sm:text-lg text-neutral-200 leading-relaxed mb-4">
-          Designing repeatable, human-gated evaluations for AI agent skills.
+          Testing agent skills with defined expectations, evidence, and human checkpoints.
         </p>
         <p className="text-sm leading-relaxed text-neutral-400 max-w-[620px]">
-          Evaluate Skill is a guided workflow developed within DotSkills,
-          the broader open-source library of reusable agent skills.
-          This case study focuses specifically on Evaluate Skill&apos;s
-          methodology, execution architecture, trust boundaries, and
-          evidence-based improvement process.
+          Evaluate Skill turns skill improvement into a testable engineering
+          process: define success, design evaluation cases, inspect actual
+          behavior, diagnose failures, and verify approved changes. Its
+          12-stage workflow supports Claude Code and Codex through separate
+          provider-specific evaluation paths.
         </p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5 text-xs">
           <a
-            href="https://github.com/rlynjb/dotskills"
+            href="https://github.com/rlynjb/dotskills/tree/main/skills/evaluate-skill"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-200 underline underline-offset-4 hover:text-white"
           >
-            parent repository · DotSkills ↗
+            Evaluate Skill source ↗
           </a>
           <a
             href="https://github.com/rlynjb/dotskills/blob/main/skills/evaluate-skill/README.md"
@@ -116,23 +116,24 @@ export default function EvaluateSkillCaseStudy() {
           01 / the problem
         </h2>
         <p className="text-sm leading-relaxed text-neutral-300">
-          A well-formatted agent skill is not necessarily reliable. It can miss
-          important context, produce the wrong answer, or attempt an action
-          outside the user&apos;s intent. Reviewing only the final output can
-          miss those failure modes. I wanted a repeatable way to define success,
-          test behavior, and inspect evidence before changing or releasing a skill.
+          A valid skill file does not prove the skill behaves reliably. It
+          might invent facts, ignore a required checkpoint, or attempt a
+          prohibited tool action. I designed Evaluate Skill to replace
+          prompt-only review with observable success criteria, realistic test
+          cases, and evidence-based diagnosis before making changes.
         </p>
       </section>
 
-      <section className="mb-12" aria-labelledby="use-case-heading">
-        <h2 id="use-case-heading" className="text-base font-medium text-white mb-3">
-          02 / use case: evaluating Learn Repo
+
+      <section className="mb-12" aria-labelledby="workflow-heading">
+        <h2 id="workflow-heading" className="text-base font-medium text-white mb-3">
+          02 / how Evaluate Skill works
         </h2>
         <p className="text-sm leading-relaxed text-neutral-300 mb-5">
-          Given a small synthetic repository, can Learn Repo accurately describe
-          the codebase, support claims with file evidence, and pause at a guided
-          checkpoint? Evaluate Skill turns these expectations into approved cases
-          and assertions. A prepared test is not counted as a completed model run.
+          Evaluate Skill guides four phases and 12 stages. It checks skill
+          structure, defines what correct behavior looks like, prepares
+          approved tests, and uses real evaluation evidence to justify
+          proposed changes. The human reviews consequential decisions.
         </p>
         <ol className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           {phases.map((phase) => (
@@ -149,15 +150,34 @@ export default function EvaluateSkillCaseStudy() {
             </li>
           ))}
         </ol>
+        <p className="text-xs text-neutral-500 leading-relaxed mt-4">
+          Executing an evaluation requires separate approval and verified
+          isolation. Preparing a test is not the same as running a model
+          or producing a passing grade.
+        </p>
+      </section>
+
+      <section className="mb-12" aria-labelledby="use-case-heading">
+        <h2 id="use-case-heading" className="text-base font-medium text-white mb-3">
+          03 / applied example: evaluating Learn Repo
+        </h2>
+        <p className="text-sm leading-relaxed text-neutral-300 mb-5">
+          Learn Repo is the skill being tested—not the focus of this case
+          study. With a small synthetic Python CLI repository, Evaluate Skill
+          defines assertions for correct module identification, source-backed
+          explanations, and a required learner checkpoint. The prepared
+          cases specify expected behavior and prohibited effects, but do not
+          establish a behavioral pass.
+        </p>
       </section>
 
       <section className="mb-12" aria-labelledby="architecture-heading">
         <h2 id="architecture-heading" className="text-base font-medium text-white mb-2">
-          03 / system architecture
+          04 / Evaluate Skill architecture
         </h2>
         <p className="text-xs leading-relaxed text-neutral-500 mb-5">
-          v0.2 target design — the offline foundation exists; live execution
-          and independent isolation remain unverified.
+          Evaluate Skill v0.2: the offline control and evidence foundation
+          exists; live execution and independent isolation remain unverified.
         </p>
         <ol aria-label="Proposed evaluation architecture" className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
           <li className="border border-neutral-800 rounded-lg p-4 min-w-0">
@@ -201,7 +221,7 @@ export default function EvaluateSkillCaseStudy() {
 
       <section className="mb-12" aria-labelledby="decisions-heading">
         <h2 id="decisions-heading" className="text-base font-medium text-white mb-3">
-          04 / design decisions &amp; trade-offs
+          05 / design decisions &amp; trade-offs
         </h2>
         <dl className="divide-y divide-neutral-800 border-y border-neutral-800">
           {decisions.map((decision) => (
@@ -219,7 +239,7 @@ export default function EvaluateSkillCaseStudy() {
 
       <section className="mb-12" aria-labelledby="status-heading">
         <h2 id="status-heading" className="text-base font-medium text-white mb-4">
-          05 / implementation status
+          06 / implementation status
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
           <div>
@@ -248,7 +268,7 @@ export default function EvaluateSkillCaseStudy() {
 
       <section className="mb-12" aria-labelledby="next-heading">
         <h2 id="next-heading" className="text-base font-medium text-white mb-3">
-          06 / next milestone
+          07 / next milestone
         </h2>
         <p className="text-sm leading-relaxed text-neutral-300">
           Prove one authorized, isolated evaluation end to end: verify the
