@@ -25,6 +25,16 @@ const projects: Project[] = [
     initials: "ev",
   },
   {
+    name: "Reliable AI-Assisted Engineering Workflows",
+    subtitle: "Professional work · In progress",
+    description:
+      "Auditing Refine Requirements and Sprint Assessment agent skills, clarifying their integration, and identifying evaluation opportunities.",
+    href: "/projects/reliable-ai-workflows",
+    iconBg: "bg-[#E1EAF2]",
+    iconText: "text-[#30546A]",
+    initials: "rw",
+  },
+  {
     name: "LoomiConnect",
     subtitle: "Built with Next.js, Anthropic SDK, and MCP",
     description:
