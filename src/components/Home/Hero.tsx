@@ -93,7 +93,7 @@ export default function Hero() {
                       aria-hidden="true"
                       className={`h-4 w-1 shrink-0 rounded-full ${section.accent}`}
                     />
-                    <span className={`text-[12px] font-semibold uppercase tracking-wider leading-[19px] ${section.titleColor}`}>
+                    <span className={`font-heading text-[12px] font-semibold uppercase tracking-wider leading-[19px] ${section.titleColor}`}>
                       {section.label}
                     </span>
                   </span>

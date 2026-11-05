@@ -123,19 +123,19 @@ function CardBody({ project }: { project: Project }) {
           aria-hidden="true"
           className={`h-[7px] w-[7px] shrink-0 rounded-full ${category.dot}`}
         />
-        <span className={`text-[10px] font-semibold uppercase tracking-wider ${category.text}`}>
+        <span className={`font-heading text-[10px] font-semibold uppercase tracking-wider ${category.text}`}>
           {category.label}
         </span>
       </div>
       <div className="flex gap-2.5 items-center">
         <div
-          className={`w-[34px] h-[34px] rounded-md flex items-center justify-center text-[13px] font-medium ${project.iconBg} ${project.iconText}`}
+          className={`font-heading w-[34px] h-[34px] rounded-md flex items-center justify-center text-[13px] font-medium ${project.iconBg} ${project.iconText}`}
         >
           {project.initials}
         </div>
         <div className="flex flex-col">
           <div className="flex items-center gap-1.5">
-            <span className="font-medium text-sm">{project.name}</span>
+            <span className="font-heading font-medium text-sm">{project.name}</span>
             {project.privateRepo && (
               <span className="text-[10px] px-1.5 py-0.5 rounded-md border border-neutral-700 text-neutral-400">
                 private repo
