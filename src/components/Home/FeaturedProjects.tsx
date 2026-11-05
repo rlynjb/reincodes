@@ -17,9 +17,9 @@ type Project = {
 const projects: Project[] = [
   {
     name: "Evaluate Skill",
-    subtitle: "Parent project: DotSkills",
+    subtitle: "DotSkills · 12-stage evaluation workflow",
     description:
-      "A guided 12-stage workflow for evaluating agent skills with approved test cases, evidence-based review, and safety checkpoints.",
+      "Systematically test, diagnose, and improve agent skills through measurable evidence, regression checks, and human approval—not instruction review alone.",
     href: "/projects/dotskills",
     iconBg: "bg-[#E4E5F8]",
     iconText: "text-[#373C78]",

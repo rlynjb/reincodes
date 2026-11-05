@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Evaluate Skill | Reincodes",
   description:
-    "A 12-stage, human-gated evaluation workflow for testing agent skills, diagnosing failures, and verifying evidence-based improvements.",
+    "An evidence-driven, human-gated workflow for systematically testing, diagnosing, and improving agent skills—not judging instructions alone.",
 };
 
 const phases = [
@@ -16,7 +16,7 @@ const phases = [
   {
     stages: "3–4",
     name: "Evaluate",
-    detail: "Run a baseline only when approved isolation is verified; inspect the evidence.",
+    detail: "When approved Docker isolation is verified, run paired baselines and review observed behavior.",
   },
   {
     stages: "5–8",
@@ -32,14 +32,14 @@ const phases = [
 
 const decisions = [
   {
-    title: "Reuse provider-native evaluation tools",
+    title: "Keep evaluation formats provider-specific",
     reason:
-      "Claude Code and Codex keep their own execution and grading paths. A thin coordinator avoids creating another general-purpose agent runtime, at the cost of provider-specific integration work.",
+      "Claude plugin eval and Promptfoo with the Codex SDK use distinct cases and graders. One guided coordinator preserves each provider's evidence without inventing a cross-provider score.",
   },
   {
-    title: "Prefer verified native isolation",
+    title: "Require verified Docker-only execution",
     reason:
-      "A Docker-backed route is considered only when native controls cannot meet a test's requirements. Neither a copied workspace nor a container label proves isolation.",
+      "Every future live evaluation must run inside the approved, independently verified Docker boundary. Native sandboxes are not fallbacks; unverified isolation blocks execution.",
   },
   {
     title: "Separate quality from safety",
@@ -82,14 +82,14 @@ export default function EvaluateSkillCaseStudy() {
           </a>
         </p>
         <p className="text-base sm:text-lg text-neutral-200 leading-relaxed mb-4">
-          Testing agent skills with defined expectations, evidence, and human checkpoints.
+          Systematically testing, diagnosing, and improving agent skills with measurable evidence.
         </p>
         <p className="text-sm leading-relaxed text-neutral-400 max-w-[620px]">
-          Evaluate Skill turns skill improvement into a testable engineering
-          process: define success, design evaluation cases, inspect actual
-          behavior, diagnose failures, and verify approved changes. Its
-          12-stage workflow supports Claude Code and Codex through separate
-          provider-specific evaluation paths.
+          Well-written instructions do not guarantee reliable agent behavior.
+          Evaluate Skill creates a repeatable, human-gated way to define
+          expected outcomes, test real behavior, diagnose failures, and verify
+          approved improvements through comparable evidence. Its 12 stages
+          support separate Claude Code and Codex evaluation routes.
         </p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5 text-xs">
           <a
@@ -116,11 +116,12 @@ export default function EvaluateSkillCaseStudy() {
           01 / the problem
         </h2>
         <p className="text-sm leading-relaxed text-neutral-300">
-          A valid skill file does not prove the skill behaves reliably. It
-          might invent facts, ignore a required checkpoint, or attempt a
-          prohibited tool action. I designed Evaluate Skill to replace
-          prompt-only review with observable success criteria, realistic test
-          cases, and evidence-based diagnosis before making changes.
+          A skill can be structurally valid and still fail its actual job:
+          inventing facts, skipping a required checkpoint, producing
+          unsupported answers, or attempting an unauthorized tool action.
+          Reviewing instructions alone cannot reveal these failures.
+          Evaluate Skill approaches improvement as an evidence-driven
+          engineering problem rather than a prompt-editing exercise.
         </p>
       </section>
 
@@ -130,10 +131,10 @@ export default function EvaluateSkillCaseStudy() {
           02 / how Evaluate Skill works
         </h2>
         <p className="text-sm leading-relaxed text-neutral-300 mb-5">
-          Evaluate Skill guides four phases and 12 stages. It checks skill
-          structure, defines what correct behavior looks like, prepares
-          approved tests, and uses real evaluation evidence to justify
-          proposed changes. The human reviews consequential decisions.
+          Four phases organize the 12 stages: define measurable expectations,
+          prepare approved test cases, compare actual outputs when safe
+          execution is available, diagnose the evidence, and recheck
+          regressions before a human decides what to keep.
         </p>
         <ol className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           {phases.map((phase) => (
@@ -150,9 +151,15 @@ export default function EvaluateSkillCaseStudy() {
             </li>
           ))}
         </ol>
-        <p className="text-xs text-neutral-500 leading-relaxed mt-4">
-          Executing an evaluation requires separate approval and verified
-          isolation. Preparing a test is not the same as running a model
+        <p className="text-xs text-neutral-400 leading-relaxed mt-4">
+          Example criteria include factual grounding, task correctness,
+          required checkpoints, prohibited tool effects, and regression
+          behavior. Grades and scores are interpreted alongside actual
+          outputs and trusted traces—not treated as proof by themselves.
+        </p>
+        <p className="text-xs text-neutral-500 leading-relaxed mt-3">
+          Executing an evaluation requires separate approval and a verified
+          Docker boundary. Preparing a test is not the same as running a model
           or producing a passing grade.
         </p>
       </section>
@@ -176,8 +183,10 @@ export default function EvaluateSkillCaseStudy() {
           04 / Evaluate Skill architecture
         </h2>
         <p className="text-xs leading-relaxed text-neutral-500 mb-5">
-          Evaluate Skill v0.2: the offline control and evidence foundation
-          exists; live execution and independent isolation remain unverified.
+          Evaluate Skill v0.4: the Docker-only execution design and offline
+          control, runner, and evidence components are implemented and tested.
+          Real Docker provisioning and no-model isolation probes are still
+          pending; live paired model evaluation remains blocked—not run.
         </p>
         <ol aria-label="Proposed evaluation architecture" className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
           <li className="border border-neutral-800 rounded-lg p-4 min-w-0">
@@ -192,8 +201,9 @@ export default function EvaluateSkillCaseStudy() {
             <p className="text-[11px] text-neutral-500 mb-2">02 / restricted execution</p>
             <h3 className="text-sm font-medium text-white mb-2">Run in bounds</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              One Claude or Codex route, an independently verified native
-              sandbox or approved Docker fallback, and controlled mock tools.
+              One provider-specific route inside the verified Docker-only
+              boundary, with approved mock tools and protected credentials.
+              Provider-native sandboxes are not execution fallbacks.
             </p>
           </li>
           <li className="border border-neutral-800 rounded-lg p-4 min-w-0">
@@ -210,7 +220,7 @@ export default function EvaluateSkillCaseStudy() {
           evidence cannot be verified, the evaluation is <strong className="font-medium text-white">blocked — not run</strong>.
         </p>
         <a
-          href="https://github.com/rlynjb/dotskills/blob/main/skills/evaluate-skill/docs/evaluate_skill_system_boundary_map_v0_2.md"
+          href="https://github.com/rlynjb/dotskills/blob/main/skills/evaluate-skill/docs/evaluate_skill_system_boundary_map_v0_4.md"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-xs text-neutral-300 underline underline-offset-4 hover:text-white mt-4"
@@ -247,16 +257,16 @@ export default function EvaluateSkillCaseStudy() {
             <ul className="list-disc pl-4 space-y-2 text-xs text-neutral-400 leading-relaxed">
               <li>Evaluate Skill package and 12-stage guided methodology</li>
               <li>Claude- and Codex-specific test case preparation</li>
-              <li>Run-plan, approval, policy, and evidence-checking modules</li>
-              <li>Offline probes, bounded/mock authorization interfaces, and test coverage</li>
+              <li>Approved run-plan, policy, and evidence-checking modules</li>
+              <li>Docker-only runner and gateway contracts with offline test coverage</li>
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-medium text-neutral-100 mb-2">Not yet verified live</h3>
             <ul className="list-disc pl-4 space-y-2 text-xs text-neutral-400 leading-relaxed">
-              <li>Independently enforced native execution boundary</li>
-              <li>End-to-end model evaluations and regression comparisons</li>
-              <li>Verified Docker fallback for cases native isolation cannot support</li>
+              <li>Real Docker provisioning and accepted no-model isolation probes</li>
+              <li>Authorized live paired model evaluations and trustworthy traces</li>
+              <li>Measured before/after improvements and regression comparisons</li>
             </ul>
           </div>
         </div>
@@ -271,13 +281,14 @@ export default function EvaluateSkillCaseStudy() {
           07 / next milestone
         </h2>
         <p className="text-sm leading-relaxed text-neutral-300">
-          Prove one authorized, isolated evaluation end to end: verify the
-          execution boundary, run paired cases, collect independent evidence,
-          and compare quality and safety outcomes without conflating them.
-          Publish sanitized results once they exist.
+          First verify the Docker-only host and no-model isolation probes.
+          Then authorize one paired with-skill / without-skill evaluation,
+          inspect trusted quality and safety evidence, and compare results
+          before deciding whether an improvement worked. Publish sanitized
+          measurements only when they exist.
         </p>
         <a
-          href="https://github.com/rlynjb/dotskills/blob/main/skills/evaluate-skill/docs/evaluate_skill_execution_architecture_v0_2.md"
+          href="https://github.com/rlynjb/dotskills/blob/main/skills/evaluate-skill/docs/evaluate_skill_execution_architecture_v0_4.md"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-xs text-neutral-300 underline underline-offset-4 hover:text-white mt-4"
