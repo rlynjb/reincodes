@@ -1,3 +1,5 @@
+import PortfolioIcon from "./PortfolioIcon";
+
 export default function CommunityInvolvement() {
   return (
     <section id="community-involvement" className="mb-14 scroll-mt-20" aria-labelledby="community-involvement-title">
@@ -8,13 +10,18 @@ export default function CommunityInvolvement() {
         community involvement
       </h2>
       <div className="rounded-xl border border-neutral-800 bg-black p-4">
-        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <h3 className="text-sm font-medium">Agentic AI Foundation (AAIF)</h3>
-          <span className="text-[11px] text-neutral-500">2026 – present</span>
+        <div className="flex items-start gap-3">
+          <PortfolioIcon name="community" />
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h3 className="text-sm font-medium">Agentic AI Foundation (AAIF)</h3>
+              <span className="text-[11px] text-neutral-500">2026 – present</span>
+            </div>
+            <p className="mt-1 text-[11px] text-neutral-500">
+              Technical Working Group Participant · Linux Foundation
+            </p>
+          </div>
         </div>
-        <p className="mt-1 text-[11px] text-neutral-500">
-          Technical Working Group Participant · Linux Foundation
-        </p>
         <p className="mt-3 text-xs text-neutral-300 leading-relaxed">
           Attend public technical working-group meetings to learn how agentic
           AI standards, interoperability guidance, and community proposals are
