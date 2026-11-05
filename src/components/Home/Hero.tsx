@@ -10,35 +10,35 @@ const sections: PortfolioSection[] = [
   {
     id: "featured-projects",
     label: "featured projects",
-    description: "AI systems and experiments I've built.",
+    description: "Projects where I put my applied AI learning into practice.",
     bg: "bg-[#72243E]",
     text: "text-[#FBEAF0]",
   },
   {
     id: "engineering-foundations",
     label: "learning",
-    description: "Coursework, engineering fundamentals, and MCPA preparation.",
+    description: "How Interview Kickstart, technical books, and MCPA study are strengthening my foundations.",
     bg: "bg-[#3C3489]",
     text: "text-[#EEEDFE]",
   },
   {
     id: "community-involvement",
     label: "community",
-    description: "Learning from agentic AI standards and working groups.",
+    description: "AgentCon + MCPCon 2026 inspired me to join AI working groups and deepen my MCP learning.",
     bg: "bg-[#085041]",
     text: "text-[#E1F5EE]",
   },
   {
     id: "interactive-visualizers",
     label: "visualizers",
-    description: "Interactive ways to explore algorithms and data structures.",
+    description: "Visualizing DSA concepts I studied at Interview Kickstart and continue exploring through books.",
     bg: "bg-[#164E63]",
     text: "text-[#E0F2FE]",
   },
   {
     id: "from-scratch-implementations",
     label: "implementations",
-    description: "Core engineering concepts implemented from scratch.",
+    description: "Building algorithms and data structures from scratch to reinforce what I've learned through coursework and reading.",
     bg: "bg-[#3A3A40]",
     text: "text-[#ECECEC]",
   },
@@ -60,7 +60,7 @@ export default function Hero() {
 
       <nav aria-label="Portfolio contents">
         <h2 className="mb-3 text-[12px] font-medium uppercase tracking-wider text-neutral-500">
-          on this page
+          inside this portfolio
         </h2>
         <ol className="overflow-hidden rounded-xl border border-neutral-800 divide-y divide-neutral-800">
           {sections.map((section, index) => (
