@@ -2,7 +2,10 @@ import SectionHeading from "./SectionHeading";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+type ProjectCategory = "agent-skill" | "professional-work" | "personal-project";
+
 type Project = {
+  category: ProjectCategory;
   name: string;
   subtitle: string;
   description: string;
@@ -16,6 +19,7 @@ type Project = {
 
 const projects: Project[] = [
   {
+    category: "agent-skill",
     name: "Evaluate Skill",
     subtitle: "DotSkills · 12-stage evaluation workflow",
     description:
@@ -26,6 +30,7 @@ const projects: Project[] = [
     initials: "ev",
   },
   {
+    category: "agent-skill",
     name: "Refine Requirements",
     subtitle: "DotSkills · Requirements engineering skill",
     description:
@@ -36,6 +41,7 @@ const projects: Project[] = [
     initials: "rr",
   },
   {
+    category: "professional-work",
     name: "AI-Assisted Ticket Sizing & Requirements Refinement",
     subtitle: "Jira · Refine Requirements + Sprint Assessment · In progress",
     description:
@@ -46,6 +52,7 @@ const projects: Project[] = [
     initials: "rw",
   },
   {
+    category: "personal-project",
     name: "LoomiConnect",
     subtitle: "Built with Next.js, Anthropic SDK, and MCP",
     description:
@@ -57,6 +64,7 @@ const projects: Project[] = [
     initials: "lc",
   },
   {
+    category: "personal-project",
     name: "buffr",
     subtitle: "Built with the OpenAI Agents SDK",
     description:
@@ -72,6 +80,7 @@ const projects: Project[] = [
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- hidden for now, kept for easy restore
 const supporting: Project[] = [
   {
+    category: "personal-project",
     name: "loopd / dryrun",
     subtitle: "hybrid cloud↔on-device llm, mobile",
     description:
@@ -82,13 +91,42 @@ const supporting: Project[] = [
   },
 ];
 
+const categoryStyles: Record<ProjectCategory, { label: string; dot: string; text: string }> = {
+  "agent-skill": {
+    label: "Agent Skill",
+    dot: "bg-[#E8A6B3]",
+    text: "text-[#E8A6B3]",
+  },
+  "professional-work": {
+    label: "Professional Work",
+    dot: "bg-[#C76A8A]",
+    text: "text-[#C76A8A]",
+  },
+  "personal-project": {
+    label: "Personal Project",
+    dot: "bg-[#B46A7B]",
+    text: "text-[#B46A7B]",
+  },
+};
+
 const baseCardClass =
   "bg-black border border-neutral-800 rounded-xl p-4 transition-colors h-full flex flex-col gap-2";
 const linkCardClass = `${baseCardClass} hover:border-neutral-700 cursor-pointer`;
 
 function CardBody({ project }: { project: Project }) {
+  const category = categoryStyles[project.category];
+
   return (
     <>
+      <div className="flex items-center gap-2">
+        <span
+          aria-hidden="true"
+          className={`h-[7px] w-[7px] shrink-0 rounded-full ${category.dot}`}
+        />
+        <span className={`text-[10px] font-semibold uppercase tracking-wider ${category.text}`}>
+          {category.label}
+        </span>
+      </div>
       <div className="flex gap-2.5 items-center">
         <div
           className={`w-[34px] h-[34px] rounded-md flex items-center justify-center text-[13px] font-medium ${project.iconBg} ${project.iconText}`}
