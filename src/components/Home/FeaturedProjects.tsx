@@ -1,3 +1,4 @@
+import SectionHeading from "./SectionHeading";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -133,9 +134,9 @@ function ProjectCard({ project }: { project: Project }): ReactNode {
 export default function FeaturedProjects() {
   return (
     <section id="featured-projects" className="mb-14 scroll-mt-20">
-      <div className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800">
+      <SectionHeading tone="projects">
         featured projects
-      </div>
+      </SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {projects.map((p) => (
           <ProjectCard key={p.name} project={p} />

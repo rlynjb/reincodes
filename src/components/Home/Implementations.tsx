@@ -1,11 +1,12 @@
+import SectionHeading from "./SectionHeading";
 import { IMPLEMENTATIONS } from "./conceptsData";
 
 export default function Implementations() {
   return (
     <section id="from-scratch-implementations" className="mb-14 scroll-mt-20">
-      <div className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800">
+      <SectionHeading tone="implementations">
         implementations · from scratch
-      </div>
+      </SectionHeading>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
         {IMPLEMENTATIONS.map((impl) => (

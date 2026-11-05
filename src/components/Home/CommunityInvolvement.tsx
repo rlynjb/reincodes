@@ -1,14 +1,12 @@
+import SectionHeading from "./SectionHeading";
 import PortfolioIcon from "./PortfolioIcon";
 
 export default function CommunityInvolvement() {
   return (
     <section id="community-involvement" className="mb-14 scroll-mt-20" aria-labelledby="community-involvement-title">
-      <h2
-        id="community-involvement-title"
-        className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800"
-      >
+      <SectionHeading tone="community" id="community-involvement-title">
         community involvement
-      </h2>
+      </SectionHeading>
       <div className="rounded-xl border border-neutral-800 bg-black p-4">
         <div className="flex items-start gap-3">
           <PortfolioIcon name="community" />

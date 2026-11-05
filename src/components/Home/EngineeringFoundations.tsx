@@ -1,3 +1,4 @@
+import SectionHeading from "./SectionHeading";
 import PortfolioIcon from "./PortfolioIcon";
 
 type LearningItem = {
@@ -34,12 +35,9 @@ const learning: LearningItem[] = [
 export default function EngineeringFoundations() {
   return (
     <section id="engineering-foundations" className="mb-14 scroll-mt-20" aria-labelledby="engineering-foundations-title">
-      <h2
-        id="engineering-foundations-title"
-        className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800"
-      >
+      <SectionHeading tone="learning" id="engineering-foundations-title">
         engineering foundations &amp; continuous learning
-      </h2>
+      </SectionHeading>
       <div className="rounded-xl border border-neutral-800 bg-black p-4">
         <p className="text-xs text-neutral-300 leading-relaxed mb-4">
           Building toward applied AI engineering through structured study,
