@@ -3,7 +3,7 @@ import { CONCEPT_CATEGORIES } from "./conceptsData";
 
 export default function Concepts() {
   return (
-    <section className="mb-14">
+    <section id="interactive-visualizers" className="mb-14 scroll-mt-20">
       <div className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800">
         concepts · interactive visualizers
       </div>
