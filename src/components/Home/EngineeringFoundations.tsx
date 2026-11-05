@@ -1,5 +1,8 @@
+import PortfolioIcon from "./PortfolioIcon";
+
 type LearningItem = {
   title: string;
+  icon: "graduation" | "certificate" | "book";
   context: string;
   description: string;
 };
@@ -7,18 +10,21 @@ type LearningItem = {
 const learning: LearningItem[] = [
   {
     title: "Interview Kickstart",
+    icon: "graduation",
     context: "Structured technical education",
     description:
       "Front-end engineering and applied agentic AI coursework, with a focus on data structures, algorithms, and system design.",
   },
   {
     title: "Model Context Protocol Associate (MCPA)",
+    icon: "certificate",
     context: "Linux Foundation · Certification preparation in progress",
     description:
       "Studying MCP architecture, client-server interactions, security, and trust boundaries.",
   },
   {
     title: "Independent Engineering Study",
+    icon: "book",
     context: "Ongoing",
     description:
       "Distributed systems, backend engineering, system design, and evaluation-driven agent development.",
@@ -41,14 +47,17 @@ export default function EngineeringFoundations() {
         </p>
         <div className="divide-y divide-neutral-800">
           {learning.map((item) => (
-            <div key={item.title} className="py-3 first:pt-0 last:pb-0">
-              <h3 className="text-sm font-medium">{item.title}</h3>
-              <p className="mt-1 text-[11px] text-neutral-500">
-                {item.context}
-              </p>
-              <p className="mt-2 text-xs text-neutral-300 leading-relaxed">
-                {item.description}
-              </p>
+            <div key={item.title} className="flex items-start gap-3 py-3 first:pt-0 last:pb-0">
+              <PortfolioIcon name={item.icon} />
+              <div className="min-w-0 flex-1">
+                <h3 className="text-sm font-medium">{item.title}</h3>
+                <p className="mt-1 text-[11px] text-neutral-500">
+                  {item.context}
+                </p>
+                <p className="mt-2 text-xs text-neutral-300 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
