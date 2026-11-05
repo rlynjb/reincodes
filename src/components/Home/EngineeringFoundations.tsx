@@ -27,7 +27,7 @@ const learning: LearningItem[] = [
 
 export default function EngineeringFoundations() {
   return (
-    <section className="mb-14" aria-labelledby="engineering-foundations-title">
+    <section id="engineering-foundations" className="mb-14 scroll-mt-20" aria-labelledby="engineering-foundations-title">
       <h2
         id="engineering-foundations-title"
         className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800"
