@@ -1,40 +1,47 @@
-interface SkillChip {
+type PortfolioSection = {
+  id: string;
   label: string;
+  description: string;
   bg: string;
   text: string;
-}
+};
 
-const skills: SkillChip[] = [
-  // AI Engineering (Personal Projects)
-  { label: "OpenAI Agents SDK", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "Anthropic SDK", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "Multi-Agent Workflows", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "MCP", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-  { label: "LLM evaluation", bg: "bg-[#72243E]", text: "text-[#FBEAF0]" },
-
-  // Languages
-  { label: "TypeScript", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "Python (dabbled)", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-  { label: "HTML/CSS", bg: "bg-[#3C3489]", text: "text-[#EEEDFE]" },
-
-  // Frontend
-  { label: "React", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "Next.js", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "Vue", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-  { label: "Nuxt", bg: "bg-[#085041]", text: "text-[#E1F5EE]" },
-
-  // Backend
-  { label: "Node.js", bg: "bg-[#164E63]", text: "text-[#E0F2FE]" },
-  { label: "Go (working familiarity)", bg: "bg-[#164E63]", text: "text-[#E0F2FE]" },
-  { label: "PostgreSQL / pgvector", bg: "bg-[#164E63]", text: "text-[#E0F2FE]" },
-
-  // Tooling & Cloud
-  { label: "Git", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
-  { label: "Jenkins", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
-  { label: "Rancher", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
-  { label: "Fly.io (personal projects)", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
-  { label: "Netlify (serverless)", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
-  { label: "Vercel (basic familiarity)", bg: "bg-[#3A3A40]", text: "text-[#ECECEC]" },
+const sections: PortfolioSection[] = [
+  {
+    id: "featured-projects",
+    label: "featured projects",
+    description: "AI systems and experiments I've built.",
+    bg: "bg-[#72243E]",
+    text: "text-[#FBEAF0]",
+  },
+  {
+    id: "engineering-foundations",
+    label: "learning",
+    description: "Coursework, engineering fundamentals, and MCPA preparation.",
+    bg: "bg-[#3C3489]",
+    text: "text-[#EEEDFE]",
+  },
+  {
+    id: "community-involvement",
+    label: "community",
+    description: "Learning from agentic AI standards and working groups.",
+    bg: "bg-[#085041]",
+    text: "text-[#E1F5EE]",
+  },
+  {
+    id: "interactive-visualizers",
+    label: "visualizers",
+    description: "Interactive ways to explore algorithms and data structures.",
+    bg: "bg-[#164E63]",
+    text: "text-[#E0F2FE]",
+  },
+  {
+    id: "from-scratch-implementations",
+    label: "implementations",
+    description: "Core engineering concepts implemented from scratch.",
+    bg: "bg-[#3A3A40]",
+    text: "text-[#ECECEC]",
+  },
 ];
 
 export default function Hero() {
@@ -51,16 +58,44 @@ export default function Hero() {
         Seattle, Washington · Front-end building towards Applied AI Engineer
       </p>
 
-      <div className="flex flex-wrap gap-1.5">
-        {skills.map((s) => (
-          <span
-            key={s.label}
-            className={`inline-flex px-2.5 py-[3px] rounded-full text-[11px] font-medium ${s.bg} ${s.text}`}
-          >
-            {s.label}
-          </span>
-        ))}
-      </div>
+      <nav aria-label="Portfolio contents">
+        <h2 className="mb-3 text-[12px] font-medium uppercase tracking-wider text-neutral-500">
+          on this page
+        </h2>
+        <ol className="overflow-hidden rounded-xl border border-neutral-800 divide-y divide-neutral-800">
+          {sections.map((section, index) => (
+            <li key={section.id}>
+              <a
+                href={`#${section.id}`}
+                className="group flex items-start gap-3 px-3 py-3 transition-colors hover:bg-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-neutral-400 sm:items-center"
+              >
+                <span
+                  className="w-5 shrink-0 pt-1 text-[11px] text-neutral-600 sm:pt-0"
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="flex min-w-0 flex-1 flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:gap-3">
+                  <span
+                    className={`inline-flex shrink-0 rounded-full px-2.5 py-[3px] text-[11px] font-medium ${section.bg} ${section.text}`}
+                  >
+                    {section.label}
+                  </span>
+                  <span className="text-xs leading-relaxed text-neutral-400">
+                    {section.description}
+                  </span>
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="shrink-0 text-neutral-600 transition-colors group-hover:text-neutral-300"
+                >
+                  ↓
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
     </section>
   );
 }
