@@ -2,7 +2,7 @@ import { IMPLEMENTATIONS } from "./conceptsData";
 
 export default function Implementations() {
   return (
-    <section className="mb-14">
+    <section id="from-scratch-implementations" className="mb-14 scroll-mt-20">
       <div className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800">
         implementations · from scratch
       </div>
