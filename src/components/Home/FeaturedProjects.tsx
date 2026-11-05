@@ -15,7 +15,6 @@ type Project = {
 };
 
 const projects: Project[] = [
-  /* Temporarily hidden case studies: Evaluate Skill and Sprint Assessment workflow.
   {
     name: "Evaluate Skill",
     subtitle: "Parent project: DotSkills",
@@ -28,7 +27,7 @@ const projects: Project[] = [
   },
   {
     name: "Reliable AI-Assisted Engineering Workflows",
-    subtitle: "Professional work · In progress",
+    subtitle: "Refine Requirements + Sprint Assessment · In progress",
     description:
       "Auditing Refine Requirements and Sprint Assessment agent skills, clarifying their integration, and identifying evaluation opportunities.",
     href: "/projects/reliable-ai-workflows",
@@ -36,7 +35,6 @@ const projects: Project[] = [
     iconText: "text-[#30546A]",
     initials: "rw",
   },
-  */
   {
     name: "LoomiConnect",
     subtitle: "Built with Next.js, Anthropic SDK, and MCP",
