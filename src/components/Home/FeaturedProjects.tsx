@@ -14,6 +14,7 @@ type Project = {
 };
 
 const projects: Project[] = [
+  /* Temporarily hidden case studies: Evaluate Skill and Sprint Assessment workflow.
   {
     name: "Evaluate Skill",
     subtitle: "Parent project: DotSkills",
@@ -34,6 +35,7 @@ const projects: Project[] = [
     iconText: "text-[#30546A]",
     initials: "rw",
   },
+  */
   {
     name: "LoomiConnect",
     subtitle: "Built with Next.js, Anthropic SDK, and MCP",
