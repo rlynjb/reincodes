@@ -67,15 +67,15 @@ export default function Hero() {
             <li key={section.id}>
               <a
                 href={`#${section.id}`}
-                className="group flex items-start gap-3 px-3 py-3 transition-colors hover:bg-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-neutral-400 sm:items-center"
+                className="group flex items-start gap-3 px-3 py-3 transition-colors hover:bg-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-neutral-400"
               >
                 <span
-                  className="w-5 shrink-0 pt-1 text-[11px] text-neutral-600 sm:pt-0"
+                  className="w-5 shrink-0 pt-1 text-[11px] text-neutral-600"
                   aria-hidden="true"
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="flex min-w-0 flex-1 flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:gap-3">
+                <span className="flex min-w-0 flex-1 flex-col items-start gap-2">
                   <span
                     className={`inline-flex shrink-0 rounded-full px-2.5 py-[3px] text-[11px] font-medium ${section.bg} ${section.text}`}
                   >
