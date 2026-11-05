@@ -1,6 +1,6 @@
 export default function CommunityInvolvement() {
   return (
-    <section className="mb-14" aria-labelledby="community-involvement-title">
+    <section id="community-involvement" className="mb-14 scroll-mt-20" aria-labelledby="community-involvement-title">
       <h2
         id="community-involvement-title"
         className="text-[12px] font-medium text-neutral-500 uppercase tracking-wider mb-6 pt-2 border-t border-neutral-800"
