@@ -26,6 +26,16 @@ const projects: Project[] = [
     initials: "ev",
   },
   {
+    name: "Refine Requirements",
+    subtitle: "DotSkills · Requirements engineering skill",
+    description:
+      "A codebase-first, guided skill that turns feature requests into evidence-backed functional and non-functional requirements, acceptance criteria, and stakeholder questions.",
+    href: "/projects/refine-requirements",
+    iconBg: "bg-[#E5F1E8]",
+    iconText: "text-[#285C45]",
+    initials: "rr",
+  },
+  {
     name: "AI-Assisted Ticket Sizing & Requirements Refinement",
     subtitle: "Jira · Refine Requirements + Sprint Assessment · In progress",
     description:
