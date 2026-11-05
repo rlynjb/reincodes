@@ -6,8 +6,6 @@ type PortfolioSection = {
   titleColor: string;
   tint: string;
   hoverTint: string;
-  border: string;
-  hoverBorder: string;
 };
 
 const sections: PortfolioSection[] = [
@@ -19,8 +17,6 @@ const sections: PortfolioSection[] = [
     titleColor: "text-[#C76A8A]",
     tint: "bg-[rgba(199,106,138,0.09)]",
     hoverTint: "hover:bg-[rgba(199,106,138,0.23)]",
-    border: "border-[rgba(199,106,138,0.19)]",
-    hoverBorder: "hover:border-[#C76A8A]",
   },
   {
     id: "engineering-foundations",
@@ -30,8 +26,6 @@ const sections: PortfolioSection[] = [
     titleColor: "text-[#A193EB]",
     tint: "bg-[rgba(161,147,235,0.09)]",
     hoverTint: "hover:bg-[rgba(161,147,235,0.23)]",
-    border: "border-[rgba(161,147,235,0.19)]",
-    hoverBorder: "hover:border-[#A193EB]",
   },
   {
     id: "community-involvement",
@@ -41,8 +35,6 @@ const sections: PortfolioSection[] = [
     titleColor: "text-[#59C8A4]",
     tint: "bg-[rgba(89,200,164,0.08)]",
     hoverTint: "hover:bg-[rgba(89,200,164,0.20)]",
-    border: "border-[rgba(89,200,164,0.17)]",
-    hoverBorder: "hover:border-[#59C8A4]",
   },
   {
     id: "interactive-visualizers",
@@ -52,8 +44,6 @@ const sections: PortfolioSection[] = [
     titleColor: "text-[#69B8DB]",
     tint: "bg-[rgba(105,184,219,0.08)]",
     hoverTint: "hover:bg-[rgba(105,184,219,0.21)]",
-    border: "border-[rgba(105,184,219,0.17)]",
-    hoverBorder: "hover:border-[#69B8DB]",
   },
   {
     id: "from-scratch-implementations",
@@ -63,8 +53,6 @@ const sections: PortfolioSection[] = [
     titleColor: "text-[#A1A1AA]",
     tint: "bg-[rgba(161,161,170,0.07)]",
     hoverTint: "hover:bg-[rgba(161,161,170,0.18)]",
-    border: "border-[rgba(161,161,170,0.15)]",
-    hoverBorder: "hover:border-[#A1A1AA]",
   },
 ];
 
@@ -91,7 +79,7 @@ export default function Hero() {
             <li key={section.id}>
               <a
                 href={`#${section.id}`}
-                className={`group flex items-start gap-3 rounded-lg border px-3.5 py-3.5 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300 ${section.tint} ${section.hoverTint} ${section.border} ${section.hoverBorder}`}
+                className={`group flex items-start gap-3 rounded-lg px-3.5 py-3.5 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-300 ${section.tint} ${section.hoverTint}`}
               >
                 <span
                   aria-hidden="true"
