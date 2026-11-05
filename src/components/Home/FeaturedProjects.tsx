@@ -26,10 +26,10 @@ const projects: Project[] = [
     initials: "ev",
   },
   {
-    name: "Reliable AI-Assisted Engineering Workflows",
-    subtitle: "Refine Requirements + Sprint Assessment · In progress",
+    name: "AI-Assisted Ticket Sizing & Requirements Refinement",
+    subtitle: "Jira · Refine Requirements + Sprint Assessment · In progress",
     description:
-      "Auditing Refine Requirements and Sprint Assessment agent skills, clarifying their integration, and identifying evaluation opportunities.",
+      "Designing a workflow to gather Jira tickets, flag incomplete or conflicting scope, and use codebase context to support better-grounded story-point estimates.",
     href: "/projects/reliable-ai-workflows",
     iconBg: "bg-[#E1EAF2]",
     iconText: "text-[#30546A]",
