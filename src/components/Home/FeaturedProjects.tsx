@@ -18,6 +18,7 @@ type Project = {
 };
 
 const projects: Project[] = [
+  /* Temporarily hidden from featured projects; restore when ready.
   {
     category: "agent-skill",
     name: "Evaluate Skill",
@@ -51,6 +52,7 @@ const projects: Project[] = [
     iconText: "text-[#30546A]",
     initials: "rw",
   },
+  */
   {
     category: "personal-project",
     name: "LoomiConnect",
