@@ -61,10 +61,13 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed">
-        I&apos;m a software engineer with 9 yrs of experience in front-end engineering, currently expanding into <strong>Full-Stack</strong> and <strong>Applied AI Engineering</strong>. I&apos;m particularly interested in designing reliable AI-assisted systems and engineering workflows.
+        I&apos;m a software engineer with 9 yrs of experience in front-end engineering, now expanding into backend, full-stack, and applied AI development.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
-        I enjoy continuous learning, whether through structured programs, attending tech conferences, or connecting with the AI community. I love maintaining a routine of studying, building, and making small but consistent progress on both personal and work projects.
+        My primary focus is <strong>Applied AI Engineering</strong>, particularly designing and building reliable AI agents and systems, with an interest in orchestration, evaluations, and system design.
+      </p>
+      <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
+        I enjoy continuous learning, whether through structured programs, attending tech conferences, or connecting with the AI community. I love maintaining a routine of studying and making small but consistent progress on both personal and work projects.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
         I also love brainstorming ideas through voice conversations with AI, exploring different approaches, thinking through design trade-offs, and turning ideas into practical systems and workflows.
