@@ -7,7 +7,7 @@ import Implementations from "@/components/Home/Implementations";
 
 export default function Home() {
   return (
-    <div className="max-w-[720px] mx-auto px-4 sm:px-6 py-6 text-left">
+    <div className="max-w-[720px] mx-auto px-0 sm:px-6 py-6 text-left">
       <Hero />
       <FeaturedProjects />
       <EngineeringFoundations />
