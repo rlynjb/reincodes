@@ -49,6 +49,13 @@ a.disabled:hover {
   text-align: center;
 }
 
+/* Reduce nested page gutters on phones without changing desktop spacing. */
+@media (max-width: 639px) {
+  .b-container {
+    padding: 0.5rem;
+  }
+}
+
 .b-field-container {
   margin: 0 0 0.3rem;
 }
