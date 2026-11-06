@@ -61,10 +61,16 @@ export default function Hero() {
     <section className="mb-14">
       <h1 className="text-2xl font-medium mb-1.5">hi, i&apos;m rein.</h1>
       <p className="text-[15px] text-neutral-300 leading-relaxed">
-        I&apos;m a software engineer. I enjoy reading, building side projects, and experimenting with ideas. Lately, I&apos;ve been particularly interested in applied AI engineering.
+        I&apos;m a software engineer with 9 yrs of experience in front-end engineering, currently expanding into <strong>Full-Stack</strong> and <strong>Applied AI Engineering</strong>.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
-        When I&apos;m not studying, I enjoy exploring cities and looking for fun experiences to try.
+        I enjoy continuous learning, whether through structured programs, attending tech conferences, or connecting with the AI community. I love maintaining a routine of studying and making small but consistent progress on both personal and work projects.
+      </p>
+      <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
+        I also love brainstorming ideas through voice conversations with AI, exploring different approaches, and designing systems and workflows that lead to something practical.
+      </p>
+      <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
+        Outside of tech, I enjoy simple things like spending time with friends, catching a movie solo, shopping, or exploring new cities and finding fun experiences to try.
       </p>
       <p className="text-[13px] text-neutral-500 mt-4 mb-8">
         Seattle, Washington · Front-end building towards Applied AI Engineer
