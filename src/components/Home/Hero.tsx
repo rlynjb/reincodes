@@ -67,7 +67,7 @@ export default function Hero() {
         My primary focus is <strong>Applied AI Engineering</strong>, particularly designing and building reliable AI agents and systems, with an interest in orchestration, evaluations, and system design.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
-        I enjoy continuous learning, whether through structured programs, attending tech conferences, or connecting with the AI community. I love maintaining a routine of studying and making small but consistent progress on both personal and work projects.
+        One thing about me: I&apos;m big on maintaining a study routine and making small but consistent progress on both personal and work projects.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
         I also love brainstorming ideas through voice conversations with AI, exploring different approaches, thinking through design trade-offs, and turning ideas into practical systems and workflows.
