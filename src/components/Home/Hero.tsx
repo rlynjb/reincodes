@@ -67,6 +67,13 @@ export default function Hero() {
         My primary focus is <strong>Applied AI Engineering</strong>, particularly designing and building reliable AI agents and systems, with an interest in orchestration, evaluations, and system design.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
+        At Switch, I documented and shared a system-design and layered-validation workflow
+        bridging sprint assessment and feature implementation. It shows how Jira tickets
+        move through codebase verification, design trade-offs, and validation checkpoints
+        before coding, making the engineering decision process more transparent to product
+        managers, engineering leaders, and developers.
+      </p>
+      <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
         A habit of mine is maintaining a study routine and making small but consistent progress on both personal and work projects. Seeing those efforts pay off over time is especially rewarding.
       </p>
       <p className="text-[15px] text-neutral-300 leading-relaxed mt-3">
