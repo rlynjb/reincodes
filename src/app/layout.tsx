@@ -40,8 +40,10 @@ export default function RootLayout({
                  className="text-gray-400 hover:text-white">github</a>
               <a href="https://www.linkedin.com/in/rlynpro" target="_blank" rel="noopener noreferrer"
                  className="text-gray-400 hover:text-white">linkedin</a>
+              {/* Temporarily hidden email link.
               <a href="mailto:rlynjb@gmail.com"
                  className="text-gray-400 hover:text-white">email</a>
+              */}
               {/* Temporarily hidden resume link.
               <a href={process.env.NODE_ENV === "production" ? "/reincodes/resume.pdf" : "/resume.pdf"}
                  target="_blank" rel="noopener noreferrer"
